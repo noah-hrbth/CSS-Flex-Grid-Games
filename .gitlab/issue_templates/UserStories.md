@@ -4,4 +4,4 @@
 ## damit
 *Hier schreiben*  
 
-~UserStory 
+/label ~UserStory 
