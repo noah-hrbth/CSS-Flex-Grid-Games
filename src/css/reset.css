@@ -1,3 +1,4 @@
+/* Setzt ein paar Browserstylings zurück, damit man wirklich von 0 aus stylen kann */
 *,
 *::after,
 *::before {
