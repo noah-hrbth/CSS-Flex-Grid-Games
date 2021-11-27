@@ -21,6 +21,10 @@ Die gesamte Organisation findet hier auf GitLab, über Issues usw., statt.
 
 <img src="https://cdn.discordapp.com/attachments/898937507406839869/910247728641105930/Milestones.png">
 
+## Sequenzdiagramm Input zu Output
+
+<img src="https://cdn.discordapp.com/attachments/898937507406839869/914157736034451506/Sequenzdiagramm_Input_to_Output.png">
+
 ## Protokoll 1
 
 | Datum       | 29.10.2021 | Protokollführer | Adam Bessisso  |
