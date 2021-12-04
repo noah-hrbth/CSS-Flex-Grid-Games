@@ -5,16 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/index.css" />
     <link rel="stylesheet" href="/src/css/reset.css" />
+		<link rel="stylesheet" href="/src/css/buttons.css">
     <title>HSD Flex</title>
   </head>
   <body>
     <div id="app" class="main-container">
       <div class="left">
         <div class="game-logo">LOGO</div>
-        <div class="levelauswahl">LEVELAUSWAHL</div>
-        <div class="settings">SETTINGS</div>
+        <div class="levelauswahl">
+					<img src="/src/assets/images/level-icon.png" alt="Levelauswahl" class="lvl-icon">
+				</div>
+        <div class="settings">
+          <button class="settings-btn"> 
+            <span class="material-icons-round setting-icon">
+              settings
+            </span>		
+          </button>		
+				</div>
         <div class="aufgaben">
           <h2 class="aufgaben-titel">Aufgabe</h2>
           <p class="aufgaben-text">
@@ -41,17 +51,11 @@
       </div>
 
       <div class="right">
-        <div class="right-box">
-          <div class="inner-right-static">
-            <div class="lila-container">
-              <img class="lila" src="/images/106425_2.jpg" alt="Lila" />
-            </div>
-          </div>
-          <div class="inner-right-dynamic" v-bind:style="message">
-            <div class="green-container">
-              <img class="green" src="/images/green.jpg" alt="Grün" />
-            </div>
-          </div>
+        <div class="inner-right-static">
+          <div class="lila-container">LILA/ZIEL</div>
+        </div>
+        <div class="inner-right-dynamic" v-bind:style="message">
+          <div class="green-container">GRÜN</div>
         </div>
       </div>
     </div>
