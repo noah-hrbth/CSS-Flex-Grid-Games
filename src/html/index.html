@@ -1,64 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/index.css" />
-    <link rel="stylesheet" href="/src/css/reset.css" />
-		<link rel="stylesheet" href="/src/css/buttons.css">
-    <title>HSD Flex</title>
-  </head>
-  <body>
-    <div id="app" class="main-container">
-      <div class="left">
-        <div class="game-logo">LOGO</div>
-        <div class="levelauswahl">
-					<img src="/src/assets/images/level-icon.png" alt="Levelauswahl" class="lvl-icon">
-				</div>
-        <div class="settings">
-          <button class="settings-btn"> 
-            <span class="material-icons-round setting-icon">
-              settings
-            </span>		
-          </button>		
-				</div>
-        <div class="aufgaben">
-          <h2 class="aufgaben-titel">Aufgabe</h2>
-          <p class="aufgaben-text">
-            Bewege den <strong>grünen</strong> Kreis auf das
-            <strong>lila</strong> Rechteck, indem du
-            <strong class="aufgaben-text-important">
-              <nobr>justify-content</nobr></strong
-            >
-            und <strong class="aufgaben-text-important">align-items</strong> in
-            kombinierst.
-          </p>
-        </div>
-        <div class="editor">
-          <p class="editor-text">#output {</p>
-          <textarea
-            class="editor-eingabe gradient-border"
-            v-model="message"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="Gib hier dein CSS ein!"
-          ></textarea>
-          <p class="editor-text">}</p>
-        </div>
-      </div>
-
-      <div class="right">
-        <div class="inner-right-static">
-          <div class="lila-container">LILA/ZIEL</div>
-        </div>
-        <div class="inner-right-dynamic" v-bind:style="message">
-          <div class="green-container">GRÜN</div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <link
+          href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/src/css/index.css"/>
+  <link rel="stylesheet" href="/src/css/reset.css"/>
+  <link rel="stylesheet" href="/src/css/buttons.css"/>
+  <title>HSD Flex</title>
+</head>
+<body onload="checkCookie()">
+<div id="app" class="main-container">
+  <div class="left">
+    <div class="game-logo">LOGO</div>
+    <div class="levelauswahl">
+      <img
+              src="/src/assets/images/level-icon.png"
+              alt="Levelauswahl"
+              class="lvl-icon"
+      />
     </div>
-    <script src="/src/js/main.js"></script>
-  </body>
+    <div class="settings">
+      <button class="settings-btn">
+        <span class="material-icons-round setting-icon"> settings </span>
+      </button>
+    </div>
+    <div class="aufgaben">
+      <h2 class="aufgaben-titel">Aufgabe</h2>
+      <p class="aufgaben-text">
+        Bewege den <strong>grünen</strong> Kreis auf das
+        <strong>lila</strong> Rechteck, indem du
+        <strong class="aufgaben-text-important">
+          <nobr>justify-content</nobr>
+        </strong
+        >
+        und <strong class="aufgaben-text-important">align-items</strong> in
+        kombinierst.
+      </p>
+    </div>
+    <div class="editor">
+      <p class="editor-text">#output {</p>
+      <textarea
+              class="editor-eingabe gradient-border"
+              v-model="message"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Gib hier dein CSS ein!"
+      ></textarea>
+      <p class="editor-text">}</p>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="inner-right-static">
+      <div class="lila-container">LILA/ZIEL</div>
+    </div>
+    <div class="inner-right-dynamic" v-bind:style="message">
+      <div class="green-container">GRÜN</div>
+    </div>
+  </div>
+</div>
+<script src="/src/js/main.js"></script>
+<script src="/src/js/cookie.js"></script>
+</body>
 </html>
