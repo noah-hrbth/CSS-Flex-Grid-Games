@@ -27,9 +27,9 @@ const getCookie = (cookieName = "isOnLevel") => {
 const checkCookie = () => {
   let level = getCookie();
   if (level !== "") {
-	alert(`Wir haben deinen Fortschritt auf \nLevel: ${level} wiederhergestellt!`);
+	// alert(`Wir haben deinen Fortschritt auf \nLevel: ${level} wiederhergestellt!`);
   } else {
-	alert("Dein Fortschritt wird über Cookies gespeichert! \nDu kannst also beruhigt den Browser schließen und wann anders wiederkommen :)");
+	// alert("Dein Fortschritt wird über Cookies gespeichert! \nDu kannst also beruhigt den Browser schließen und wann anders wiederkommen :)");
 	setCookie();
   }
 }
