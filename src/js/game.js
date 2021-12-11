@@ -19,5 +19,9 @@ const isCollision = ($div1, $div2) => {
 }
 
 window.setInterval(function() {
-  $('#result').text(isCollision($('#div1'), $('#div2')));
+  $('#result').text(isCollision($('#player-container'), $('#target-container')));
 }, 200);
+
+
+// TODO: wenn beide bilder miteinander kollidieren 
+// soll irgendwas passieren zum beispiel animation von Truhe ausstellen usw

@@ -1,9 +1,18 @@
-.settings-content{
-    display: none;
-    color:white;
+.settings-btn {
+  background: #ffe7d5;
+  border-radius: 100%;
+  border: none;
+  padding: 1rem 2rem;
+  color: #5d1d00;
+  display: inline-block;
+  text-align: center;
 }
 
-.settings:hover .settings-content{
-    display: block;
+.settings-content {
+  display: none;
+  color: white;
 }
 
+.settings:hover .settings-content {
+  display: block;
+}

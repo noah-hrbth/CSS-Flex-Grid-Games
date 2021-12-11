@@ -1,5 +1,5 @@
 // Vue app erstellen
-let app = new Vue({
+let app = new Vue ({
   // App wird auf die ganze Seite gesetzt
   el: "#app",
   data: {
