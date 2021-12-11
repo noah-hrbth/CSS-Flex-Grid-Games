@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
@@ -13,6 +12,8 @@
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/buttons.css" />
     <link rel="stylesheet" href="/css/settings.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <title>HSD Flex</title>
   </head>
   <body onload="checkCookie()">
@@ -37,6 +38,7 @@
           </ul>
         </div>
         <div class="aufgaben">
+          <p>Colliding? <span id="result">false</span></p>
           <h2 class="aufgaben-titel">Aufgabe</h2>
           <p class="aufgaben-text">
             Bewege den <strong>grünen</strong> Kreis auf das
@@ -62,15 +64,20 @@
       </div>
 
       <div class="right">
-        <div class="inner-right-static">
-          <div class="lila-container">LILA/ZIEL</div>
+        <div class="inner-right-target">
+          <div class="target-container" id="div1">
+            <img class="image target-treasure" src="/assets/images/treasure.png" alt="Ziel Truhe">
+          </div>
         </div>
-        <div class="inner-right-dynamic" v-bind:style="message">
-          <div class="green-container">GRÜN</div>
+        <div class="inner-right-player" v-bind:style="message">
+          <div class="player-container" id="div2">
+            <img class="image player-pirate" src="/assets/images/pirate-player.png" alt="Player Pirate">
+          </div>
         </div>
       </div>
     </div>
-    <script src="/js/main.js"></script>
+    <script src="/js/vue.js"></script>
     <script src="/js/cookie.js"></script>
+    <script src="/js/game.js"></script>
   </body>
 </html>

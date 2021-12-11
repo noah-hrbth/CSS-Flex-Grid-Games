@@ -1,15 +1,10 @@
 .settings-btn {
-  background: #15d798;
-  border-radius: 0.688rem;
+  background: #FFE7D5;
+  border-radius: 100%;
   border: none;
   padding: 1rem 2rem;
-  color: #ffffff;
+  color: #5D1D00;
   display: inline-block;
   text-align: center;
 }
 
-.lvl-icon {
-  display: block;
-  height: 3rem;
-  width: 3rem;
-}
