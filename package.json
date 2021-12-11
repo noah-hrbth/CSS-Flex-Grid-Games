@@ -1,0 +1,22 @@
+{
+  "name": "browser-learn-games",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "build": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://projectbase.medien.hs-duesseldorf.de/se/browser-learn-games.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

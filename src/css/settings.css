@@ -1,0 +1,10 @@
+.settings-content{
+    display: none;
+    position: absolout;
+    color:white;
+}
+
+.settings:hover .settings-content{
+    display: block;
+}
+
