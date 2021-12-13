@@ -1,16 +1,17 @@
+@import url(/css/_variables.css);
+
 .settings-btn {
-  background: #ffe7d5;
+  background: var(--color-light);
   border-radius: 100%;
   border: none;
   padding: 1rem 2rem;
-  color: #5d1d00;
+  color: var(--color-darker);
   display: inline-block;
   text-align: center;
 }
 
 .settings-content {
   display: none;
-  color: white;
 }
 
 .settings:hover .settings-content {
