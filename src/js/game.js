@@ -16,12 +16,17 @@ const isCollision = ($div1, $div2) => {
     return false;
   }
   return true;
-}
+};
 
-window.setInterval(function() {
-  $('#result').text(isCollision($('#player-container'), $('#target-container')));
+window.setInterval(function () {
+  $("#result").text(
+    isCollision($("#player-container"), $("#target-container"))
+  );
 }, 200);
 
-
-// TODO: wenn beide bilder miteinander kollidieren 
+// TODO: wenn beide bilder miteinander kollidieren
 // soll irgendwas passieren zum beispiel animation von Truhe ausstellen usw
+
+// if (isCollision($('#player-container'), $('#target-container'))) {
+//   document.querySelector('.target-treasure').classList.remove('animate__animated');
+// }
