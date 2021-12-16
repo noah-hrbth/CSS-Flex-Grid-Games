@@ -1,19 +1,25 @@
 <template>
     <div>
-      
-
-        <div class="editor">
-          {{ this.getLevelById(levelData) }}
+      <div class="aufgaben">
+          <p>Colliding? <span id="result">false</span></p>
+          <h2 class="aufgaben-titel">{{ this.getLevelById(levelData).levelTitle }}</h2>
+          <p class="aufgaben-text">
+              {{ this.getLevelById(levelData).levelTxt }}
+          </p>
+      </div>
+      <div class="editor">
           <p class="editor-text">#output {</p>
           <textarea
-            class="editor-eingabe"
-            v-model="this.message"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="Gib hier dein CSS ein!"
+              class="editor-eingabe"
+              v-model="this.message"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Gib hier dein CSS ein!"
           ></textarea>
           <p class="editor-text">}</p>
-        </div>
+      </div>
+
+        
         <div class="right">
           <div class="inner-right-target">
             <div class="target-container" id="target-container">
