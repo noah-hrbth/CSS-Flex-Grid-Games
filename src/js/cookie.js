@@ -1,4 +1,8 @@
-const setCookie = (cookieName = "isOnLevel", level = getLevel(), expireDays = 30) => {
+const setCookie = (
+  cookieName = "isOnLevel",
+  level = getLevel(),
+  expireDays = 30
+) => {
   let date = new Date();
   date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
   let expires = date.toUTCString();
@@ -27,13 +31,13 @@ const getCookie = (cookieName = "isOnLevel") => {
 const checkCookie = () => {
   let level = getCookie();
   if (level !== "") {
-	// alert(`Wir haben deinen Fortschritt auf \nLevel: ${level} wiederhergestellt!`);
+    // alert(`Wir haben deinen Fortschritt auf \nLevel: ${level} wiederhergestellt!`);
   } else {
-	// alert("Dein Fortschritt wird über Cookies gespeichert! \nDu kannst also beruhigt den Browser schließen und wann anders wiederkommen :)");
-	setCookie();
+    // alert("Dein Fortschritt wird über Cookies gespeichert! \nDu kannst also beruhigt den Browser schließen und wann anders wiederkommen :)");
+    setCookie();
   }
-}
+};
 
 const getLevel = () => {
   return 1;
-}
+};
