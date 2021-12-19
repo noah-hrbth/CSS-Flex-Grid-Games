@@ -1,0 +1,33 @@
+@import url(/src/css/_variables.css);
+
+.level-select-btn {
+  height: 100%;
+  cursor: pointer;
+}
+
+.level-icon {
+  max-height: 100%;
+}
+
+.level-select-level {
+  display: grid;
+  background: url(/assets/images/level-sign.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 10rem;
+  height: 21rem;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 0fr));
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.level-nr {
+  cursor: pointer;
+}

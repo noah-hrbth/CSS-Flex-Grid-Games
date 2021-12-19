@@ -32,12 +32,14 @@ body {
   grid-area: Logo;
 }
 
-.levelauswahl {
+.level-select {
   grid-area: Levelauswahl;
+  z-index: 10;
 }
 
 .settings {
   grid-area: Settings;
+  z-index: 10;
 }
 
 .aufgaben {
