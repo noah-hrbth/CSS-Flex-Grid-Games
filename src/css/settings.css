@@ -11,6 +11,7 @@
 
 .settings-content {
   display: none;
+  background-color: var(--color-dark);
 }
 
 .settings-content--active {
