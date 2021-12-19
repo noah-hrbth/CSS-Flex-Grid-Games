@@ -11,9 +11,16 @@
 
 .settings-content {
   display: none;
-  background-color: var(--color-dark);
+  background: url(/assets/images/settings-sign.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 106px;
+  width: 213px;
+  align-items: center;
+  flex-direction: column;
+  z-index:10;
 }
 
 .settings-content--active {
-  display: block;
+  display: flex;
 }
