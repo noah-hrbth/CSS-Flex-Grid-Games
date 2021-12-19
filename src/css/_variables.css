@@ -1,6 +1,18 @@
+@font-face {
+  font-family: battlesbridge;
+  src: url(/assets/fonts/battlesbridge-font/BattlesbridgeDemo-AL126.ttf);
+}
+
+@font-face {
+  font-family: thedarkestpearl;
+  src: url(/assets/fonts/thedarkestpearl-font/Thedarkestpearl-9Ym8Z.ttf);
+}
+
 :root {
   --color-darker: #323232;
-  --color-dark: #311e0f;
+  --color-dark:   #311e0f;
   --color-medium: #954c2f;
-  --color-light: #ffe7d5;
+  --color-light:  #ffe7d5;
+  --font-heading:   'battlesbridge';
+  --font-body:      'thedarkestpearl';
 }

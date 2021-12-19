@@ -2,11 +2,11 @@
 
 body {
   color: var(--color-darker);
+  font-family: var(--font-body), sans-serif;
 }
 
 .main-container {
   display: flex;
-  font-family: sans-serif;
 }
 
 .left {
@@ -34,6 +34,10 @@ body {
 
 .levelauswahl {
   grid-area: Levelauswahl;
+}
+
+.settings {
+  grid-area: Settings;
 }
 
 .aufgaben {

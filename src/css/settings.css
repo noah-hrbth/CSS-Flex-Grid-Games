@@ -1,19 +1,18 @@
 @import url(/css/_variables.css);
 
 .settings-btn {
-  background: var(--color-light);
-  border-radius: 100%;
-  border: none;
-  padding: 1rem 2rem;
-  color: var(--color-darker);
-  display: inline-block;
-  text-align: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.settings-icon {
+  max-height: 100%;
 }
 
 .settings-content {
   display: none;
 }
 
-.settings:hover .settings-content {
+.settings-content--active {
   display: block;
 }

@@ -1,1 +1,0 @@
-// JavaScript Dateien hier importieren und nur main.js dann in html aufrufen
