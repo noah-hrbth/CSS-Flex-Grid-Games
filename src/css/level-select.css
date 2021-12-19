@@ -10,7 +10,7 @@
 }
 
 .level-select-level {
-  display: grid;
+  display: none;
   background: url(/assets/images/level-sign.png);
   background-size: cover;
   background-repeat: no-repeat;

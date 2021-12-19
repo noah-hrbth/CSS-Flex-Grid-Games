@@ -1,8 +1,9 @@
 /* Alle Links zu den anderen css files hiereinfügen */
 @import url(/css/_reset.css);
 @import url(/css/_variables.css);
+@import url(/css/_animation.css);
 @import url(/css/index.css);
 @import url(/css/buttons.css);
 @import url(/css/settings.css);
 @import url(/css/editor.css);
-@import url(/css/levels.css);
+@import url(/css/level-select.css);
