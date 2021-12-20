@@ -10,7 +10,8 @@
 }
 
 .level-select-level {
-  display: none;
+  display: grid;
+  opacity: 0;
   background: url(/assets/images/level-sign.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,6 +20,13 @@
   grid-template-columns: repeat(auto-fit, minmax(30px, 0fr));
   padding-left: 1.5rem;
   padding-top: 1rem;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.level-select-level--active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .level {
