@@ -20,6 +20,6 @@ levelSelectBtn.addEventListener("click", () => {
     );
     setTimeout(() => {
       watersplashImageLevelSelect.src = "/assets/images/watersplash-level-select.gif";
-    }, 1800);
+    }, 1850);
   }
 });

@@ -18,7 +18,7 @@ settingsBtn.addEventListener("click", () => {
     const watersplashImageSettings = document.querySelector('.watersplash-image-settings');
     setTimeout(() => {
       watersplashImageSettings.src = "/assets/images/watersplash-settings.gif";
-    }, 1800);
+    }, 1850);
   }
 
 });
