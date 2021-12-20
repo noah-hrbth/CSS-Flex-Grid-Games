@@ -26,11 +26,13 @@ body {
   align-items: stretch;
   background: url(/assets/images/wood.jpg) no-repeat;
   background-size: cover;
-  border-right: 5px solid var(--color-dark);
+  border-right: 5px solid var(--color-darker);
 }
 
 .game-logo {
   grid-area: Logo;
+  font-family: var(--font-heading);
+  font-size: 2rem;
 }
 
 .level-select {

@@ -9,7 +9,8 @@
 }
 
 :root {
-  --color-darker: #323232;
+  --color-grey:   #323232;
+  --color-darker: #3B2718;
   --color-dark:   #8B4513;
   --color-medium: #954c2f;
   --color-light:  #eeeeee;
