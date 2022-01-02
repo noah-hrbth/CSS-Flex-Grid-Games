@@ -3,6 +3,13 @@
 .level-select-btn {
   height: 100%;
   cursor: pointer;
+  border-radius: 100%;
+  box-shadow: 0px -2px 0px 1.5px rgba(0, 0, 0, 0.24);
+}
+
+.level-select-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0px -2px 0px 1.5px rgba(0, 0, 0, 0.103);
 }
 
 .level-icon {

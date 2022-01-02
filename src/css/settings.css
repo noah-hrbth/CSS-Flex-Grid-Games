@@ -3,6 +3,13 @@
 .settings-btn {
   height: 100%;
   cursor: pointer;
+  border-radius: 100%;
+  box-shadow: inset 0px 57px 0px -18px rgba(0, 0, 0, 0.24);
+}
+
+.settings-btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0px 57px 0px -18px rgba(0, 0, 0, 0.103);
 }
 
 .settings-icon {

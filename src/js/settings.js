@@ -15,26 +15,23 @@ settingsBtn.addEventListener("click", () => {
   }
 
   if (settingsContent.classList.contains("hinge-out-top")) {
-    const watersplashImageSettings = document.querySelector('.watersplash-image-settings');
+    const watersplashImageSettings = document.querySelector(
+      ".watersplash-image-settings"
+    );
     setTimeout(() => {
       watersplashImageSettings.src = "/assets/images/watersplash-settings.gif";
     }, 1850);
   }
-
 });
 
-const hintChangeSwitch = document.querySelector('.hint-change__switch');
-const checkbox = document.getElementById('checkbox');
+const hintChangeSwitch = document.querySelector(".hint-change__switch");
+const checkbox = document.getElementById("checkbox");
 
-hintChangeSwitch.addEventListener('click', () => {
-  checkbox.toggleAttribute('checked');
+hintChangeSwitch.addEventListener("click", () => {
+  checkbox.toggleAttribute("checked");
   if (checkbox.checked) {
-    document.querySelector('.hint-change__switchtext').innerHTML = "aus";
+    document.querySelector(".hint-change__switchtext").innerHTML = "aus";
   } else {
-    document.querySelector('.hint-change__switchtext').innerHTML = "an";
-
+    document.querySelector(".hint-change__switchtext").innerHTML = "an";
   }
-  console.log('lol')
-})
-
-
+});
