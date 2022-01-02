@@ -91,16 +91,21 @@
             />
           </button>
           <ul class="settings-content">
-            <br>
-            <section>
-                <p id="labelLanguage" class="Sprachenauswahl">Sprache</p>
-                <select id="language">
-                  <option value="de">Deutsch</option>
-                  <option value="en">Englisch</option>
-                </select>
-            </section>
-            <li class="setting-options"> Lautstärke</li>
-            <li class="setting-options"> Settings3</li>
+            <li class="settings-option language-change">
+              <span>Sprache</span>
+              <select id="language" class="language-change__dropdown">
+                <option value="de">Deutsch</option>
+                <option value="en">Englisch</option>
+              </select>
+            </li>
+            <li class="settings-option hint-change">
+              <span>Hinweise</span>
+              <span class="hint-change__switchtext"> an </span>
+              <label class="hint-change__switch">
+                <input type="checkbox" id="checkbox"/>
+                <span class="slider round"></span>
+              </label>
+            </li>
           </ul>
         </div>
         <div class="aufgaben">
@@ -127,8 +132,8 @@
           ></textarea>
           <p class="editor-text">}</p>
         </div>
-        <img src="" alt="" class="watersplash-image-level-select">
-        <img src="" alt="" class="watersplash-image-settings">
+        <img src="" alt="" class="watersplash-image-level-select" />
+        <img src="" alt="" class="watersplash-image-settings" />
       </div>
 
       <div class="right">

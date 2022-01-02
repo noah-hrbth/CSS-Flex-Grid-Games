@@ -23,4 +23,18 @@ settingsBtn.addEventListener("click", () => {
 
 });
 
+const hintChangeSwitch = document.querySelector('.hint-change__switch');
+const checkbox = document.getElementById('checkbox');
+
+hintChangeSwitch.addEventListener('click', () => {
+  checkbox.toggleAttribute('checked');
+  if (checkbox.checked) {
+    document.querySelector('.hint-change__switchtext').innerHTML = "aus";
+  } else {
+    document.querySelector('.hint-change__switchtext').innerHTML = "an";
+
+  }
+  console.log('lol')
+})
+
 
