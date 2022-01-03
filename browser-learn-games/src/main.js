@@ -6,7 +6,8 @@ import LevelData from './level.json'
 
 const store = createStore({
     state: {
-        levelData: LevelData
+        levelData: LevelData,
+        gameLanguage: 0,
     },
     getters: {
         getLevelById: (state) => (gameId, levelId) => {           
