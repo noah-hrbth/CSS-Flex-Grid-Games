@@ -1,7 +1,9 @@
 <template>
     <div>
+      
+
         <div class="editor">
-          {{ this.levelData }}
+          {{ this.getLevelById(levelData) }}
           <p class="editor-text">#output {</p>
           <textarea
             class="editor-eingabe"
@@ -46,6 +48,7 @@
 <script>
 import PlayerPirateImage from '../assets/images/pirate-player.png'
 import TreasureImage from '../assets/images/treasure.png'
+import WoodImage from '../assets/images/wood.jpg'
 
 const gameId = 1;
 
@@ -64,14 +67,15 @@ export default {
         return this.$store.getters.getLevelById(1, levelId)
       }
     },
-    mounted: {
-      updateLevelId() {
-        this.levelId = this.levelData;
-      }
-    },
+    // mounted: {
+    //   updateLevelId() {
+    //     this.levelId = this.levelData;
+    //   }
+    // },
     data: () => ({
       playerPirateImage: PlayerPirateImage,
       treasureImage: TreasureImage,
+      woodImage: WoodImage,
 
       gameId: gameId,
       levelId: 0,
@@ -125,7 +129,7 @@ body {
   gap: 0.625rem;
   justify-content: space-around;
   align-items: stretch;
-  background: url(/assets/images/wood.jpg) no-repeat;
+  background: url(../assets/images/wood.jpg) no-repeat;
   background-size: cover;
   border-right: 5px solid var(--color-darker);
 }
