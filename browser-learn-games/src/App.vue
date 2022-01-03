@@ -4,10 +4,21 @@
         <a v-on:click="goToGrid">Grid</a>
 
         <div v-if="this.currentGame == 1">
-            <FlexGame />
+            <a v-for="level in this.allLevelData.flex" :key="level.levelNr" v-on:click="goToLevel(1, level.levelNr)">
+                {{ level.levelNr }}
+            </a>
+
+            <FlexGame :level-data="this.currentGameData.levelNr" />
         </div>
         <div v-else-if="this.currentGame == 2">
-            <GridGame />
+            <a v-for="level in this.allLevelData.grid" :key="level.levelNr" v-on:click="goToLevel(2, level.levelNr)">
+                {{ level.levelNr }}
+            </a>
+
+            <GridGame :level-data="this.currentGameData.levelNr" />
+        </div>
+        <div v-else>
+            <HomeScreen />
         </div>
     </div>
 </template>
@@ -15,6 +26,7 @@
 <script>
 import FlexGame from './components/FlexGame.vue'
 import GridGame from './components/GridGame.vue'
+import HomeScreen from './components/HomeScreen.vue'
 import LevelData from './level.json'
 
 console.log(LevelData);
@@ -23,7 +35,8 @@ export default {
     name: 'App',
     components: {
         FlexGame,
-        GridGame
+        GridGame,
+        HomeScreen
     },
     methods: {
         goToFlex() {
@@ -31,13 +44,25 @@ export default {
         },
         goToGrid() {
             this.currentGame = 2;
+        },
+        goToLevel(game, level) {
+            if(game == 1){
+                this.currentGame = game;
+                this.currentGameData.levelNr = level;
+            }
+            else if (game == 2) {
+                this.currentGame = game;
+                this.currentGameData.levelNr = level;
+            }
         }
     },
     data: () => ({
         currentGame: 0,
         currentGameData: {
-            levelNr: 
-        }
+            levelNr: 0,
+            currentPosition: {x: 0, y: 0}
+        },
+        allLevelData: LevelData
     })
 }
 </script>
