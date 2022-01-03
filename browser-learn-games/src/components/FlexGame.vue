@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="editor">
-          {{ this.level-data }}
+          {{ this.levelData }}
           <p class="editor-text">#output {</p>
           <textarea
             class="editor-eingabe"
@@ -47,19 +47,36 @@
 import PlayerPirateImage from '../assets/images/pirate-player.png'
 import TreasureImage from '../assets/images/treasure.png'
 
+const gameId = 1;
+
 export default {
     name: 'FlexGame',
     components: {
 
     },
-    props: ['level-data'],
-    data: () =>  ({
-        playerPirateImage: PlayerPirateImage,
-        treasureImage: TreasureImage,
+    props: {
+      levelData: {
+        type: Number
+      }
+    },
+    methods: {
+      getLevelById(levelId) {
+        return this.$store.getters.getLevelById(1, levelId)
+      }
+    },
+    mounted: {
+      updateLevelId() {
+        this.levelId = this.levelData;
+      }
+    },
+    data: () => ({
+      playerPirateImage: PlayerPirateImage,
+      treasureImage: TreasureImage,
 
+      gameId: gameId,
+      levelId: 0,
 
-
-        message: ""
+      message: ""
     })
 }
 </script>

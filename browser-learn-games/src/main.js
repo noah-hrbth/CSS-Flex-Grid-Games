@@ -2,14 +2,20 @@ import { createApp } from 'vue'
 import { createStore } from 'vuex'
 import App from './App.vue'
 
+import LevelData from './level.json'
+
 const store = createStore({
-    state() {
-        return {
-            count: 0
-        }
+    state: {
+        levelData: LevelData
     },
-    mutations: {
-        
+    getters: {
+        getLevelById: (state) => (gameId, levelId) => {           
+            if(gameId == 1){
+                return state.levelData.flex[levelId]
+            } else if(gameId == 2) {
+                return state.levelData.grid[levelId]
+            }
+        }
     }
 })
 
