@@ -7,6 +7,9 @@ import LevelData from './level.json'
 const store = createStore({
     state: {
         levelData: LevelData,
+
+        currentGame: 0,
+
         gameLanguage: 0,
     },
     getters: {
@@ -20,8 +23,5 @@ const store = createStore({
     }
 })
 
-const app = createApp(App)
+createApp(App).use(store).mount('#app')
 
-app.mount('#app')
-
-app.use(store)
