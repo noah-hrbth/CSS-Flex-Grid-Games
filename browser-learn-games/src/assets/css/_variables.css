@@ -9,11 +9,12 @@
 }
 
 :root {
-  --color-grey:   #323232;
-  --color-darker: #3B2718;
-  --color-dark:   #8B4513;
+  --color-grey: #818088;
+  --color-lightgrey: #a09faa;
+  --color-darker: #3b2718;
+  --color-dark: #8b4513;
   --color-medium: #954c2f;
-  --color-light:  #eeeeee;
-  --font-heading:   'battlesbridge';
-  --font-body:      'thedarkestpearl';
+  --color-light: #eeeeee;
+  --font-heading: "battlesbridge";
+  --font-body: "thedarkestpearl";
 }
