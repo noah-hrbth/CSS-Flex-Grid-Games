@@ -17,7 +17,7 @@
                 />
             </div>
         </div>
-        <div class="inner-right-player" v-bind:style="message">
+        <div class="inner-right-player" v-bind:style="this.$store.state.editor.editorInput">
             <div class="player-container" id="player-container">
                 <img
                 class="image player-pirate"

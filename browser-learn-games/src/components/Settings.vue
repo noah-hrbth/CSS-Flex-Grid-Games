@@ -12,8 +12,8 @@
             <section>
                 <p id="labelLanguage" class="Sprachenauswahl">Sprache</p>
                 <select id="language">
-                <option value="de">Deutsch</option>
-                <option value="en">Englisch</option>
+                  <option value="de">Deutsch</option>
+                  <option value="en">Englisch</option>
                 </select>
             </section>
             <li class="setting-options"> Lautstärke</li>

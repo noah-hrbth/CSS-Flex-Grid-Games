@@ -13,10 +13,10 @@ export default {
     }),
     methods: {
         goToFlex(){
-            this.$store.state.currentGame = 1;
+            this.$store.state.game.currentGame = 1;
         },
         goToGrid(){
-            this.$store.state.currentGame = 2;
+            this.$store.state.game.currentGame = 2;
         }
     }
 }

@@ -1,15 +1,15 @@
 <template>
     <div>
-        <div v-if="this.$store.state.currentGame == 0">
+        <div v-if="this.$store.state.game.currentGame == 0">
             <HomeScreen />
 
             <Navigation />
         </div>
-        <div v-else>
+        <div class="main-container" v-else>
             <div class="left">
                 <div class="game-logo">HSD Flex Pirate</div>
                 <div class="level-select">
-                    <button class="level-select-btn" @click="this.levelSelectOpen = !this.levelSelectOpen">
+                    <button class="level-select-btn" @click="openLevelSelect()">
                         <img
                         :src="levelSelectImage"
                         alt="Level select"
@@ -17,17 +17,17 @@
                         />
                     </button>
                     <div class="level-select-level" :class="{ 'level-select-level--active': this.levelSelectOpen }">
-                        <div v-if="this.$store.state.currentGame == 1">
+                        <div v-if="this.$store.state.game.currentGame == 1">
                             <Navigation />
 
                             <div v-for="level in this.$store.state.levelData.flex" :key="level.levelNr" v-on:click="goToLevel(1, (level.levelNr - 1))">
                                 <span class="level-nr">{{ level.levelNr }}</span>
                             </div>
                         </div>
-                        <div v-if="this.$store.state.currentGame == 2">
+                        <div v-if="this.$store.state.game.currentGame == 2">
                             <Navigation />
 
-                            <div v-for="level in this.$store.state.levelData.grid" :key="level.levelNr" v-on:click="goToLevel(1, (level.levelNr - 1))">
+                            <div v-for="level in this.$store.state.levelData.grid" :key="level.levelNr" v-on:click="goToLevel(2, (level.levelNr - 1))">
                                 <span class="level-nr">{{ level.levelNr }}</span>
                             </div>
                         </div>
@@ -44,10 +44,10 @@
                 <img src="" alt="" class="watersplash-image-settings">
             </div>
 
-            <div v-if="this.$store.state.currentGame == 1">
+            <div v-if="this.$store.state.game.currentGame == 1">
                 <FlexGame :level-data="this.currentGameData.levelNr" />
             </div>
-            <div v-if="this.$store.state.currentGame == 2">
+            <div v-if="this.$store.state.game.currentGame == 2">
                 <GridGame :level-data="this.currentGameData.levelNr" />
             </div>
         </div>
@@ -84,6 +84,19 @@ export default {
         goToLevel(game, level) {
             this.currentGame = game;
             this.currentGameData.levelNr = level;
+            this.$store.state.game.currentGame = game;
+            this.$store.state.game.currentLevel = level;
+            this.$store.state.editor.editorInput = "";
+        },
+
+        openLevelSelect() {
+            if(!this.levelSelectOpen){
+                this.levelSelectOpen = true
+                this.levelSelectClassArray.push("level-select-level--active")
+            } else {
+                this.levelSelectOpen = false
+                this.levelSelectClassArray = []
+            }
         }
     },
     data: () => ({
@@ -94,17 +107,26 @@ export default {
         },
 
         levelSelectOpen: false,
+        levelSelectClassArray: [],
         levelSelectImage: LevelSelectImage,
     })
 }
 </script>
 
 <style>
+body {
+  color: var(--color-light);
+  font-family: var(--font-body), sans-serif;
+  overflow: hidden;
+}
+
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    overflow: hidden;
+}
+
+.main-container {
+  display: flex;
 }
 
 .left {

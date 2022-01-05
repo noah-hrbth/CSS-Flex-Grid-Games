@@ -3,7 +3,7 @@
         <p class="editor-text">#output {</p>
             <textarea
                 class="editor-eingabe"
-                v-model="this.editorInput"
+                v-model="this.$store.state.editor.editorInput"
                 autocomplete="off"
                 spellcheck="false"
                 placeholder="Gib hier dein CSS ein!"

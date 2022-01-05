@@ -8,8 +8,11 @@ const store = createStore({
     state: {
         levelData: LevelData,
 
-        currentGame: 0,
-        currentLevel: 0,
+        game: {
+            currentGame: 0,
+            currentLevel: 0,
+            colliding: false,
+        },
 
         settings: {
             gameLanguage: 0,
