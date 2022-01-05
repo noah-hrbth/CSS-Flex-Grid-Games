@@ -1,11 +1,11 @@
 @font-face {
   font-family: battlesbridge;
-  src: url(/assets/fonts/battlesbridge-font/BattlesbridgeDemo-AL126.ttf);
+  src: url(../fonts/battlesbridge-font/BattlesbridgeDemo-AL126.ttf);
 }
 
 @font-face {
   font-family: thedarkestpearl;
-  src: url(/assets/fonts/thedarkestpearl-font/Thedarkestpearl-9Ym8Z.ttf);
+  src: url(../fonts/thedarkestpearl-font/Thedarkestpearl-9Ym8Z.ttf);
 }
 
 :root {

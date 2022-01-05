@@ -9,17 +9,27 @@ const store = createStore({
         levelData: LevelData,
 
         currentGame: 0,
+        currentLevel: 0,
 
-        gameLanguage: 0,
+        settings: {
+            gameLanguage: 0,
+        },
+        
+        editor: {
+            editorInput: "",
+        }
     },
     getters: {
-        getLevelById: (state) => (gameId, levelId) => {           
+        getLevelById: (state) => (gameId, levelId) => {
+            state.currentGame = gameId;
+            state.currentLevel = levelId;
+            
             if(gameId == 1){
                 return state.levelData.flex[levelId]
             } else if(gameId == 2) {
                 return state.levelData.grid[levelId]
             }
-        }
+        },
     }
 })
 

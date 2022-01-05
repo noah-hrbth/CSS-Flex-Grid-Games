@@ -35,19 +35,19 @@
                 </div>
                 
                 <Settings />
+
+                <Task />
+
+                <Input />
                 
                 <img src="" alt="" class="watersplash-image-level-select">
                 <img src="" alt="" class="watersplash-image-settings">
             </div>
 
             <div v-if="this.$store.state.currentGame == 1">
-                
-
                 <FlexGame :level-data="this.currentGameData.levelNr" />
             </div>
             <div v-if="this.$store.state.currentGame == 2">
-
-
                 <GridGame :level-data="this.currentGameData.levelNr" />
             </div>
         </div>
@@ -56,12 +56,16 @@
 
 <script>
 import './assets/css/_variables.css'
+import './assets/css/_animation.css'
+import './assets/css/_reset.css'
 
 import FlexGame from './components/FlexGame.vue'
 import GridGame from './components/GridGame.vue'
 import HomeScreen from './components/HomeScreen.vue'
 import Settings from './components/Settings.vue'
 import Navigation from './components/Navigation.vue'
+import Task from './components/Task.vue'
+import Input from './components/Input.vue'
 
 import LevelSelectImage from './assets/images/level-select.png'
 
@@ -72,7 +76,9 @@ export default {
         GridGame,
         HomeScreen,
         Settings,
-        Navigation
+        Navigation,
+        Task,
+        Input
     },
     methods: {
         goToLevel(game, level) {
@@ -94,38 +100,41 @@ export default {
 </script>
 
 <style>
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  width: 100vw;
-}
-
-img {
-  object-fit: cover;
-  max-width: 100%;
-}
-
-ul {
-  list-style: none;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-}
-
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    display: flex;
+    overflow: hidden;
+}
+
+.left {
+  width: 50vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 25%;
+  grid-template-rows: 20% 7% 30% 40%;
+  grid-template-areas:
+    "Logo Logo"
+    "Levelauswahl Settings"
+    "Aufgaben Aufgaben"
+    "Editor Editor";
+  gap: 0.625rem;
+  justify-content: space-around;
+  align-items: stretch;
+  background: url(./assets/images/wood.jpg) no-repeat;
+  background-size: cover;
+  border-right: 5px solid var(--color-darker);
+}
+
+.game-logo {
+  grid-area: Logo;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+}
+
+.level-select {
+  grid-area: Levelauswahl;
+  z-index: 10;
 }
 
 .level-select-btn {
@@ -166,5 +175,19 @@ button {
 
 .level-nr {
   cursor: pointer;
+}
+
+.watersplash-image-level-select {
+  position: absolute;
+  width: 30rem;
+  top: 75%;
+  right: 80%;
+}
+
+.watersplash-image-settings {
+  position: absolute;
+  width: 20rem;
+  top: 83%;
+  left: 30%;
 }
 </style>
