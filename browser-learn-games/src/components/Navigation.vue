@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <a v-on:click="goToFlex">Flex</a>
-        <a v-on:click="goToGrid">Grid</a>
+    <div class="navigation">
+        <a class="link_button" v-on:click="goToFlex">Flex</a>
+        <a class="link_button" v-on:click="goToGrid">Grid</a>
     </div>
 </template>
 
@@ -22,6 +22,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

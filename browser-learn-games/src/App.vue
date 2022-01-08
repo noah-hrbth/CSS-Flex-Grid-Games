@@ -2,8 +2,6 @@
     <div>
         <div v-if="this.$store.state.game.currentGame == 0">
             <HomeScreen />
-
-            <Navigation />
         </div>
         <div class="main-container" v-else>
             <div class="left">
@@ -18,15 +16,11 @@
                     </button>
                     <div class="level-select-level" :class="{ 'level-select-level--active': this.levelSelectOpen }">
                         <div v-if="this.$store.state.game.currentGame == 1">
-                            <Navigation />
-
                             <div v-for="level in this.$store.state.levelData.flex" :key="level.levelNr" v-on:click="goToLevel(1, (level.levelNr - 1))">
                                 <span class="level-nr">{{ level.levelNr }}</span>
                             </div>
                         </div>
                         <div v-if="this.$store.state.game.currentGame == 2">
-                            <Navigation />
-
                             <div v-for="level in this.$store.state.levelData.grid" :key="level.levelNr" v-on:click="goToLevel(2, (level.levelNr - 1))">
                                 <span class="level-nr">{{ level.levelNr }}</span>
                             </div>
@@ -63,7 +57,6 @@ import FlexGame from './components/FlexGame.vue'
 import GridGame from './components/GridGame.vue'
 import HomeScreen from './components/HomeScreen.vue'
 import Settings from './components/Settings.vue'
-import Navigation from './components/Navigation.vue'
 import Task from './components/Task.vue'
 import Input from './components/Input.vue'
 
@@ -76,7 +69,6 @@ export default {
         GridGame,
         HomeScreen,
         Settings,
-        Navigation,
         Task,
         Input
     },

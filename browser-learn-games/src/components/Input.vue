@@ -7,6 +7,7 @@
                 autocomplete="off"
                 spellcheck="false"
                 placeholder="Gib hier dein CSS ein!"
+                autofocus
             ></textarea>
         <p class="editor-text">}</p>
     </div>
