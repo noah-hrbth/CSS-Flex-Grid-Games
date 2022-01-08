@@ -24,11 +24,8 @@ body {
 }
 
 .home {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    background-color: #cccccc;
+    height: 100vh;
+    width: 100vw;
 }
 
 .navigation {
