@@ -6,7 +6,7 @@
     <div class="main-container" v-else>
       <div class="left">
         <div class="game-logo">
-          <h1>HSD Flex Pirate</h1>
+          <h1>Flex Pirate</h1>
           <button class="back-to-home">
             <a
               @click="
