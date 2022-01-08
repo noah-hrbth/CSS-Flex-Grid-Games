@@ -47,3 +47,9 @@ Die Browser Learn Games sind 2 interaktive Lernspiele, in welchen HSD Studenten 
 ## UML Verteilungsdiagramm
 
 <img src="https://cdn.discordapp.com/attachments/898937507406839869/929425027428909077/UML_Verteilungsdiagramm.png">
+
+
+## Vue Lifecycle Diagram 
+
+<img src="https://cdn.discordapp.com/attachments/898937507406839869/929425681014751292/lifecycle.png">
+Quelle: <a href="https://vuejs.org/v2/guide/instance.html">Offiziele Vue Documentation</a>
