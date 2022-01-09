@@ -89,11 +89,78 @@ body {
 .right {
   width: 50vw;
   height: 100vh;
-  background: url(/assets/images/sand.jpg) no-repeat;
+  background: url(/assets/images/leaves.png) no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+}
+
+#board {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+  border: 12px solid #6D5720;
+}
+
+#garden, #plants, #soil, #overlay {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#overlay .plot {
+  z-index: 50;
+  background: none;
+  box-shadow: inset 2px 2px 0 rgb(255 255 255 / 5%), inset -2px -2px 0 #665235;
+}
+
+.plot {
+  width: 100%;
+  height: 100%;
+  background-color: #6F532A;
+  background-color: #836B32;
+  background-image: url(../images/dirt.svg);
+  background-size: calc(10vw - 4px);
+}
+
+#plants {
+  z-index: 30;
+}
+
+.plant, .treatment {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.treatment.carrot .bg {
+  background-color: rgba(81, 140, 179, 1);
+  /* background-image: url(../images/water.svg);
+  animation: scroll 6s linear infinite; */
+}
+
+.plant .bg, .treatment .bg {
+  width: 100%;
+  height: 100%;
+  background-position: left top;
+  background-size: calc(10vw - 4px);
+}
+
+#garden {
+  z-index: 20;
+}
+
+#soil {
+  background-color: #523D1F;
+  overflow: hidden;
 }
 
 .inner-right-player {
@@ -132,6 +199,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 50;
 }
 
 .target-treasure {
