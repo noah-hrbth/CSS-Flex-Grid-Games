@@ -8,6 +8,11 @@
   src: url(../fonts/thedarkestpearl-font/Thedarkestpearl-9Ym8Z.ttf);
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
 :root {
   --color-grey: #818088;
   --color-lightgrey: #a09faa;
@@ -15,6 +20,7 @@
   --color-dark: #8b4513;
   --color-medium: #954c2f;
   --color-light: #eeeeee;
-  --font-heading: "battlesbridge";
-  --font-body: "thedarkestpearl";
+  --font-heading: battlesbridge;
+  --font-body: thedarkestpearl, sans-serif;
+  --font-homescreen: Roboto;
 }

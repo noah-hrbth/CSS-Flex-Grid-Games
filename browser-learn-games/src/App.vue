@@ -7,15 +7,14 @@
       <div class="left">
         <div class="game-logo">
           <h1>Flex Pirate</h1>
-          <button class="back-to-home">
-            <a
-              @click="
-                this.$store.state.game.currentGame = 0;
-                this.$store.state.game.currentLevel = 0;
-              "
-              class="back-to-home-link"
-              >Zurück zur Übersicht</a
-            >
+          <button
+            class="back-to-home"
+            @click="
+              this.$store.state.game.currentGame = 0;
+              this.$store.state.game.currentLevel = 0;
+            "
+          >
+            <a class="back-to-home-link">Zurück zur Übersicht</a>
           </button>
         </div>
         <div class="level-select">
