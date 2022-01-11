@@ -24,7 +24,7 @@ body {
   gap: 0.625rem;
   justify-content: space-around;
   align-items: stretch;
-  background: url(/assets/images/wood.jpg) no-repeat;
+  background: url(/assets/images/holztextur.png) no-repeat;
   background-size: cover;
   border-right: 5px solid var(--color-darker);
 }
@@ -101,7 +101,6 @@ body {
   width: 50vw;
   height: 100vh;
   overflow: hidden;
-  border: 12px solid #6D5720;
 }
 
 #garden, #plants, #soil, #overlay {
@@ -118,7 +117,7 @@ body {
 #overlay .plot {
   z-index: 50;
   background: none;
-  box-shadow: inset 2px 2px 0 rgb(255 255 255 / 5%), inset -2px -2px 0 #665235;
+  box-shadow: inset 2px 2px 0 rgb(255 255 255 / 5%), inset -2px -2px 0 #133e14;
 }
 
 .plot {
@@ -126,7 +125,7 @@ body {
   height: 100%;
   background-color: #6F532A;
   background-color: #836B32;
-  background-image: url(../images/dirt.svg);
+  background-image: url(/assets/images/leaves.png);
   background-size: calc(10vw - 4px);
 }
 
@@ -142,7 +141,7 @@ body {
 }
 
 .treatment.carrot .bg {
-  background-color: rgba(81, 140, 179, 1);
+  /* background-color: rgba(81, 140, 179, 1); */
   /* background-image: url(../images/water.svg);
   animation: scroll 6s linear infinite; */
 }
@@ -160,6 +159,7 @@ body {
 
 #soil {
   background-color: #523D1F;
+  background-image: url(/assets/images/leaves.png);
   overflow: hidden;
 }
 
