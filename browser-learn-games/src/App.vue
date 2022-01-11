@@ -17,47 +17,14 @@
             <a class="back-to-home-link">Zurück zur Übersicht</a>
           </button>
         </div>
-        <div class="level-select">
-          <button class="level-select-btn" @click="openLevelSelect()">
-            <img
-              :src="levelSelectImage"
-              alt="Level select"
-              class="level-icon"
-            />
-          </button>
-          <div
-            class="level-select-level"
-            :class="{ 'level-select-level--active': this.levelSelectOpen }"
-          >
-            <div v-if="this.$store.state.game.currentGame == 1">
-              <div
-                v-for="level in this.$store.state.levelData.flex"
-                :key="level.levelNr"
-                v-on:click="goToLevel(1, level.levelNr - 1)"
-              >
-                <span class="level-nr">{{ level.levelNr }}</span>
-              </div>
-            </div>
-            <div v-if="this.$store.state.game.currentGame == 2">
-              <div
-                v-for="level in this.$store.state.levelData.grid"
-                :key="level.levelNr"
-                v-on:click="goToLevel(2, level.levelNr - 1)"
-              >
-                <span class="level-nr">{{ level.levelNr }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        <LevelSelect />
 
         <Settings />
 
         <Task />
 
         <Input />
-
-        <img src="" alt="" class="watersplash-image-level-select" />
-        <img src="" alt="" class="watersplash-image-settings" />
       </div>
 
       <div v-if="this.$store.state.game.currentGame == 1">
@@ -78,11 +45,10 @@ import "./assets/css/_reset.css";
 import FlexGame from "./components/FlexGame.vue";
 import GridGame from "./components/GridGame.vue";
 import HomeScreen from "./components/HomeScreen.vue";
+import LevelSelect from "./components/LevelSelect.vue";
 import Settings from "./components/Settings.vue";
 import Task from "./components/Task.vue";
 import Input from "./components/Input.vue";
-
-import LevelSelectImage from "./assets/images/level-select.png";
 
 export default {
   name: "App",
@@ -90,28 +56,10 @@ export default {
     FlexGame,
     GridGame,
     HomeScreen,
+    LevelSelect,
     Settings,
     Task,
     Input,
-  },
-  methods: {
-    goToLevel(game, level) {
-      this.currentGame = game;
-      this.currentGameData.levelNr = level;
-      this.$store.state.game.currentGame = game;
-      this.$store.state.game.currentLevel = level;
-      this.$store.state.editor.editorInput = "";
-    },
-
-    openLevelSelect() {
-      if (!this.levelSelectOpen) {
-        this.levelSelectOpen = true;
-        this.levelSelectClassArray.push("level-select-level--active");
-      } else {
-        this.levelSelectOpen = false;
-        this.levelSelectClassArray = [];
-      }
-    },
   },
   data: () => ({
     currentGame: 0,
@@ -119,11 +67,31 @@ export default {
       levelNr: 0,
       currentPosition: { x: 0, y: 0 },
     },
-
-    levelSelectOpen: false,
-    levelSelectClassArray: [],
-    levelSelectImage: LevelSelectImage,
   }),
+  methods: {
+    checkIfColliding() {
+      const player = "";
+      const target = "";
+
+      let x1 = player.offset().left;
+      let y1 = player.offset().top;
+      let h1 = player.outerHeight(true);
+      let w1 = player.outerWidth(true);
+      let b1 = y1 + h1;
+      let r1 = x1 + w1;
+      let x2 = target.offset().left;
+      let y2 = target.offset().top;
+      let h2 = target.outerHeight(true);
+      let w2 = target.outerWidth(true);
+      let b2 = y2 + h2;
+      let r2 = x2 + w2;
+
+      if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
+        return false;
+      }
+      return true;
+    },
+  },
 };
 </script>
 
@@ -185,62 +153,5 @@ body {
   text-decoration: underline;
 }
 
-.level-select {
-  grid-area: Levelauswahl;
-  z-index: 10;
-}
 
-.level-select-btn {
-  height: 100%;
-  cursor: pointer;
-}
-
-.level-icon {
-  max-height: 100%;
-}
-
-.level-select-level {
-  display: grid;
-  opacity: 0;
-  background: url(./assets/images/level-sign.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 10rem;
-  height: 21rem;
-  grid-template-columns: repeat(auto-fit, minmax(30px, 0fr));
-  padding-left: 1.5rem;
-  padding-top: 1rem;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.level-select-level--active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.level {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-}
-
-.level-nr {
-  cursor: pointer;
-}
-
-.watersplash-image-level-select {
-  position: absolute;
-  width: 30rem;
-  top: 75%;
-  right: 80%;
-}
-
-.watersplash-image-settings {
-  position: absolute;
-  width: 20rem;
-  top: 83%;
-  left: 30%;
-}
 </style>

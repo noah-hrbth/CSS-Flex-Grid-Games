@@ -1,72 +1,65 @@
 <template>
-    <div class="right">
-        <div class="inner-right-target">
-            <div class="target-container" id="target-container">
-                <img
-                class="
-                image
-                target-treasure
-                animate__animated
-                animate__bounce
-                animate__slow
-                animate__delay-1s
-                animate__infinite
-                "
-                :src="treasureImage"
-                alt="Ziel Truhe"
-                />
-            </div>
-        </div>
-        <div class="inner-right-player" v-bind:style="this.$store.state.editor.editorInput">
-            <div class="player-container" id="player-container">
-                <img
-                class="image player-pirate"
-                :src="playerPirateImage"
-                alt="Player Pirate"
-                />
-            </div>
-        </div>
+  <div class="right">
+    <div class="inner-right-target">
+      <div class="target-container" id="target-container">
+        <img
+          class="image target-treasure animate__animated animate__bounce animate__slow animate__delay-1s animate__infinite"
+          :src="treasureImage"
+          alt="Ziel Truhe"
+        />
+      </div>
     </div>
+    <div
+      class="inner-right-player"
+      v-bind:style="this.$store.state.editor.editorInput"
+    >
+      <div class="player-container" id="player-container">
+        <img
+          class="image player-pirate"
+          :src="playerPirateImage"
+          alt="Player Pirate"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import PlayerPirateImage from '../assets/images/pirate-player.png'
-import TreasureImage from '../assets/images/treasure.png'
-import WoodImage from '../assets/images/wood.jpg'
+import PlayerPirateImage from "../assets/images/pirate-player.png";
+import TreasureImage from "../assets/images/treasure.png";
+import WoodImage from "../assets/images/wood.jpg";
 
 const gameId = 1;
 
 export default {
-    name: 'FlexGame',
-    components: {
-
+  name: "FlexGame",
+  components: {},
+  props: {
+    levelData: {
+      type: Number,
     },
-    props: {
-      levelData: {
-        type: Number
-      }
+  },
+  methods: {
+    getLevelById(levelId) {
+      return this.$store.getters.getLevelById(1, levelId);
     },
-    methods: {
-      getLevelById(levelId) {
-        return this.$store.getters.getLevelById(1, levelId)
-      }
-    },
-    // mounted: {
-    //   updateLevelId() {
-    //     this.levelId = this.levelData;
-    //   }
-    // },
-    data: () => ({
-      playerPirateImage: PlayerPirateImage,
-      treasureImage: TreasureImage,
-      woodImage: WoodImage,
+  },
+  // mounted: {
+  //   updateLevelId() {
+  //     this.levelId = this.levelData;
+  //   }
+  // },
+  data: () => ({
+    playerPirateImage: PlayerPirateImage,
+    treasureImage: TreasureImage,
+    woodImage: WoodImage,
 
-      gameId: gameId,
-      levelId: 0,
+    gameId: gameId,
+    levelId: 0,
 
-      message: ""
-    })
-}
+    message: "",
+  }),
+};
 </script>
 
 <style>
@@ -126,5 +119,4 @@ export default {
 .target-treasure {
   max-width: 10rem;
 }
-
 </style>

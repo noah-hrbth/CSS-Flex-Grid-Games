@@ -52,6 +52,7 @@ export default {
   width: 100vw;
   display: flex;
 }
+
 /* 
 #canon-shoot {
   position: absolute;
@@ -135,11 +136,24 @@ export default {
 .preview-flex {
   background: url(../assets/images/wood.jpg) no-repeat;
   background-size: cover;
+  border-right: var(--color-light) 10px solid;
+  filter: grayscale(80%);
+  transition: all 0.3s;
+}
+
+.preview-flex:hover {
+  filter: grayscale(0);
 }
 
 .preview-grid {
   background-image: url(../assets/images/leaves.png);
   background-size: cover;
+  filter: grayscale(80%);
+  transition: all 0.3s;
+}
+
+.preview-grid:hover {
+  filter: grayscale(0);
 }
 
 .gametitle:first-child {

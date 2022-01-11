@@ -1,14 +1,20 @@
 <template>
   <div class="settings">
-    <button
-      class="settings-btn"
-      @click="this.settingsOpen = !this.settingsOpen"
-    >
-      <img :src="settingsIconImage" alt="Settings" class="settings-icon" />
+    <button class="settings-btn" @click="openSettings">
+      <img
+        :src="this.settingsOpen ? this.settingsBtnSrc : this.settingsIconImage"
+        alt="Settings"
+        class="settings-icon"
+      />
     </button>
     <ul
       class="settings-content"
-      :class="{ 'settings-content--active': this.settingsOpen }"
+      :class="
+        this.settingsOpen
+          ? 'swing-in-top-fwd' + ' settings-content--active'
+          : 'hinge-out-top'
+      "
+      :style="this.settingsLoaded ? '' : 'animation: none'"
     >
       <li class="settings-option language-change">
         <span>Sprache</span>
@@ -26,6 +32,7 @@
         </label>
       </li>
     </ul>
+    <img src="" alt="" class="watersplash-image-settings" />
   </div>
 </template>
 
@@ -35,10 +42,33 @@ import SettingsIconImage from "../assets/images/settings-icon.png";
 export default {
   name: "Settings",
   data: () => ({
+    watersplashSrc: require("../assets/images/watersplash-settings.gif"),
+    settingsBtnSrc: require("../assets/images/stone-close.png"),
     settingsIconImage: SettingsIconImage,
     settingsOpen: false,
+    settingsLoaded: false,
   }),
-  methods: {},
+  methods: {
+    openSettings() {
+      this.settingsOpen = !this.settingsOpen;
+      this.settingsLoaded = true;
+    },
+  },
+  mounted() {
+    const settingsBtn = document.querySelector(".settings-btn");
+    settingsBtn.addEventListener("click", () => {
+      const settingsContent = document.querySelector(".settings-content");
+
+      if (settingsContent.classList.contains("hinge-out-top")) {
+        const watersplashImageSettings = document.querySelector(
+          ".watersplash-image-settings"
+        );
+        setTimeout(() => {
+          watersplashImageSettings.src = this.watersplashSrc;
+        }, 1850);
+      }
+    });
+  },
 };
 </script>
 
@@ -47,12 +77,12 @@ export default {
   height: 100%;
   cursor: pointer;
   border-radius: 100%;
-  box-shadow: inset 0px 57px 0px -18px rgba(0, 0, 0, 0.24);
+  filter: drop-shadow(2px 4px 8px black);
 }
 
 .settings-btn:active {
   transform: scale(0.95);
-  box-shadow: inset 0px 57px 0px -18px rgba(0, 0, 0, 0.103);
+  filter: drop-shadow(2px 4px 8px black);
 }
 
 .settings-icon {
@@ -60,19 +90,18 @@ export default {
 }
 
 .settings-content {
+  position: relative;
   display: flex;
   opacity: 0;
-  background: url(../assets/images/settings-sign.png);
+  background: url(../assets/images/settings-wood-sign.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 6.625rem;
-  width: 13.313rem;
+  height: 8vw;
+  width: 14vw;
   flex-direction: column;
-  z-index: -1;
   pointer-events: none;
   gap: 0.5rem;
-  padding-left: 0.5rem;
-  padding-top: 1.5rem;
+  padding-top: 1.5vw;
+  padding-right: 1.5vw;
 }
 
 .settings-content--active {
@@ -91,11 +120,15 @@ export default {
 
 .language-change__dropdown {
   padding: 0.2rem;
-  background: var(--color-grey);
+  background: var(--color-darker);
   color: var(--color-light);
   border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.language-change__dropdown:hover {
+  background-color: var(--color-darker-focus);
 }
 
 .hint-change__switchtext {
@@ -110,14 +143,12 @@ export default {
   height: 1.5rem;
 }
 
-/* Hide default HTML checkbox */
 .hint-change__switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -125,7 +156,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-grey);
+  background: var(--color-darker);
   transition: 0.4s;
 }
 
@@ -142,23 +173,29 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: var(--color-lightgrey);
+  background-color: var(--color-darker-focus);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--color-lightgrey);
+  box-shadow: 0 0 1px var(--color-darker-focus);
 }
 
 input:checked + .slider:before {
   transform: translateX(23px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 25rem;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.watersplash-image-settings {
+  position: absolute;
+  width: 20rem;
+  top: 83%;
+  left: 30%;
 }
 </style>

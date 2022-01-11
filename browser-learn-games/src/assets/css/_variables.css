@@ -14,11 +14,11 @@
 }
 
 :root {
-  --color-grey: #818088;
+  --color-grey: #5c5b64;
   --color-lightgrey: #a09faa;
   --color-darker: #3b2718;
+  --color-darker-focus: #553822;
   --color-dark: #8b4513;
-  --color-medium: #954c2f;
   --color-light: #eeeeee;
   --font-heading: battlesbridge;
   --font-body: thedarkestpearl, sans-serif;
