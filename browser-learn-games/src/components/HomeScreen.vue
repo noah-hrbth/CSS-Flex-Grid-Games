@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <!-- <img id="canon-shoot" src="" alt=""> -->
     <div class="welcome-container">
       <p class="welcome-text">
         <span class="welcome-text-first">Willkommen!</span>
@@ -34,6 +35,8 @@ export default {
   props: {},
   methods: {
     goToFlex() {
+      // const canonShoot = document.getElementById('canon-shoot');
+      // canonShoot.src = "../assets/images/canon-shoot.gif";
       this.$store.state.game.currentGame = 1;
     },
     goToGrid() {
@@ -44,23 +47,30 @@ export default {
 </script>
 
 <style>
-
 .home {
   height: 100vh;
   width: 100vw;
   display: flex;
 }
+/* 
+#canon-shoot {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+} */
 
 .welcome-container {
   position: absolute;
   height: 100vh;
   width: 100vw;
   backdrop-filter: blur(10px);
-  animation: blur-out forwards 1.5s 1.5s;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  z-index: 10;
   pointer-events: none;
+  animation: blur-out forwards 1.5s 1.5s;
 }
 
 @keyframes blur-out {
@@ -104,11 +114,11 @@ export default {
 @keyframes change-font-size {
   from {
     font-size: 9rem;
-  color: var(--color-light);
+    color: var(--color-light);
   }
   to {
     font-size: 2rem;
-  color: #575e40;
+    color: #575e40;
   }
 }
 
