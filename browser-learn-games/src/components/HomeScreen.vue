@@ -137,7 +137,7 @@ export default {
   background: url(../assets/images/wood.jpg) no-repeat;
   background-size: cover;
   border-right: var(--color-light) 10px solid;
-  filter: grayscale(80%);
+  filter: grayscale(70%);
   transition: all 0.3s;
 }
 
@@ -148,7 +148,7 @@ export default {
 .preview-grid {
   background-image: url(../assets/images/leaves.png);
   background-size: cover;
-  filter: grayscale(80%);
+  filter: grayscale(70%);
   transition: all 0.3s;
 }
 
