@@ -160,5 +160,6 @@ export default {
   width: 30rem;
   top: 75%;
   right: 80%;
+  pointer-events: none;
 }
 </style>

@@ -197,5 +197,6 @@ input:checked + .slider:before {
   width: 20rem;
   top: 83%;
   left: 30%;
+  pointer-events: none;
 }
 </style>
