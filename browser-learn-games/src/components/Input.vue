@@ -6,15 +6,14 @@
       v-model="this.$store.state.editor.editorInput"
       autocomplete="off"
       spellcheck="false"
-      placeholder="Gib hier dein CSS ein!"
+      v-bind:placeholder="this.$store.state.languageData[this.$store.state.settings.language].inputPlaceholder"
       autofocus
     ></textarea>
     <button class="continue-btn" @click="go_to_next_level()">
       <img
         class="continue-icon"
         src="../assets/images/continue-btn.png"
-        alt="Nächstes Level"
-        title="Nächstes Level"
+        alt=""
       />
     </button>
     <p class="editor-text">}</p>

@@ -1,8 +1,18 @@
 [
   {
-    
+    "welcomeText": "Willkommen!",
+    "chooseGameText": "Wähle ein Game aus:",
+    "backToHome": "Zurück zur Übersicht",
+    "languageChange": "Sprache",
+    "hints": "Hinweise",
+    "inputPlaceholder": "Gib hier dein CSS ein!"
   },
   {
-
+    "welcomeText": "Welcome!",
+    "chooseGameText": "Choose a Game:",
+    "backToHome": "Back to home",
+    "languageChange": "Language",
+    "hints": "Hints",
+    "inputPlaceholder":"Write your CSS here!"
   }
 ]

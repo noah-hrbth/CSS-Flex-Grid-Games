@@ -1,16 +1,13 @@
 <template>
   <div class="home">
-    <div class="language-change">
-      <select id="language" class="language-change__dropdown">
-        <option value="de">Deutsch</option>
-        <option value="en">Englisch</option>
-      </select>
-    </div>
+    <LanguageChange />
     <div class="welcome-container">
       <p class="welcome-text">
-        <span class="welcome-text-first">Willkommen!</span>
+        <span class="welcome-text-first">
+          {{ this.$store.state.languageData[this.$store.state.settings.language].welcomeText }}
+        </span>
         <br />
-        Wähle ein Game aus:
+        {{ this.$store.state.languageData[this.$store.state.settings.language].chooseGameText }}
       </p>
     </div>
     <div class="preview-flex preview">
@@ -35,8 +32,13 @@
 </template>
 
 <script>
+import LanguageChange from "./LanguageChange.vue";
+
 export default {
   name: "HomeScreen",
+  components: {
+    LanguageChange
+  },
   props: {},
   methods: {
     goToFlex() {
@@ -45,6 +47,14 @@ export default {
     goToGrid() {
       this.$store.state.game.currentGame = 2;
     },
+    changeLanguage() {
+      const languageChange = document.querySelector(".language-change__dropdown");
+      if (languageChange.value == 'de') {
+        this.$store.state.settings.language = 0;
+      } else if (languageChange.value == 'en') {
+        this.$store.state.settings.language = 1;
+      }
+    }
   },
 };
 </script>
@@ -56,7 +66,7 @@ export default {
   display: flex;
 }
 
-.language-change {
+.language-change__dropdown {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -71,7 +81,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  z-index: 10;
+  z-index: 100;
   pointer-events: none;
   animation: blur-out forwards 1.5s 1.5s;
 }

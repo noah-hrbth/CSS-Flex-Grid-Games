@@ -14,7 +14,7 @@
               this.$store.state.game.currentLevel = 0;
             "
           >
-            <a class="back-to-home-link">Zurück zur Übersicht</a>
+            <a class="back-to-home-link">{{ this.$store.state.languageData[this.$store.state.settings.language].backToHome }}</a>
           </button>
         </div>
 

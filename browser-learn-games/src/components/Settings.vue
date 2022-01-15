@@ -17,15 +17,17 @@
       :style="this.settingsLoaded ? '' : 'animation: none'"
     >
       <li class="settings-option language-change">
-        <span>Sprache</span>
-        <select id="language" class="language-change__dropdown">
-          <option value="de">Deutsch</option>
-          <option value="en">Englisch</option>
-        </select>
+        <span>{{
+          this.$store.state.languageData[this.$store.state.settings.language]
+            .languageChange
+        }}</span>
+        <LanguageChange />
       </li>
       <li class="settings-option hint-change">
-        <span>Hinweise</span>
-        <span class="hint-change__switchtext"> an </span>
+        <span>{{
+          this.$store.state.languageData[this.$store.state.settings.language]
+            .hints
+        }}</span>
         <label class="hint-change__switch">
           <input type="checkbox" id="checkbox" />
           <span class="slider round"></span>
@@ -37,10 +39,14 @@
 </template>
 
 <script>
+import LanguageChange from "./LanguageChange.vue";
 import SettingsIconImage from "../assets/images/settings-icon.png";
 
 export default {
   name: "Settings",
+  components: {
+    LanguageChange
+  },
   data: () => ({
     watersplashSrc: require("../assets/images/watersplash-settings.gif"),
     settingsBtnSrc: require("../assets/images/stone-close.png"),
@@ -100,8 +106,7 @@ export default {
   flex-direction: column;
   pointer-events: none;
   gap: 0.5rem;
-  padding-top: 1.5vw;
-  padding-right: 1.5vw;
+  padding: 1.5vw 1.5vw 0 1vw;
 }
 
 .settings-content--active {
@@ -111,24 +116,11 @@ export default {
 
 .settings-option {
   display: flex;
-  justify-content: center;
-}
-
-.language-change {
   gap: 1rem;
 }
 
-.language-change__dropdown {
-  padding: 0.2rem;
-  background: var(--color-darker);
-  color: var(--color-light);
-  border: 1px solid transparent;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.language-change__dropdown:hover {
-  background-color: var(--color-darker-focus);
+.settings-option span:not(.slider) {
+  width: 5rem;
 }
 
 .hint-change__switchtext {
