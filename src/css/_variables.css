@@ -14,6 +14,7 @@
   --color-dark:   #8B4513;
   --color-medium: #954c2f;
   --color-light:  #eeeeee;
-  --font-heading:   'battlesbridge';
-  --font-body:      'thedarkestpearl';
+  --font-heading:   'Autour One', cursive;
+  --font-headline: 'Lemon Milk', sans-serif;
+  --font-body:      'PT Sans', sans-serif;
 }
