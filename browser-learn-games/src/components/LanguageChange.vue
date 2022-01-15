@@ -5,7 +5,7 @@
     @click="changeLanguage"
   >
     <option value="de">Deutsch</option>
-    <option value="en">Englisch</option>
+    <option value="en">English</option>
   </select>
 </template>
 

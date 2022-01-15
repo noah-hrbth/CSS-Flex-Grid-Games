@@ -29,7 +29,7 @@
             .hints
         }}</span>
         <label class="hint-change__switch">
-          <input type="checkbox" id="checkbox" />
+          <input type="checkbox" id="checkbox" @click="toggleHints" checked/>
           <span class="slider round"></span>
         </label>
       </li>
@@ -58,6 +58,18 @@ export default {
     openSettings() {
       this.settingsOpen = !this.settingsOpen;
       this.settingsLoaded = true;
+    },
+
+    toggleHints() {
+      const checkbox = document.getElementById('checkbox');
+      const aufgaben = document.querySelector('.aufgaben');
+      if (!checkbox.checked) {
+        aufgaben.classList.remove('slide-in-top');
+       aufgaben.classList.add('scale-out-center');
+      } else {
+        aufgaben.classList.remove('scale-out-center');
+        aufgaben.classList.add('slide-in-top');
+      }
     },
   },
   mounted() {
