@@ -1,8 +1,11 @@
 <template>
   <div class="home">
-    <button class="language-change-btn">
-      Sprache
-    </button>
+    <div class="language-change">
+      <select id="language" class="language-change__dropdown">
+        <option value="de">Deutsch</option>
+        <option value="en">Englisch</option>
+      </select>
+    </div>
     <div class="welcome-container">
       <p class="welcome-text">
         <span class="welcome-text-first">Willkommen!</span>
@@ -46,15 +49,18 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .home {
   height: 100vh;
   width: 100vw;
   display: flex;
 }
 
-.language-change-btn {
-  position: fixed;
+.language-change {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
 }
 
 .welcome-container {
