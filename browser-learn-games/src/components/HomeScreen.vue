@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <!-- <img id="canon-shoot" src="" alt=""> -->
+    <button class="language-change-btn">
+      Sprache
+    </button>
     <div class="welcome-container">
       <p class="welcome-text">
         <span class="welcome-text-first">Willkommen!</span>
@@ -35,8 +37,6 @@ export default {
   props: {},
   methods: {
     goToFlex() {
-      // const canonShoot = document.getElementById('canon-shoot');
-      // canonShoot.src = "../assets/images/canon-shoot.gif";
       this.$store.state.game.currentGame = 1;
     },
     goToGrid() {
@@ -53,13 +53,9 @@ export default {
   display: flex;
 }
 
-/* 
-#canon-shoot {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  pointer-events: none;
-} */
+.language-change-btn {
+  position: fixed;
+}
 
 .welcome-container {
   position: absolute;

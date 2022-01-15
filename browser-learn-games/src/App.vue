@@ -17,7 +17,7 @@
             <a class="back-to-home-link">Zurück zur Übersicht</a>
           </button>
         </div>
-        
+
         <LevelSelect />
 
         <Settings />
@@ -68,28 +68,51 @@ export default {
       currentPosition: { x: 0, y: 0 },
     },
   }),
+  beforeMount() {
+    this.checkCookie();
+  },
   methods: {
-    checkIfColliding() {
-      const player = "";
-      const target = "";
+    getLevel() {
+      return this.$store.state.game.currentLevel;
+    },
 
-      let x1 = player.offset().left;
-      let y1 = player.offset().top;
-      let h1 = player.outerHeight(true);
-      let w1 = player.outerWidth(true);
-      let b1 = y1 + h1;
-      let r1 = x1 + w1;
-      let x2 = target.offset().left;
-      let y2 = target.offset().top;
-      let h2 = target.outerHeight(true);
-      let w2 = target.outerWidth(true);
-      let b2 = y2 + h2;
-      let r2 = x2 + w2;
+    setCookie(
+      cookieName = "isOnLevel",
+      level = this.getLevel(),
+      expireDays = 30
+    ) {
+      let date = new Date();
+      date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
+      let expires = date.toUTCString();
 
-      if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
-        return false;
+      document.cookie = `${cookieName}=${level}; ${expires}; path=/`;
+    },
+
+    getCookie(cookieName = "isOnLevel") {
+      let name = `${cookieName}=`;
+      // Falls Cookie Sonderzeichen wie $ beinhaltet
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let cookieArray = decodedCookie.split(";");
+
+      for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) === " ") {
+          cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+          return cookie.substring(name.length, cookie.length);
+        }
       }
-      return true;
+      return "";
+    },
+
+    checkCookie() {
+      let level = this.getCookie();
+      if (level !== "") {
+        // this.$store.state.game.levelNr(level);
+      } else {
+        this.setCookie();
+      }
     },
   },
 };
@@ -152,6 +175,4 @@ body {
 .back-to-home:hover .back-to-home-link {
   text-decoration: underline;
 }
-
-
 </style>
