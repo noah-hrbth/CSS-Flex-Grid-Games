@@ -4,8 +4,8 @@
     class="language-change__dropdown"
     @click="changeLanguage"
   >
-    <option value="de">Deutsch</option>
-    <option value="en">English</option>
+    <option value="de" id="language-de">Deutsch</option>
+    <option value="en" id="language-en">English</option>
   </select>
 </template>
 
