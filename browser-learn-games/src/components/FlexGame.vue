@@ -1,47 +1,95 @@
 <template>
   <div class="right">
     <div class="inner-right-target">
-      <div class="target-container" id="target-container" :style="this.getLevelById(this.$store.state.game.currentLevel).solution">
+      <div
+        class="target-container"
+        id="target-container-1"
+        :style="this.getLevelById(this.$store.state.game.currentLevel).solution"
+      >
         <img
           class="image target-treasure animate__animated animate__bounce animate__slow animate__delay-1s animate__infinite"
           :src="treasureImage"
           alt="Ziel Truhe"
         />
+
+        <img src="../assets/images/coin.gif" alt="" class="coin-gif" />
       </div>
-      <div class="target-container" id="target-container" :style="[this.getLevelById(this.$store.state.game.currentLevel).solution, this.getLevelById(this.$store.state.game.currentLevel).playerAmount > 1 ? '' : 'display:none;']">
+      <div
+        class="target-container"
+        id="target-container-2"
+        :style="[
+          this.getLevelById(this.$store.state.game.currentLevel).solution,
+          this.getLevelById(this.$store.state.game.currentLevel).playerAmount >
+          1
+            ? ''
+            : 'display:none;',
+        ]"
+      >
         <img
           class="image target-treasure animate__animated animate__bounce animate__slow animate__delay-1s animate__infinite"
           :src="treasureBlueImage"
           alt="Ziel Truhe"
         />
+
+        <img src="../assets/images/coin.gif" alt="" class="coin-gif" />
       </div>
-      <div class="target-container" id="target-container" :style="[this.getLevelById(this.$store.state.game.currentLevel).solution, this.getLevelById(this.$store.state.game.currentLevel).playerAmount > 2 ? '' : 'display:none;']">
+      <div
+        class="target-container"
+        id="target-container-3"
+        :style="[
+          this.getLevelById(this.$store.state.game.currentLevel).solution,
+          this.getLevelById(this.$store.state.game.currentLevel).playerAmount >
+          2
+            ? ''
+            : 'display:none;',
+        ]"
+      >
         <img
           class="image target-treasure animate__animated animate__bounce animate__slow animate__delay-1s animate__infinite"
           :src="treasureYellowImage"
           alt="Ziel Truhe"
         />
+
+        <img src="../assets/images/coin.gif" alt="" class="coin-gif" />
       </div>
     </div>
     <div
       class="inner-right-player"
       v-bind:style="this.$store.state.editor.editorInput"
     >
-      <div class="player-container" id="player-container">
+      <div class="player-container" id="player-container-1">
         <img
           class="image player-pirate"
           :src="playerPirateImage"
           alt="Player Pirate"
         />
       </div>
-      <div class="player-container" id="player-container" :style="this.getLevelById(this.$store.state.game.currentLevel).playerAmount > 1 ? '' : 'display:none;'">
+      <div
+        class="player-container"
+        id="player-container-2"
+        :style="
+          this.getLevelById(this.$store.state.game.currentLevel).playerAmount >
+          1
+            ? ''
+            : 'display:none;'
+        "
+      >
         <img
           class="image player-pirate"
           :src="playerPirateBlueImage"
           alt="Player Pirate"
         />
       </div>
-      <div class="player-container" id="player-container" :style="this.getLevelById(this.$store.state.game.currentLevel).playerAmount > 2 ? '' : 'display:none;'">
+      <div
+        class="player-container"
+        id="player-container-3"
+        :style="
+          this.getLevelById(this.$store.state.game.currentLevel).playerAmount >
+          2
+            ? ''
+            : 'display:none;'
+        "
+      >
         <img
           class="image player-pirate"
           :src="playerPirateYellowImage"
@@ -49,7 +97,6 @@
         />
       </div>
     </div>
-    <img src="../assets/images/coin.gif" alt="" class="coin-gif">
   </div>
 </template>
 
@@ -72,16 +119,7 @@ export default {
       type: Number,
     },
   },
-  methods: {
-    getLevelById(levelId) {
-      return this.$store.getters.getLevelById(1, levelId);
-    },
-  },
-  // mounted: {
-  //   updateLevelId() {
-  //     this.levelId = this.levelData;
-  //   }
-  // },
+
   data: () => ({
     playerPirateImage: PlayerPirateImage,
     playerPirateBlueImage: PlayerPirateBlueImage,
@@ -96,6 +134,36 @@ export default {
 
     message: "",
   }),
+  methods: {
+    getLevelById(levelId) {
+      return this.$store.getters.getLevelById(1, levelId);
+    },
+
+    isCollision(div1, div2) {
+      let x1 = div1.getBoundingClientRect().left;
+      let y1 = div1.getBoundingClientRect().top;
+      let h1 = div1.offsetHeight();
+      let w1 = div1.offsetWidth();
+      let b1 = y1 + h1;
+      let r1 = x1 + w1;
+      let x2 = div2.getBoundingClientRect().left;
+      let y2 = div2.getBoundingClientRect().top;
+      let h2 = div2.offsetHeight();
+      let w2 = div2.offsetWidth();
+      let b2 = y2 + h2;
+      let r2 = x2 + w2;
+
+      if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
+        return false;
+      }
+      return true;
+    },
+  },
+  // mounted: {
+  //   updateLevelId() {
+  //     this.levelId = this.levelData;
+  //   }
+  // },
 };
 </script>
 

@@ -25,6 +25,13 @@ export default {
       }
     },
   },
+  mounted() {
+    if (this.$store.state.settings.language == 0) {
+      document.querySelector("#language-de").setAttribute("selected", true);
+    } else if (this.$store.state.settings.language == 1) {
+      document.querySelector("#language-en").setAttribute("selected", true);
+    }
+  },
 };
 </script>
 
