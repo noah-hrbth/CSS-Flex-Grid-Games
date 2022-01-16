@@ -21,6 +21,7 @@
         />
       </div>
     </div>
+    <img src="../assets/images/coin.gif" alt="" class="coin-gif">
   </div>
 </template>
 
@@ -101,7 +102,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .player-pirate {
@@ -118,5 +119,11 @@ export default {
 
 .target-treasure {
   max-width: 10rem;
+}
+
+.coin-gif {
+  position: absolute;
+  bottom: 13rem;
+  z-index: 100;
 }
 </style>

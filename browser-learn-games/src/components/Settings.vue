@@ -29,7 +29,7 @@
             .hints
         }}</span>
         <label class="hint-change__switch">
-          <input type="checkbox" id="checkbox" @click="toggleHints" checked/>
+          <input type="checkbox" id="checkbox" @click="toggleHints" checked />
           <span class="slider round"></span>
         </label>
       </li>
@@ -45,7 +45,7 @@ import SettingsIconImage from "../assets/images/settings-icon.png";
 export default {
   name: "Settings",
   components: {
-    LanguageChange
+    LanguageChange,
   },
   data: () => ({
     watersplashSrc: require("../assets/images/watersplash-settings.gif"),
@@ -61,14 +61,14 @@ export default {
     },
 
     toggleHints() {
-      const checkbox = document.getElementById('checkbox');
-      const aufgaben = document.querySelector('.aufgaben');
+      const checkbox = document.getElementById("checkbox");
+      const aufgaben = document.querySelector(".aufgaben");
       if (!checkbox.checked) {
-        aufgaben.classList.remove('slide-in-top');
-       aufgaben.classList.add('scale-out-center');
+        aufgaben.classList.remove("slide-in-top");
+        aufgaben.classList.add("scale-out-center");
       } else {
-        aufgaben.classList.remove('scale-out-center');
-        aufgaben.classList.add('slide-in-top');
+        aufgaben.classList.remove("scale-out-center");
+        aufgaben.classList.add("slide-in-top");
       }
     },
   },

@@ -191,8 +191,7 @@ export default {
 .signature {
   position: absolute;
   bottom: 0;
-  margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
+  left: 1rem;
   font-family: sans-serif;
 }
 </style>
