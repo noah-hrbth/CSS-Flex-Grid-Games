@@ -11,7 +11,6 @@
           :src="treasureImage"
           alt="Ziel Truhe"
         />
-
         <img src="../assets/images/coin.gif" alt="" class="coin-gif" />
       </div>
       <div
@@ -142,14 +141,14 @@ export default {
     isCollision(div1, div2) {
       let x1 = div1.getBoundingClientRect().left;
       let y1 = div1.getBoundingClientRect().top;
-      let h1 = div1.offsetHeight();
-      let w1 = div1.offsetWidth();
+      let h1 = div1.offsetHeight;
+      let w1 = div1.offsetWidth;
       let b1 = y1 + h1;
       let r1 = x1 + w1;
       let x2 = div2.getBoundingClientRect().left;
       let y2 = div2.getBoundingClientRect().top;
-      let h2 = div2.offsetHeight();
-      let w2 = div2.offsetWidth();
+      let h2 = div2.offsetHeight;
+      let w2 = div2.offsetWidth;
       let b2 = y2 + h2;
       let r2 = x2 + w2;
 
