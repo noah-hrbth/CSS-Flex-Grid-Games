@@ -28,6 +28,7 @@
         v-on:click="goToGrid"
       />
     </div>
+    <p class="signature">Made with &#10084;&#65039; by Browser-Learn-Games Team</p>
   </div>
 </template>
 
@@ -185,5 +186,13 @@ export default {
 
 .game-preview-gif:hover {
   transform: scale(1.05);
+}
+
+.signature {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  font-family: sans-serif;
 }
 </style>
