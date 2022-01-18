@@ -3,7 +3,7 @@
     <p class="editor-text">#sand {</p>
     <textarea
       class="editor-eingabe"
-      v-model="this.$store.state.editor.editorInput"
+      v-model="editorInput"
       autocomplete="off"
       spellcheck="false"
       v-bind:placeholder="this.$store.state.languageData[this.$store.state.settings.language].inputPlaceholder"
@@ -39,7 +39,44 @@ export default {
         this.$store.state.game.currentLevel += 1;
       }
     },
+
+    isCollision(div1, div2) {
+      let x1 = div1.getBoundingClientRect().left;
+      let y1 = div1.getBoundingClientRect().top;
+      let h1 = div1.offsetHeight;
+      let w1 = div1.offsetWidth;
+      let b1 = y1 + h1;
+      let r1 = x1 + w1;
+      let x2 = div2.getBoundingClientRect().left;
+      let y2 = div2.getBoundingClientRect().top;
+      let h2 = div2.offsetHeight;
+      let w2 = div2.offsetWidth;
+      let b2 = y2 + h2;
+      let r2 = x2 + w2;
+
+      if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
+        console.log("no collision")
+        return false;
+      }
+      console.log("collision")
+      return true;
+    },
   },
+  watch: {
+    editorInput: function() {
+      this.$store.state.editor.editorInput = this.editorInput;
+
+      for(let i = 0; i < this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel).playerAmount; i++){
+        let pId = "player-container-" + (i + 1);
+        let tId = "target-container-" + (i + 1);
+
+        let p = document.getElementById(pId);
+        let t = document.getElementById(tId);
+
+        this.isCollision(p, t)
+      }
+    }
+  }
 };
 </script>
 
