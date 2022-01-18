@@ -1,6 +1,11 @@
 <template>
   <div class="editor">
-    <p class="editor-text">#sand {</p>
+    <p class="editor-text">
+      #sand { <br>
+      &nbsp; &nbsp; display: flex; <br>
+      &nbsp; &nbsp; justify-content: center;<br>
+      }
+    </p>
     <textarea
       class="editor-eingabe"
       v-model="editorInput"
@@ -9,14 +14,14 @@
       v-bind:placeholder="this.$store.state.languageData[this.$store.state.settings.language].inputPlaceholder"
       autofocus
     ></textarea>
-    <button class="continue-btn" @click="go_to_next_level()">
+    <pre class="editor-text">}</pre>
+    <!-- <button class="continue-btn" @click="go_to_next_level()">
       <img
         class="continue-icon"
         src="../assets/images/continue-btn.png"
         alt=""
       />
-    </button>
-    <p class="editor-text">}</p>
+    </button> -->
   </div>
 </template>
 
@@ -84,30 +89,34 @@ export default {
 .editor {
   grid-area: Editor;
   margin-bottom: 10rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .editor-text {
-  font-size: 1.75rem;
+  font-size: 1.35rem;
   font-weight: bold;
-  word-spacing: 0.5rem;
+  font-family: sans-serif;
 }
 
 .editor-eingabe {
-  max-width: 64%;
-  min-width: 45%;
-  max-height: 95%;
-  min-height: 35%;
-  font-size: 1.25rem;
+  margin: 1% 0 1% 4.2%;
+  resize: none;
+  font-size: 1.35rem;
   font-weight: bold;
-  color: var(--color-light);
-  background-color: var(--color-darker);
-  margin: 0.5rem 0;
-  padding: 0.2rem 1.25rem;
+  border: 0;
   outline: 0;
-  border-radius: 10px;
-  border: 3px solid transparent;
+  border-radius: 5px;
+  background-color: var(--color-darker);
+  width: 80%;
+  min-height: 60%;
+  color: var(--color-light);
+  padding: 0.2rem;
+  font-family: sans-serif;
 }
 
+/*
 .editor-eingabe:focus {
   background-color: var(--color-darker-focus);
 }
@@ -126,5 +135,5 @@ export default {
 
 .continue-icon {
   max-height: 4rem;
-}
+} */
 </style>
