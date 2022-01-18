@@ -4,8 +4,6 @@
       "levelNr": 1,
       "levelTitle": "justify-content",
       "levelTxt": "Willkommen bei Flex Pirate, einem Spiel, in welchem du Duffy und seiner Crew hilfst, indem du CSS-Code schreibst! Führe Duffy zum X, welches den Schatz markiert, indem du die justify-content-Eigenschaft verwendest, die Elemente horizontal ausrichtet und die folgenden Werte akzeptiert: \nflex-start: Elemente an der linken Seite des Containers ausrichten. \nflex-end: Elemente an der rechten Seite des Containers ausrichten. \ncenter: Elemente an der Mitte des Containers ausrichten. \nspace-between: Elemente mit gleichem Innenabstand ausrichten. \nspace-around: Elemente mit gleichem Außenabstand ausrichten. \nMit justify-content: flex-end; bewegst du Duffy zum Beispiel nach rechts.",
-      "playerPos": [[0], [0]],
-      "targetPos": [[5], [0]],
       "playerAmount": 1,
       "solution": "justify-content: center; align-items: center"
     },
@@ -30,9 +28,13 @@
     {
       "levelNr": 4,
       "levelTitle": "justify-content",
-      "levelTxt": "Willkommen bei Flex Pirate, einem Spiel, in welchem du Duffy und seiner Crew hilfst, indem du CSS-Code schreibst! Führe Duffy zum X, welches den Schatz markiert, indem du die justify-content-Eigenschaft verwendest, die Elemente horizontal ausrichtet und die folgenden Werte akzeptiert: \nflex-start: Elemente an der linken Seite des Containers ausrichten. \nflex-end: Elemente an der rechten Seite des Containers ausrichten. \ncenter: Elemente an der Mitte des Containers ausrichten. \nspace-between: Elemente mit gleichem Innenabstand ausrichten. \nspace-around: Elemente mit gleichem Außenabstand ausrichten. \nMit justify-content: flex-end; bewegst du Duffy zum Beispiel nach rechts.",
-      "playerPos": [[0], [0]],
-      "targetPos": [[5], [0]]
+      "levelTxt": [
+        "LevelTxtDe",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "playerAmount": 3,
+      "solution": "display: none;" 
     },
     {
       "levelNr": 5,
@@ -158,16 +160,14 @@
     {
       "levelNr": 1,
       "levelTitle": "justify-content",
-      "levelTxt": "Willkommen bei Flex Pirate, einem Spiel, in welchem du Duffy und seiner Crew hilfst, indem du CSS-Code schreibst! Führe Duffy zum X, welches den Schatz markiert, indem du die justify-content-Eigenschaft verwendest, die Elemente horizontal ausrichtet und die folgenden Werte akzeptiert: \nflex-start: Elemente an der linken Seite des Containers ausrichten. \nflex-end: Elemente an der rechten Seite des Containers ausrichten. \ncenter: Elemente an der Mitte des Containers ausrichten. \nspace-between: Elemente mit gleichem Innenabstand ausrichten. \nspace-around: Elemente mit gleichem Außenabstand ausrichten. \nMit justify-content: flex-end; bewegst du Duffy zum Beispiel nach rechts.",
-      "playerPos": [[0], [0]],
-      "targetPos": [[5], [0]]
-    },
-    {
-      "levelNr": 2,
-      "levelTitle": "whatever lvl2",
-      "levelTxt": "Willkommen bei Flex Pirate, einnte mit glichten. \nMit justify-content: flex-end; bewegst du Duffy zum Beispiel nach rechts.",
-      "playerPos": [[0], [0]],
-      "targetPos": [[5], [0]]
+      "levelTxt": [
+        "LevelTxtDe",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "justify-content: center; align-items: center",
+      "targetPos": "justify-content: center; align-items: center"
     }
   ]
 }
