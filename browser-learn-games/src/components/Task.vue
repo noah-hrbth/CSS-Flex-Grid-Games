@@ -9,7 +9,7 @@
     <p class="aufgaben-text">
       {{
         this.$store.getters.getLevelById(1, this.$store.state.game.currentLevel)
-          .levelTxt
+          .levelTxt[this.$store.state.settings.language]
       }}
     </p>
   </div>

@@ -10,7 +10,10 @@
     {
       "levelNr": 2,
       "levelTitle": "whatever lvl2",
-      "levelTxt": "Willkommen bei Flex Pirate, einnte mit glichten. \nMit justify-content: flex-end; bewegst du Duffy zum Beispiel nach rechts.",
+      "levelTxt": [
+        "LevelTxtDe",
+        "LevelTxtEn"
+      ],
       "playerPos": [[0], [0]],
       "targetPos": [[5], [0]],
       "playerAmount": 2,
@@ -19,7 +22,10 @@
     {
       "levelNr": 3,
       "levelTitle": "whatever lvl3",
-      "levelTxt": "YOHOOOO \nMit justify-content: flex-end; bewegst du Duffy zum Beispiel nach rechts.",
+      "levelTxt": [
+        "LevelTxtDe",
+        "LevelTxtEn"
+      ],
       "playerPos": [[0], [0]],
       "targetPos": [[5], [0]],
       "playerAmount": 3,
