@@ -10,6 +10,8 @@ body {
   display: flex;
 }
 
+
+
 .left {
   width: 50vw;
   height: 100vh;
@@ -73,6 +75,22 @@ body {
 .editor {
   grid-area: Editor;
   margin-bottom: 10rem;
+}
+
+.continue-btn {
+  margin-left: 1.5vw;
+  cursor: pointer;
+  border-radius: 100%;
+  filter: drop-shadow(2px 4px 8px black);
+}
+
+.continue-btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0px 57px 0px -18px rgba(0, 0, 0, 0.103);
+}
+
+.continue-icon {
+  max-height: 4rem;
 }
 
 .watersplash-image-level-select {
