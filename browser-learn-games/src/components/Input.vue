@@ -116,11 +116,11 @@ export default {
   font-family: sans-serif;
 }
 
-/*
 .editor-eingabe:focus {
   background-color: var(--color-darker-focus);
 }
 
+/*
 .continue-btn {
   margin-left: 1.5vw;
   cursor: pointer;
