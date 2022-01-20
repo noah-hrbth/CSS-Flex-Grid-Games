@@ -7,7 +7,7 @@
         :style="this.getLevelById(this.$store.state.game.currentLevel).solution"
       >
         <img
-          class="image target-treasure animate__animated animate__bounce animate__slow animate__delay-1s animate__infinite"
+          class="image target-treasure"
           :src="treasureImage"
           alt="Ziel Truhe"
         />
@@ -25,7 +25,7 @@
         ]"
       >
         <img
-          class="image target-treasure animate__animated animate__bounce animate__slow animate__delay-1s animate__infinite"
+          class="image target-treasure"
           :src="treasureBlueImage"
           alt="Ziel Truhe"
         />
@@ -44,7 +44,7 @@
         ]"
       >
         <img
-          class="image target-treasure animate__animated animate__bounce animate__slow animate__delay-1s animate__infinite"
+          class="image target-treasure"
           :src="treasureYellowImage"
           alt="Ziel Truhe"
         />
@@ -54,7 +54,10 @@
     </div>
     <div
       class="inner-right-player"
-      v-bind:style="this.$store.state.editor.editorInput"
+      v-bind:style="
+      this.$store.state.editor.editorInput
+      
+      "
     >
       <div class="player-container" id="player-container-1">
         <img
@@ -138,11 +141,6 @@ export default {
       return this.$store.getters.getLevelById(1, levelId);
     },
   },
-  // mounted: {
-  //   updateLevelId() {
-  //     this.levelId = this.levelData;
-  //   }
-  // },
 };
 </script>
 
