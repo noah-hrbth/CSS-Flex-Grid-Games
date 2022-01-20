@@ -18,14 +18,19 @@
       "
       autofocus
     ></textarea>
-    <pre class="editor-text">}</pre>
-    <!-- <button class="continue-btn" @click="go_to_next_level()">
+    <p class="editor-text">}</p>
+    <button
+      class="continue-btn"
+      @click="go_to_next_level()"
+      style="display: none"
+      onclick="document.querySelector('.editor-eingabe').value = ''"
+    >
       <img
         class="continue-icon"
         src="../assets/images/continue-btn.png"
         alt=""
       />
-    </button> -->
+    </button>
   </div>
 </template>
 
@@ -134,12 +139,13 @@ export default {
   background-color: var(--color-darker-focus);
 }
 
-/*
 .continue-btn {
-  margin-left: 1.5vw;
   cursor: pointer;
   border-radius: 100%;
   filter: drop-shadow(2px 4px 8px black);
+  position: absolute;
+  left: 30vw;
+  top: 35vw;
 }
 
 .continue-btn:active {
@@ -149,5 +155,5 @@ export default {
 
 .continue-icon {
   max-height: 4rem;
-} */
+}
 </style>
