@@ -21,7 +21,7 @@
     <p class="editor-text">}</p>
     <button
       class="continue-btn"
-      @click="go_to_next_level();"
+      @click="go_to_next_level()"
       style="display: none"
       onclick="document.querySelector('.editor-eingabe').value = ''"
     >
@@ -70,9 +70,11 @@ export default {
 
       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
         document.querySelector(".continue-btn").style.display = "none";
+        document.querySelector(".coin-gif").style.display = "none";
         return false;
       }
       document.querySelector(".continue-btn").style.display = "block";
+      document.querySelector(".coin-gif").style.display = "block";
       return true;
     },
   },

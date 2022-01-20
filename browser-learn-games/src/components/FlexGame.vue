@@ -204,5 +204,6 @@ export default {
   position: absolute;
   bottom: 13rem;
   z-index: 100;
+  display: none;
 }
 </style>
