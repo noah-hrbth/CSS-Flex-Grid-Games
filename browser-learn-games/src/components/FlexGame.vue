@@ -11,7 +11,7 @@
           :src="treasureImage"
           alt="Ziel Truhe"
         />
-        <img src="../assets/images/coin.gif" alt="" class="coin-gif" />
+        <img src="../assets/images/coin.gif" alt="" class="coin-gif" :style="this.$store.state.game.colliding ? '' : 'display: none;'" />
       </div>
       <div
         class="target-container"
@@ -108,8 +108,6 @@ import TreasureBlueImage from "../assets/images/treasure-blue.png";
 import TreasureYellowImage from "../assets/images/treasure-yellow.png";
 import WoodImage from "../assets/images/wood.jpg";
 
-const gameId = 1;
-
 export default {
   name: "FlexGame",
   components: {},
@@ -127,9 +125,6 @@ export default {
     treasureBlueImage: TreasureBlueImage,
     treasureYellowImage: TreasureYellowImage,
     woodImage: WoodImage,
-
-    gameId: gameId,
-    levelId: 0,
 
     message: "",
   }),

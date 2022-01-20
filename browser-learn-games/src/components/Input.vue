@@ -64,15 +64,15 @@ export default {
       let r2 = x2 + w2;
 
       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
-        console.log("no collision");
+        this.$store.state.game.colliding = false;
         return false;
       }
-      console.log("collision");
+      this.$store.state.game.colliding = true;
       return true;
     },
   },
   watch: {
-    editorInput: function () {
+    editorInput: async function () {
       this.$store.state.editor.editorInput = this.editorInput;
 
       for (
@@ -90,7 +90,9 @@ export default {
         let p = document.getElementById(pId);
         let t = document.getElementById(tId);
 
-        this.isCollision(p, t);
+        await this.$nextTick()
+
+        this.isCollision(p, t)
       }
     },
   },
