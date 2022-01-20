@@ -4,7 +4,7 @@
       "levelNr": 1,
       "levelTitle": "justify-content",
       "levelTxt": [
-        "Halloooo Welt!",
+        "<span>Halloooo Welt!</span><br>na wie gehts?",
         "Helloooo World!"
       ],
       "playerAmount": 1,
@@ -41,9 +41,9 @@
         "LevelTxtDe",
         "LevelTxtEn"
       ],
-      "preTxt": "",
+      "preTxt": "#sand { <br> &nbsp; &nbsp; display: flex; <br>",
       "playerAmount": 3,
-      "solution": "display: none;" 
+      "solution": "justify-content: center; align-items: center" 
     },
     {
       "levelNr": 5,

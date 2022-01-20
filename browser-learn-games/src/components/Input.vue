@@ -1,17 +1,21 @@
 <template>
   <div class="editor">
-    <p class="editor-text">
-      #sand { <br>
-      &nbsp; &nbsp; display: flex; <br>
-      &nbsp; &nbsp; justify-content: center;<br>
-      }
-    </p>
+    <p
+      class="editor-text"
+      v-html="
+        this.$store.getters.getLevelById(1, this.$store.state.game.currentLevel)
+          .preTxt
+      "
+    ></p>
     <textarea
       class="editor-eingabe"
       v-model="editorInput"
       autocomplete="off"
       spellcheck="false"
-      v-bind:placeholder="this.$store.state.languageData[this.$store.state.settings.language].inputPlaceholder"
+      v-bind:placeholder="
+        this.$store.state.languageData[this.$store.state.settings.language]
+          .inputPlaceholder
+      "
       autofocus
     ></textarea>
     <pre class="editor-text">}</pre>
@@ -33,7 +37,7 @@ export default {
   }),
   methods: {
     is_last_level() {
-      if ((this.$store.state.game.currentLevel + 1) == null) {
+      if (this.$store.state.game.currentLevel + 1 == null) {
         return true;
       }
       return false;
@@ -60,28 +64,36 @@ export default {
       let r2 = x2 + w2;
 
       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
-        console.log("no collision")
+        console.log("no collision");
         return false;
       }
-      console.log("collision")
+      console.log("collision");
       return true;
     },
   },
   watch: {
-    editorInput: function() {
+    editorInput: function () {
       this.$store.state.editor.editorInput = this.editorInput;
 
-      for(let i = 0; i < this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel).playerAmount; i++){
+      for (
+        let i = 0;
+        i <
+        this.$store.getters.getLevelById(
+          this.$store.state.game.currentGame,
+          this.$store.state.game.currentLevel
+        ).playerAmount;
+        i++
+      ) {
         let pId = "player-container-" + (i + 1);
         let tId = "target-container-" + (i + 1);
 
         let p = document.getElementById(pId);
         let t = document.getElementById(tId);
 
-        this.isCollision(p, t)
+        this.isCollision(p, t);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

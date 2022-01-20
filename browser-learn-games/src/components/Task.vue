@@ -6,12 +6,13 @@
           .levelTitle
       }}
     </h2>
-    <p class="aufgaben-text">
-      {{
+    <p
+      class="aufgaben-text"
+      v-html="
         this.$store.getters.getLevelById(1, this.$store.state.game.currentLevel)
           .levelTxt[this.$store.state.settings.language]
-      }}
-    </p>
+      "
+    ></p>
   </div>
 </template>
 
