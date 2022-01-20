@@ -11,7 +11,7 @@
           :src="treasureImage"
           alt="Ziel Truhe"
         />
-        <img src="../assets/images/coin.gif" alt="" class="coin-gif" :style="this.$store.state.game.colliding ? '' : 'display: none;'" />
+        <img src="../assets/images/coin.gif" alt="" class="coin-gif" :style="this.$store.state.game.colliding ? 'display:block;' : 'display: none;'" />
       </div>
       <div
         class="target-container"
