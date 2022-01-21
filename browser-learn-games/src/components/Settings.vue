@@ -91,6 +91,11 @@ export default {
 </script>
 
 <style>
+.settings {
+  grid-area: Settings;
+  z-index: 100;
+}
+
 .settings-btn {
   height: 100%;
   cursor: pointer;

@@ -23,7 +23,7 @@
       class="continue-btn"
       @click="go_to_next_level()"
       style="display: none"
-      onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
+      onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(coin => coin.style.display = 'none')"
     >
       <img
         class="continue-icon"
@@ -115,6 +115,7 @@ export default {
   width: 30rem;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 
 .editor-text {

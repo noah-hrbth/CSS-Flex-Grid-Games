@@ -123,6 +123,7 @@ body {
   color: var(--color-light);
   font-family: var(--font-body), sans-serif;
   overflow: hidden;
+  user-select: none;
 }
 
 #app {

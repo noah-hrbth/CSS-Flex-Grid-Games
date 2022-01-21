@@ -99,7 +99,7 @@ export default {
 
 <style>
 .level-select {
-  z-index: 10;
+  z-index: 100;
 }
 
 .level-select-btn {

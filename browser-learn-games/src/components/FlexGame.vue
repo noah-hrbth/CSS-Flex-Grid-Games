@@ -162,11 +162,6 @@ export default {
 </script>
 
 <style>
-.settings {
-  grid-area: Settings;
-  z-index: 10;
-}
-
 .right {
   width: 50vw;
   height: 100vh;
