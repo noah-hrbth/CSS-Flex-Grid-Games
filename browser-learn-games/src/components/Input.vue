@@ -23,7 +23,7 @@
       class="continue-btn"
       @click="go_to_next_level()"
       style="display: none"
-      onclick="document.querySelector('.editor-eingabe').value = ''"
+      onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
     >
       <img
         class="continue-icon"
@@ -49,6 +49,8 @@ export default {
     },
 
     go_to_next_level() {
+      this.$store.state.editor.editorInput = "";
+      
       if (this.is_last_level() === false) {
         this.$store.state.game.currentLevel += 1;
       }
@@ -70,9 +72,11 @@ export default {
 
       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
         this.$store.state.game.colliding = false;
+        document.querySelector(".continue-btn").style.display = "none";
         return false;
       }
       this.$store.state.game.colliding = true;
+      document.querySelector(".continue-btn").style.display = "block";
       return true;
     },
   },
@@ -95,9 +99,9 @@ export default {
         let p = document.getElementById(pId);
         let t = document.getElementById(tId);
 
-        await this.$nextTick()
+        await this.$nextTick();
 
-        this.isCollision(p, t)
+        this.isCollision(p, t);
       }
     },
   },

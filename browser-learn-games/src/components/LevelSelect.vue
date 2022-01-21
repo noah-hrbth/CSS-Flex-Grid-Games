@@ -24,7 +24,7 @@
           :key="level.levelNr"
           v-on:click="goToLevel(1, level.levelNr - 1)"
           class="level-nr"
-          onclick="document.querySelector('.editor-eingabe').value = ''"
+          onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
         >
           <span>{{ level.levelNr }}</span>
         </div>
@@ -34,7 +34,7 @@
           v-for="level in this.$store.state.levelData.grid"
           :key="level.levelNr"
           v-on:click="goToLevel(2, level.levelNr - 1)"
-          onclick="document.querySelector('.editor-eingabe').value = ''"
+          onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
         >
           <span class="level-nr">{{ level.levelNr }}</span>
         </div>

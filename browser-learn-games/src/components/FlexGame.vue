@@ -11,7 +11,16 @@
           :src="treasureImage"
           alt="Ziel Truhe"
         />
-        <img src="../assets/images/coin.gif" alt="" class="coin-gif" :style="this.$store.state.game.colliding ? 'display:block;' : 'display: none;'" />
+        <img
+          src="../assets/images/coin.gif"
+          alt=""
+          class="coin-gif"
+          :style="
+            this.$store.state.game.colliding
+              ? 'display:block;'
+              : 'display: none;'
+          "
+        />
       </div>
       <div
         class="target-container"
@@ -29,8 +38,16 @@
           :src="treasureBlueImage"
           alt="Ziel Truhe"
         />
-
-        <img src="../assets/images/coin.gif" alt="" class="coin-gif" />
+        <img
+          src="../assets/images/coin.gif"
+          alt=""
+          class="coin-gif"
+          :style="
+            this.$store.state.game.colliding
+              ? 'display:block;'
+              : 'display: none;'
+          "
+        />
       </div>
       <div
         class="target-container"
@@ -48,16 +65,21 @@
           :src="treasureYellowImage"
           alt="Ziel Truhe"
         />
-
-        <img src="../assets/images/coin.gif" alt="" class="coin-gif" />
+        <img
+          src="../assets/images/coin.gif"
+          alt=""
+          class="coin-gif"
+          :style="
+            this.$store.state.game.colliding
+              ? 'display:block;'
+              : 'display: none;'
+          "
+        />
       </div>
     </div>
     <div
       class="inner-right-player"
-      v-bind:style="
-      this.$store.state.editor.editorInput
-      
-      "
+      v-bind:style="this.$store.state.editor.editorInput"
     >
       <div class="player-container" id="player-container-1">
         <img
