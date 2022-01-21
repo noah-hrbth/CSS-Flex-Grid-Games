@@ -1,225 +1,197 @@
 {
-  "level1": {
+"grid": [
+  {
     "levelNr": 1,
-    "levelTitle": "grid-column-start",
-    "levelTxt": "Willkommen bei Grid Chick, wo du CSS Code schreibst, um dem Küken zurück zu seinem Nest zu helfen! Bewege das Küken, indem du diegrid-column-start Eigenschaft nutzt. Zum Beispiel grid-column-start: 3; bewegt das Küken auf den Abschnitt auf der dritten vertikalen Rasterlinie.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level2": {
-    "levelNr": 2,
-    "levelTitle": "grid-column-start",
-    "levelTxt": "Oje, sieht aus als hätte sich das Küken verlaufen. Benutze grid-column-start, um es zum Nest zu bringen. Beachte, dass das Nest hinter der fünften vertikalen Rasterline liegt.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level3": {
-    "levelNr": 3,
-    "levelTitle": "grid-column-end",
-    "levelTxt": "Wenn grid-column-start alleine benutzt wird, umfasst das Rasterelement standardmäßig genau eine Spalte. Du kannst den Umfang des Elements jedoch auf mehrere Spalten mit Hilfe der grid-column-end Eigenschaft erweitern. Benutze grid-column-end, um allen Küken zu helfen.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level4": {
-    "levelNr": 4,
-    "levelTitle": "grid-column-end",
-    "levelTxt": "Beim gemeinsamen Einsatz von grid-column-start und grid-column-end könnte man annehmen, dass der Endwert größer als der Startwert sein muss. Es zeigt sich aber, dass dies nicht der Fall ist! Versuche, grid-column-end auf einen Wert kleiner als 5 einzustellen, um die Küken zu ihren Nestern zu bringen.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level5": {
-    "levelNr": 5,
-    "levelTitle": "grid-column-end",
-    "levelTxt": "Falls du die Rasterlinien von rechts statt von links zählen willst, kannst du für grid-column-start und grid-column-end negative Werte einstellen. Du kannst sie zum Beispiel auf -1 setzen um die erste Rasterlinie von rechts anzusprechen.Versuche, grid-column-end auf einen negativen Wert zu setzen.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level6": {
-    "levelNr": 6,
-    "levelTitle": "grid-column-start",
-    "levelTxt": "Versuche nun, grid-column-start auf einen negativen Wert zu setzen.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level7": {
-    "levelNr": 7,
-    "levelTitle": "grid-column-end",
-    "levelTxt": "Anstatt ein Rasterelement basierend auf Start- und Endposition der Rasterlinien zu definieren, kannst du es anhand der gewünschten Spaltenbreite mit dem Schlüsselwort span definieren. Denk daran, dass span nur mit positiven Werten funktioniert. Helfe zum Beispiel diesen Küken mit der Regel grid-column-end: span 2;.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level8": {
-    "levelNr": 8,
-    "levelTitle": "grid-column-end mit span",
-    "levelTxt": "Versuche, grid-column-end wieder mit dem Schlüsselwort span einzusetzen, um !!!PLATZHALTER!!!!.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level9": {
-    "levelNr": 9,
-    "levelTitle": "grid-column-start mit span",
-    "levelTxt": "Du kannst das Schlüsselwort span auch mit grid-column-start verwenden, um die Breite deines Rasterelements relativ zur Endposition anzugeben.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level10": {
-    "levelNr": 10,
-    "levelTitle": "grid-column",
-    "levelTxt": "Jedes Mal grid-column-start und grid-column-end einzutippen kann ermüdend werden. Zum Glück gibt es die Kurzschrift-Eigenschaft grid-column, welche beide Werte auf einmal akzeptiert, getrennt durch einen Schrägstrich. Zum Beispiel grid-column: 2 / 4; setzt den Beginn eines Rasterelments auf die zweite vertikale Rasterlinie und das Ende auf die vierte Rasterlinie.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level11": {
-    "levelNr": 11,
-    "levelTitle": "grid-column",
-    "levelTxt": "Versuche, grid-column zu benutzen, um !!!PLATZHALTER!!!. Das Schlüsselwort span funktioniert ebenfalls mit dieser Kurzschrift-Eigenschaft, also versuche es!",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level12": {
-    "levelNr": 12,
-    "levelTitle": "grid-row-start",
-    "levelTxt": "Eines der Dinge, welches CSS Grids von Flexbox unterscheidet, ist dass du Elemente auf einfache Weise in zwei Dimensionen positionieren kannst: Spalten und Zeilen. grid-row-start funktioniert ähnlich wie grid-column-start, jedoch auf der vertikalen Achse. Benutze grid-row-start, um diesen Küken zu helfen.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level13": {
-    "levelNr": 13,
-    "levelTitle": "grid-row",
-    "levelTxt": "Versuche nun die Kurzschrift-Eigenschaft grid-row.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level14": {
-    "levelNr": 14,
-    "levelTitle": "grid-column und grid-row",
-    "levelTxt": "Benutze grid-column und grid-row gleichzeitig, um die Position in beiden Dimensionen festzulegen.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level15": {
-    "levelNr": 15,
-    "levelTitle": "grid-column und grid-row",
-    "levelTxt": "Du kannst auch grid-column und grid-row zusammen einsetzen, um größere Bereiche im Raster zu erfassen. Versuche es!",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level16": {
-    "levelNr": 16,
-    "levelTitle": "grid-area",
-    "levelTxt": "Falls grid-column und grid-row einzutippen zu viel für dich ist, gibt es eine weitere Kurzschrift-Eigenschaft dafür. grid-area akzeptiert vier Werte, durch einen Schrägstrich getrennt: grid-row-start, grid-column-start, grid-row-end, gefolgt von grid-column-end. Ein Beispiel dafür wäre grid-area: 1 / 1 / 3 / 6;.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level17": {
-    "levelNr": 17,
-    "levelTitle": "grid-area",
-    "levelTxt": "Wie wäre es mit mehreren Elementen? Diese können sich problemlos überlagern. Verwende grid-area, um einen zweiten Bereich zu definieren, welcher allen hilfsbedürftigen Küken hilft.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level18": {
-    "levelNr": 18,
-    "levelTitle": "order",
-    "levelTxt": "Wenn Rasterelemente nicht explizit mit grid-area, grid-column, grid-row, etc. platziert werden, werden sie automatisch platziert gemäß ihrer Reihenfolge im Quellcode. Wir können das mit der order Eigenschaft überschreiben, was einer der Vorteile von Grids gegenüber Tabellen-basierten Layouts ist. Standardmäßig haben alle Rasterelemente einen order Wert von 0, dieser kann aber auf jeden positiven oder negativen Wert gesetzt werden, ähnlich wie z-index. Im Moment sind die Küken nicht auf ihren richtigen Nestern. Ändere den order Wert vom blauen Nest (blue_nest), um dies gleich in Ordnung zu bringen!",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level19": {
-    "levelNr": 19,
-    "levelTitle": "order",
-    "levelTxt": "Setze den order Wert für die Nester um die Reihenfolge zu korrigieren.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level20": {
-    "levelNr": 20,
-    "levelTitle": "grid-template-columns",
-    "levelTxt": "Bis jetzt war dein Baum als Raster von fünf Spalten mit je 20% der Gesamtbreite sowie fünf Reihen mit je 20% der Gesamthöhe angelegt. Dies wurde durch die Regeln grid-template-columns: 20% 20% 20% 20% 20%; und grid-template-rows: 20% 20% 20% 20% 20%; bewirkt. Jede dieser Regeln hat fünf Werte, was fünf Spalten erzeugt, jede 20% der Gesamtbreite des Baums. Aber du kannst das Raster so konfigurieren wie du möchtest. Gib grid-template-columns einen neuen Wert damit sich die Küken ein Nest teilen. Du solltest die Breite der ersten Spalte auf 50% setzen.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level21": {
-    "levelNr": 21,
-    "levelTitle": "grid-column",
-    "levelTxt": "",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level22": {
-    "levelNr": 22,
-    "levelTitle": "grid-template-columns",
-    "levelTxt": "grid-template-columns akzeptiert nicht nur Werte in Prozenten, sondern auch Längeneinheiten wie Pixel und em. Du kannst sogar verschiedene Einheiten zusammen mischen. Setze hier drei Spalten auf jeweils 100px, 3em, und 40%.",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level23": {
-    "levelNr": 23,
-    "levelTitle": "grid-column",
-    "levelTxt": "",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level24": {
-    "levelNr": 24,
-    "levelTitle": "grid-column",
-    "levelTxt": "",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level25": {
-    "levelNr": 25,
-    "levelTitle": "grid-column",
-    "levelTxt": "",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level26": {
-    "levelNr": 26,
-    "levelTitle": "grid-column",
-    "levelTxt": "",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level27": {
-    "levelNr": 27,
-    "levelTitle": "grid-column",
-    "levelTxt": "",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
-  },
-
-  "level28": {
-    "levelNr": 28,
-    "levelTitle": "grid-column",
-    "levelTxt": "",
-    "playerPos": [[0], [0]],
-    "targetPos": [[5], [0]]
+    "levelTitle": "grid-column-start 1",
+    "levelTxt": [
+      "Willkommen bei Grid Chick, wo du CSS Code schreibst, um dem Küken zurück zu seinem Nest zu helfen! Bewege das Küken, indem du diegrid-column-start Eigenschaft nutzt. Zum Beispiel grid-column-start: 3; bewegt das Küken auf den Abschnitt auf der dritten vertikalen Rasterlinie.",
+      "LevelTxtEn"
+    ],
+    "preTxt": "#tree { <br> display: grid; <br> grid-template-columns: 20% 20% 20% 20% 20%; <br> grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick { <br> }",
+    "targetAmount": 2,
+    "playerPos": "grid-column-start: 1;",
+    "targetPos": "grid-column-start: 3;"
   }
+  ,
+  {
+      "levelNr": 2,
+      "levelTitle": "grid-column-start 2",
+      "levelTxt": [
+        "Oje, sieht aus als hätte sich das Küken verlaufen. Benutze grid-column-start, um es zum Nest zu bringen. Beachte, dass das Nest hinter der fünften vertikalen Rasterline liegt.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column-start: 5;"
+    },
+    {
+      "levelNr": 3,
+      "levelTitle": "grid-column-end 1",
+      "levelTxt": [
+        "Wenn grid-column-start alleine benutzt wird, umfasst das Rasterelement standardmäßig genau eine Spalte. Du kannst den Umfang des Elements jedoch auf mehrere Spalten mit Hilfe der grid-column-end Eigenschaft erweitern. Benutze grid-column-end, um allen Küken zu helfen.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column-start: 1; grid-column-end: 4;"
+    },
+    {
+      "levelNr": 4,
+      "levelTitle": "grid-column-end 2",
+      "levelTxt": [
+        "Beim gemeinsamen Einsatz von grid-column-start und grid-column-end könnte man annehmen, dass der Endwert größer als der Startwert sein muss. Es zeigt sich aber, dass dies nicht der Fall ist! Versuche, grid-column-end auf einen Wert kleiner als 5 einzustellen, um die Küken zu ihren Nestern zu bringen.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 5;",
+      "targetPos": "grid-column-start: 5; grid-column-end: 2;"
+    },
+    {
+      "levelNr": 5,
+      "levelTitle": "grid-column-end 3",
+      "levelTxt": [
+        "Falls du die Rasterlinien von rechts statt von links zählen willst, kannst du für grid-column-start und grid-column-end negative Werte einstellen. Du kannst sie zum Beispiel auf -1 setzen um die erste Rasterlinie von rechts anzusprechen.Versuche, grid-column-end auf einen negativen Wert zu setzen.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column-start: 1; grid-column-end: -2;"
+    },
+    {
+      "levelNr": 6,
+      "levelTitle": "grid-column-start 3",
+      "levelTxt": [
+        "Versuche nun, grid-column-start auf einen negativen Wert zu setzen.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column-start: -3;"
+    },
+    {
+      "levelNr": 7,
+      "levelTitle": "grid-column-end 4",
+      "levelTxt": [
+        "Anstatt ein Rasterelement basierend auf Start- und Endposition der Rasterlinien zu definieren, kannst du es anhand der gewünschten Spaltenbreite mit dem Schlüsselwort span definieren. Denk daran, dass span nur mit positiven Werten funktioniert. Helfe zum Beispiel diesen Küken mit der Regel grid-column-end: span 2;.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 2;",
+      "targetPos": "grid-column-start: 2; grid-column-end: span 2;"
+    },
+    {
+      "levelNr": 8,
+      "levelTitle": "grid-column-end 5",
+      "levelTxt": [
+        "Versuche, grid-column-end wieder mit dem Schlüsselwort span einzusetzen, um jedem Nest ein Küken zuzuteilen.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column-start: 1; grid-column-end: span 5;"
+    },
+    {
+      "levelNr": 9,
+      "levelTitle": "grid-column-start 4",
+      "levelTxt": [
+        "Du kannst das Schlüsselwort span auch mit grid-column-start verwenden, um die Breite deines Rasterelements relativ zur Endposition anzugeben.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-end: 6;",
+      "targetPos": "grid-column-end: 6; grid-column-start: span 3;"
+    },
+    {
+      "levelNr": 10,
+      "levelTitle": "grid-column 1",
+      "levelTxt": [
+        "Jedes Mal grid-column-start und grid-column-end einzutippen kann ermüdend werden. Zum Glück gibt es die Kurzschrift-Eigenschaft grid-column, welche beide Werte auf einmal akzeptiert, getrennt durch einen Schrägstrich. Zum Beispiel grid-column: 2 / 4; setzt den Beginn eines Rasterelments auf die zweite vertikale Rasterlinie und das Ende auf die vierte Rasterlinie.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column: 4 / 6;"
+    },
+    {
+      "levelNr": 11,
+      "levelTitle": "grid-column 2",
+      "levelTxt": [
+        "Versuche, grid-column zu benutzen, um jedem Nest ein Küken zuzuteilen. Das Schlüsselwort span funktioniert ebenfalls mit dieser Kurzschrift-Eigenschaft, also versuche es!",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column: 2 / 5;"
+    },
+    {
+      "levelNr": 12,
+      "levelTitle": "grid-row-start 1",
+      "levelTxt": [
+        "Eines der Dinge, welches CSS Grids von Flexbox unterscheidet, ist dass du Elemente auf einfache Weise in zwei Dimensionen positionieren kannst: Spalten und Zeilen. grid-row-start funktioniert ähnlich wie grid-column-start, jedoch auf der vertikalen Achse. Benutze grid-row-start, um diesem Küken zu helfen.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-row-start: 3;"
+    },
+    {
+      "levelNr": 13,
+      "levelTitle": "grid-row-start 2",
+      "levelTxt": [
+        "Versuche nun die Kurzschrift-Eigenschaft grid-row.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-row: 3 / 6;"
+    },
+    {
+      "levelNr": 14,
+      "levelTitle": "grid-column-row 1",
+      "levelTxt": [
+        "Benutze grid-column und grid-row gleichzeitig, um die Position in beiden Dimensionen festzulegen.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-area: 5 / 2 / auto / auto;"
+    },
+    {
+      "levelNr": 15,
+      "levelTitle": "grid-column-row 2",
+      "levelTxt": [
+        "Du kannst auch grid-column und grid-row zusammen einsetzen, um größere Bereiche im Raster zu erfassen. Versuche es!",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-area: 1 / 2 / 6 / 6;"
+    },
+    {
+      "levelNr": 16,
+      "levelTitle": "grid-area 1",
+      "levelTxt": [
+        "Falls grid-column und grid-row einzutippen zu viel für dich ist, gibt es eine weitere Kurzschrift-Eigenschaft dafür. grid-area akzeptiert vier Werte, durch einen Schrägstrich getrennt: grid-row-start, grid-column-start, grid-row-end, gefolgt von grid-column-end. Ein Beispiel dafür wäre grid-area: 1 / 1 / 3 / 6;.",
+        "LevelTxtEn"
+      ],
+      "preTxt": "",
+      "targetAmount": 2,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-area: 1 / 2 / 4 / 6;"
+    }
+  ]
 }
