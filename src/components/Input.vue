@@ -49,7 +49,7 @@ export default {
   }),
   methods: {
     is_last_level() {
-      return this.$store.state.game.currentLevel  === 17;
+      return this.$store.state.game.currentLevel.next == null;
     },
 
     go_to_next_level() {
