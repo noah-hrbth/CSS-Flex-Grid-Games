@@ -29,7 +29,7 @@
     >
       <img
         class="continue-icon"
-        src="../assets/images/continue-btn.png"
+        :src="this.$store.state.game.currentGame === 1 ? this.flexArrow : this.gridArrow"
         alt=""
       />
     </button>
@@ -37,10 +37,15 @@
 </template>
 
 <script>
+import FlexArrow from '../assets/images/continue-btn.png';
+import GridArrow from '../assets/images/btn_next.png';
+
 export default {
   name: "Input",
   data: () => ({
     editorInput: "",
+    flexArrow: FlexArrow,
+    gridArrow: GridArrow,
   }),
   methods: {
     is_last_level() {
