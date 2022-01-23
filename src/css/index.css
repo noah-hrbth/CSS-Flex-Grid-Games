@@ -66,7 +66,7 @@ body {
   font-size: 1.5rem;
 }
 
-.aufgaben-text-important {
+strong {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 0 0.3rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
