@@ -1,10 +1,9 @@
 <template>
   <div class="right">
-    <div class="inner-right-target">
+    <div class="inner-right-target" :style="this.getLevelById(this.$store.state.game.currentLevel).solution">
       <div
         class="target-container"
         id="target-container-1"
-        :style="this.getLevelById(this.$store.state.game.currentLevel).solution"
       >
         <img
           class="image target-treasure"
@@ -26,7 +25,6 @@
         class="target-container"
         id="target-container-2"
         :style="[
-          this.getLevelById(this.$store.state.game.currentLevel).solution,
           this.getLevelById(this.$store.state.game.currentLevel).playerAmount >
           1
             ? ''
@@ -53,7 +51,6 @@
         class="target-container"
         id="target-container-3"
         :style="[
-          this.getLevelById(this.$store.state.game.currentLevel).solution,
           this.getLevelById(this.$store.state.game.currentLevel).playerAmount >
           2
             ? ''
@@ -206,6 +203,8 @@ export default {
   height: 10rem;
   width: 10rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .target-treasure {

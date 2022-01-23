@@ -73,10 +73,12 @@ export default {
       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
         this.$store.state.game.colliding = false;
         document.querySelector(".continue-btn").style.display = "none";
+        console.log(false);
         return false;
       }
       this.$store.state.game.colliding = true;
       document.querySelector(".continue-btn").style.display = "block";
+      console.log(true);
       return true;
     },
   },
