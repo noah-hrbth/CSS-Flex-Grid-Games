@@ -56,6 +56,7 @@ export default {
       }
     },
 
+    
     isCollision(div1, div2) {
       let x1 = div1.getBoundingClientRect().left;
       let y1 = div1.getBoundingClientRect().top;
@@ -117,11 +118,11 @@ export default {
   width: 30rem;
   display: flex;
   flex-direction: column;
-  z-index: 10;
+  z-index: 2;
 }
 
 .editor-text {
-  font-size: 1.35rem;
+  font-size: calc(16px + 0.2vw);
   font-weight: bold;
   font-family: sans-serif;
 }
@@ -129,13 +130,14 @@ export default {
 .editor-eingabe {
   margin: 1% 0 1% 4.2%;
   resize: none;
-  font-size: 1.35rem;
+  font-size: calc(16px + 0.2vw);
   font-weight: bold;
   border: 0;
   outline: 0;
   border-radius: 5px;
   background-color: var(--color-darker);
-  width: 80%;
+  width: 20vw;
+  min-width: 250px;
   min-height: 60%;
   color: var(--color-light);
   padding: 0.2rem;

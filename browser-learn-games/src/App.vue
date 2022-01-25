@@ -169,7 +169,7 @@ body {
 
 .back-to-home-link {
   color: var(--color-light);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 

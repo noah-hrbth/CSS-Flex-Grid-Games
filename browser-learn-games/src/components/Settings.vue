@@ -115,15 +115,16 @@ export default {
 .settings-content {
   position: relative;
   display: flex;
+  justify-content: center;
   opacity: 0;
-  background: url(../assets/images/settings-wood-sign.png);
+  background: url(/img/settings-wood-sign.51b365b6.png);
   background-repeat: no-repeat;
-  height: 8vw;
-  width: 14vw;
+  height: 8rem;
+  width: 14rem;
   flex-direction: column;
   pointer-events: none;
   gap: 0.5rem;
-  padding: 1.5vw 1.5vw 0 1vw;
+  padding: 0 1.5vw 1.5vw 1.5vw;
 }
 
 .settings-content--active {
@@ -204,8 +205,8 @@ input:checked + .slider:before {
 .watersplash-image-settings {
   position: absolute;
   width: 20rem;
-  top: 83%;
-  left: 30%;
+  top: 37rem;
+  left: 30vw;
   pointer-events: none;
 }
 </style>

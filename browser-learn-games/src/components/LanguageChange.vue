@@ -43,6 +43,7 @@ export default {
   border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .language-change__dropdown:hover {

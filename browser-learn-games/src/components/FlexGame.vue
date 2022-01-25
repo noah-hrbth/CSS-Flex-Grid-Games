@@ -187,8 +187,8 @@ export default {
 }
 
 .player-container {
-  height: 10rem;
-  width: 10rem;
+  height: 5vw;
+  width: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,25 +196,25 @@ export default {
 }
 
 .player-pirate {
-  max-width: 10rem;
+  max-width: 5vw;
 }
 
 .target-container {
-  height: 10rem;
-  width: 10rem;
+  height: 5vw;
+  width: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .target-treasure {
-  max-width: 10rem;
+  max-width: 5vw;
 }
 
 .coin-gif {
   position: absolute;
-  bottom: 13rem;
   z-index: 100;
   display: none;
+  width: 15vw;
 }
 </style>

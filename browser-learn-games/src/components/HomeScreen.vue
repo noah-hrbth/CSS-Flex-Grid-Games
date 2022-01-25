@@ -4,10 +4,16 @@
     <div class="welcome-container">
       <p class="welcome-text">
         <span class="welcome-text-first">
-          {{ this.$store.state.languageData[this.$store.state.settings.language].welcomeText }}
+          {{
+            this.$store.state.languageData[this.$store.state.settings.language]
+              .welcomeText
+          }}
         </span>
         <br />
-        {{ this.$store.state.languageData[this.$store.state.settings.language].chooseGameText }}
+        {{
+          this.$store.state.languageData[this.$store.state.settings.language]
+            .chooseGameText
+        }}
       </p>
     </div>
     <div class="preview-flex preview">
@@ -18,6 +24,10 @@
         class="game-preview-gif"
         v-on:click="goToFlex"
       />
+      <p class="game-description" v-html="this.$store.state.languageData[this.$store.state.settings.language]
+            .description">
+        
+      </p>
     </div>
     <div class="preview-grid preview">
       <h1 class="gametitle">Grid Chick</h1>
@@ -28,7 +38,9 @@
         v-on:click="goToGrid"
       />
     </div>
-    <p class="signature">Made with &#10084;&#65039; by Browser-Learn-Games Team</p>
+    <p class="signature">
+      Made with &#10084;&#65039; by Browser-Learn-Games Team
+    </p>
   </div>
 </template>
 
@@ -38,7 +50,7 @@ import LanguageChange from "./LanguageChange.vue";
 export default {
   name: "HomeScreen",
   components: {
-    LanguageChange
+    LanguageChange,
   },
   props: {},
   methods: {
@@ -49,13 +61,15 @@ export default {
       this.$store.state.game.currentGame = 2;
     },
     changeLanguage() {
-      const languageChange = document.querySelector(".language-change__dropdown");
-      if (languageChange.value == 'de') {
+      const languageChange = document.querySelector(
+        ".language-change__dropdown"
+      );
+      if (languageChange.value == "de") {
         this.$store.state.settings.language = 0;
-      } else if (languageChange.value == 'en') {
+      } else if (languageChange.value == "en") {
         this.$store.state.settings.language = 1;
       }
-    }
+    },
   },
 };
 </script>
@@ -97,8 +111,8 @@ export default {
 }
 
 .welcome-text {
-  margin-top: 15%;
-  font-size: 0rem;
+  margin-top: 15vw;
+  font-size: 0vw;
   text-align: center;
   font-family: var(--font-homescreen);
   color: #575e40;
@@ -108,30 +122,30 @@ export default {
 
 @keyframes change-font {
   from {
-    margin-top: 15%;
-    font-size: 0rem;
+    margin-top: 15vw;
+    font-size: 0vw;
   }
   to {
-    margin-top: 1%;
-    font-size: 3rem;
+    margin-top: 1vw;
+    font-size: 3vw;
     background-color: #ffe8d6c7;
-    border-radius: 1rem;
+    border-radius: 1vw;
   }
 }
 
 .welcome-text-first {
   color: var(--color-light);
-  font-size: 9rem;
+  font-size: 9vw;
   animation: change-font-size forwards 1.5s 1.5s;
 }
 
 @keyframes change-font-size {
   from {
-    font-size: 9rem;
+    font-size: 9vw;
     color: var(--color-light);
   }
   to {
-    font-size: 2rem;
+    font-size: 2vw;
     color: #575e40;
   }
 }
@@ -142,8 +156,8 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-top: 12%;
-  padding-left: 8%;
+  padding-top: 5vw;
+  padding-left: 8vw;
 }
 
 .preview-flex {
@@ -163,6 +177,11 @@ export default {
   background-size: cover;
   filter: grayscale(70%);
   transition: all 0.3s;
+  text-align: right;
+}
+
+.gametitle {
+  width: 35vw;
 }
 
 .preview-grid:hover {
@@ -176,8 +195,8 @@ export default {
 .game-preview-gif {
   border: var(--color-light) solid 5px;
   border-radius: 1rem;
-  height: 20rem;
-  width: 35rem;
+  height: 20vw;
+  width: 35vw;
   box-shadow: 7px 6px 8px 0px rgba(0, 0, 0, 0.705);
   object-fit: fill;
   cursor: pointer;
@@ -188,10 +207,17 @@ export default {
   transform: scale(1.05);
 }
 
+.game-description {
+  width: 35vw;
+}
+
 .signature {
   position: absolute;
   bottom: 0;
-  left: 1rem;
+  left: 1vw;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
   font-family: sans-serif;
+  background-color: var(--color-darker);
 }
 </style>

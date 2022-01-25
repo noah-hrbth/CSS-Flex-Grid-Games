@@ -2,6 +2,7 @@
   {
     "welcomeText": "Willkommen!",
     "chooseGameText": "Wähle ein Spiel aus:",
+    "description": "Yarr har ihre Landratten! In diesem Spiel könnt ihr euch CSS Flexbox Kenntnisse aneignen und vertiefen. Dazu müsst ihr nur den Piraten mit Flex Anweisungen zu seiner Schatzkiste befördern. <br> <strong> Viel Spaß mit dem Spiel! </strong>",
     "backToHome": "Zurück zur Übersicht",
     "languageChange": "Sprache",
     "hints": "Hinweise",
@@ -10,6 +11,7 @@
   {
     "welcomeText": "Welcome!",
     "chooseGameText": "Choose a Game:",
+    "description": "Yarr har landlubbers! Welcome to Flex Pirate. In this game you can learn and deepen your CSS knowledge. You only need to guide the pirate to his treasure. <br> <strong> Have fun with the game! </strong>",
     "backToHome": "Back to home",
     "languageChange": "Language",
     "hints": "Hints",

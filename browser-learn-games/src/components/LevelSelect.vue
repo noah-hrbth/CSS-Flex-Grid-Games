@@ -122,8 +122,8 @@ export default {
   opacity: 0;
   background-image: url(../assets/images/level-sign.png);
   background-repeat: no-repeat;
-  width: 9.5vw;
-  height: 18.5vw;
+  width: 9.5rem;
+  height: 18.5rem;
   padding-left: 1.75rem;
   padding-top: 1.5rem;
   pointer-events: none;
@@ -161,7 +161,7 @@ export default {
   position: absolute;
   width: 30rem;
   top: 75%;
-  right: 80%;
+  right: 80vw;
   pointer-events: none;
 }
 </style>
