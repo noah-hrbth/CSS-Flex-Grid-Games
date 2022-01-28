@@ -24,10 +24,13 @@
         class="game-preview-gif"
         v-on:click="goToFlex"
       />
-      <p class="game-description" v-html="this.$store.state.languageData[this.$store.state.settings.language]
-            .description">
-        
-      </p>
+      <p
+        class="game-description"
+        v-html="
+          this.$store.state.languageData[this.$store.state.settings.language]
+            .descriptionFlex
+        "
+      ></p>
     </div>
     <div class="preview-grid preview">
       <h1 class="gametitle">Grid Chick</h1>
@@ -37,6 +40,13 @@
         class="game-preview-gif"
         v-on:click="goToGrid"
       />
+       <p
+        class="game-description"
+        v-html="
+          this.$store.state.languageData[this.$store.state.settings.language]
+            .descriptionGrid
+        "
+      ></p>
     </div>
     <p class="signature">
       Made with &#10084;&#65039; by Browser-Learn-Games Team

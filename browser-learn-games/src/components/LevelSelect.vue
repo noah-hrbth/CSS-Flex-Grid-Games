@@ -29,14 +29,15 @@
           <span>{{ level.levelNr }}</span>
         </div>
       </div>
-      <div v-if="this.$store.state.game.currentGame == 2">
+      <div v-if="this.$store.state.game.currentGame == 2" class="level-wrapper">
         <div
           v-for="level in this.$store.state.levelData.grid"
           :key="level.levelNr"
           v-on:click="goToLevel(2, level.levelNr - 1)"
           onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
+          class="level-nr"
         >
-          <span class="level-nr">{{ level.levelNr }}</span>
+          <span>{{ level.levelNr }}</span>
         </div>
       </div>
     </div>

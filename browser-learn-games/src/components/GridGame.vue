@@ -150,7 +150,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .right {
   width: 50vw;
   height: 100vh;

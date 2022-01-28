@@ -1,0 +1,20 @@
+@font-face {
+  font-family: battlesbridge;
+  src: url(/assets/fonts/battlesbridge-font/BattlesbridgeDemo-AL126.ttf);
+}
+
+@font-face {
+  font-family: thedarkestpearl;
+  src: url(/assets/fonts/thedarkestpearl-font/Thedarkestpearl-9Ym8Z.ttf);
+}
+
+:root {
+  --color-grey:   #323232;
+  --color-darker: #3B2718;
+  --color-dark:   #8B4513;
+  --color-medium: #954c2f;
+  --color-light:  #eeeeee;
+  --font-heading:   'Autour One', cursive;
+  --font-headline: 'Lemon Milk', sans-serif;
+  --font-body:      'PT Sans', sans-serif;
+}
