@@ -202,8 +202,8 @@
       "levelNr": 1,
       "levelTitle": "grid-column-start 1",
       "levelTxt": [
-        "<p>Willkommen bei Grid Chick, wo du CSS Code schreibst, um dem Küken zurück zu seinem Nest zu helfen! Bewege das Küken, indem du die <strong>grid-column-start</strong> Eigenschaft nutzt.</p><p>Zum Beispiel <strong>grid-column-start: 3;</strong> bewegt das Küken auf den Abschnitt auf der dritten vertikalen Rasterlinie.</p>",
-        "<p>Welcome to Grid Chichk, where you write CSS code to help the chick get back to its nest! Move the chick by using the <strong>grid-column-start</strong> property.</p><p>For example, <strong>grid-column-start: 3;</strong> will move the chick to the 3rd vertical grid line, which is another way of saying the 3rd vertical border from the left in the grid.</p>"
+        "<p>Bewege das Küken, indem du die <strong>grid-column-start</strong> Eigenschaft nutzt.</p><p>Zum Beispiel <strong>grid-column-start: 3;</strong> bewegt das Küken auf den Abschnitt auf der dritten vertikalen Rasterlinie.</p>",
+        "<p>Move the chick by using the <strong>grid-column-start</strong> property.</p><p>For example, <strong>grid-column-start: 3;</strong> will move the chick to the 3rd vertical grid line, which is another way of saying the 3rd vertical border from the left in the grid.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
       "targetAmount": 1,

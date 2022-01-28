@@ -4,9 +4,31 @@
       <HomeScreen />
     </div>
     <div class="main-container" v-else>
-      <div class="left">
+      <div class="left" v-if="this.$store.state.game.currentGame == 1">
         <div class="game-logo">
           <h1>Flex Pirate</h1>
+          <button
+            class="back-to-home"
+            @click="
+              this.$store.state.game.currentGame = 0;
+              this.$store.state.game.currentLevel = 0;
+            "
+          >
+            <a class="back-to-home-link">{{ this.$store.state.languageData[this.$store.state.settings.language].backToHome }}</a>
+          </button>
+        </div>
+
+        <LevelSelect />
+
+        <Settings />
+
+        <Task />
+
+        <Input />
+      </div>
+      <div class="left" v-if="this.$store.state.game.currentGame == 2" style="background: url('');">
+        <div class="game-logo">
+          <h1>Grid Chick</h1>
           <button
             class="back-to-home"
             @click="
