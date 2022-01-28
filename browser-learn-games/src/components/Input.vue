@@ -18,7 +18,6 @@
         this.$store.state.languageData[this.$store.state.settings.language]
           .inputPlaceholder
       "
-      autofocus
     ></textarea>
     <p class="editor-text">}</p>
     <button
