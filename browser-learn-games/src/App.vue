@@ -145,7 +145,7 @@ body {
 }
 
 .error-gif {
-  margin-top: -4rem;
+  margin-top: -6rem;
 }
 
 .disable-smartphone p {
