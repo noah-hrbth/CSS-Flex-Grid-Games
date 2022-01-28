@@ -117,7 +117,7 @@ export default {
   display: flex;
   justify-content: center;
   opacity: 0;
-  background: url(/img/settings-wood-sign.51b365b6.png);
+  background: url(../assets/images/settings-wood-sign.png);
   background-repeat: no-repeat;
   height: 8rem;
   width: 14rem;
@@ -205,7 +205,7 @@ input:checked + .slider:before {
 .watersplash-image-settings {
   position: absolute;
   width: 20rem;
-  top: 37rem;
+  top: 44rem;
   left: 30vw;
   pointer-events: none;
 }

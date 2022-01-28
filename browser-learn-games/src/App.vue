@@ -140,7 +140,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 50% 25%;
-  grid-template-rows: 20% 7% 30% 40%;
+  grid-template-rows: 20% 7% 27% 40%;
   grid-template-areas:
     "Logo Logo"
     "Levelauswahl Settings"
