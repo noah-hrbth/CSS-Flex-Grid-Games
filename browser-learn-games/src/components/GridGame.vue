@@ -79,7 +79,7 @@
         />
         </div>
     </div>
-    <div class="inner-right-player" v-bind:style="this.$store.state.editor.editorInput & this.getLevelById(this.$store.state.game.currentLevel).playerPos">
+    <div class="inner-right-player" v-bind:style="[this.getLevelById(this.$store.state.game.currentLevel).playerPos, this.$store.state.editor.editorInput]">
         <div class="player-container" id="player-container-1">
             <img :src="playerImage" alt="">
         </div>
