@@ -4,6 +4,7 @@
   font-size: 1.75rem;
   font-weight: bold;
   word-spacing: 0.5rem;
+  font-family: var(--font-headline);
 }
 
 .editor-eingabe {

@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com" 
+      crossorigin>
+    <link 
+      href="//db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon/Milk"
+      rel="stylesheet"
+      type="text/css"/>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Autour+One&family=Space+Mono&display=swap" 
+      rel="stylesheet">
+    <link
       href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
     />
@@ -18,43 +32,38 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <link
       rel="icon"
-      type="image/png"
-      href="/assets/images/favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+      href="/assets/images/favicon_io/favicon.png"
       sizes="16x16"
     />
-    <link
+    <!-- <link
       rel="icon"
       type="image/png"
       href="/assets/images/favicon_io/favicon-32x32.png"
       sizes="32x32"
-    />
-    <link
+    /> -->
+    <!-- <link
       rel="icon"
       type="image/png"
       href="/assets/images/favicon_io/android-chrome-192x192.png"
       sizes="192x192"
-    />
-    <link
+    /> -->
+    <!-- <link
       rel="apple-touch-icon"
       href="/assets/images/favicon_io/apple-touch-icon.png"
       sizes="180x180"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/assets/images/favicon_io/favicon.ico"
-    />
-    <title>HSD Flex Pirate</title>
+    /> -->
+    <title>Grid Chick</title>
   </head>
 
   <body onload="checkCookie()">
     <div id="app" class="main-container">
       <div class="left">
-        <div class="game-logo">HSD Flex Pirate</div>
+        <div class="game-logo">Grid Chick</div>
         <div class="level-select">
           <button class="level-select-btn">
             <img
-              src="/assets/images/level-select.png"
+              src="/assets/images/levelauswahl.png"
               alt="Level select"
               class="level-icon"
             />
@@ -85,7 +94,7 @@
         <div class="settings">
           <button class="settings-btn">
             <img
-              src="/assets/images/settings-icon.png"
+              src="/assets/images/Settings_Icon_Wood.png"
               alt="Settings"
               class="settings-icon"
             />
@@ -112,13 +121,14 @@
           <p>Colliding? <span id="result">false</span></p>
           <h2 class="aufgaben-titel">Aufgabe</h2>
           <p class="aufgaben-text">
-            Bewege den <strong><em>grünen</em></strong> Kreis auf das
-            <strong><em>lila</em></strong> Rechteck, indem du
+            Willkommen bei Grid Chick, wo du CSS Code schreibst, um dem Küken zurück zu seinem Nest zu helfen! 
+            Bewege das <strong><em>Küken</em></strong>, indem du die  
             <strong class="aufgaben-text-important">
-              <nobr>justify-content</nobr>
+              <nobr>grid-column-start</nobr>
             </strong>
-            und <strong class="aufgaben-text-important">align-items</strong> in
-            kombinierst.
+            Eigenschaft nutzt. 
+            <br>
+            Zum Beispiel grid-column-start: 3; bewegt das Küken auf den Abschnitt auf der dritten vertikalen Rasterlinie.
           </p>
         </div>
         <div class="editor">
@@ -131,12 +141,125 @@
             placeholder="Gib hier dein CSS ein!"
           ></textarea>
           <p class="editor-text">}</p>
+          
+          <button class="continue-btn" @click="go_to_next_level()">
+            <img
+              class="continue-icon"
+              src="../assets/images/btn_next.png"
+              alt=""
+            />
+          </button>
         </div>
+<<<<<<< HEAD
         <img src="" alt="" class="watersplash-image-level-select" />
         <img src="" alt="" class="watersplash-image-settings" />
+=======
+        <!-- <img src="" alt="" class="watersplash-image-level-select">
+        <img src="" alt="" class="watersplash-image-settings"> -->
+>>>>>>> origin/Grid
       </div>
 
       <div class="right">
+        <div id="board">
+          <div id="overlay">
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+          </div>
+          <div id="plants">
+            <div class="plant carrot" style="grid-column-start: 3;">
+              <div class="bg">
+
+              </div>
+            </div>
+          </div>
+          <div id="garden">
+            <div class="treatment carrot">
+              <div class="bg">
+
+              </div>
+            </div>
+          </div>
+          <div id="leaves">
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+            <span class="plot"></span>
+          </div>
+        </div>
         <div class="inner-right-target">
           <div class="target-container" id="target-container">
             <img
@@ -149,18 +272,14 @@
                 animate__delay-1s
                 animate__infinite
               "
-              src="/assets/images/treasure.png"
+              src="/assets/images/nest.png"
               alt="Ziel Truhe"
             />
           </div>
         </div>
         <div class="inner-right-player" v-bind:style="message">
           <div class="player-container" id="player-container">
-            <img
-              class="image player-pirate"
-              src="/assets/images/pirate-player.png"
-              alt="Player Pirate"
-            />
+            <img src="/assets/images/egg_chick.png" alt="">
           </div>
         </div>
       </div>
