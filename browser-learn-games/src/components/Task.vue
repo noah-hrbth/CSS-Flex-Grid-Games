@@ -2,14 +2,14 @@
   <div class="aufgaben">
     <h2 class="aufgaben-titel">
       {{
-        this.$store.getters.getLevelById(1, this.$store.state.game.currentLevel)
+        this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel)
           .levelTitle
       }}
     </h2>
     <p
       class="aufgaben-text"
       v-html="
-        this.$store.getters.getLevelById(1, this.$store.state.game.currentLevel)
+        this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel)
           .levelTxt[this.$store.state.settings.language]
       "
     ></p>

@@ -3,7 +3,7 @@
     <p
       class="editor-text"
       v-html="
-        this.$store.getters.getLevelById(1, this.$store.state.game.currentLevel)
+        this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel)
           .preTxt
       "
     ></p>
