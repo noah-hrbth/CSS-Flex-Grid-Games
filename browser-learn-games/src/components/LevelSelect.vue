@@ -7,6 +7,13 @@
         "
         alt="Level select"
         class="level-icon"
+        v-if="this.$store.state.game.currentGame == 1"
+      />
+      <img
+        :src="this.levelSelectImageGrid"
+        alt="Level select"
+        class="level-icon"
+        v-if="this.$store.state.game.currentGame == 2"
       />
     </button>
     <div
@@ -47,6 +54,7 @@
 
 <script>
 import LevelSelectImage from "../assets/images/level-select.png";
+import LevelSelectImageGrid from "../assets/images/levelauswahl.png";
 
 export default {
   name: "LevelSelect",
@@ -60,6 +68,7 @@ export default {
     levelSelectOpen: false,
     levelSelectLoaded: false,
     levelSelectImage: LevelSelectImage,
+    levelSelectImageGrid: LevelSelectImageGrid,
     watersplashLevelSelectSrc: require("../assets/images/watersplash-level-select.gif"),
     levelSelectBtnSrc: require("../assets/images/stone-close.png"),
   }),

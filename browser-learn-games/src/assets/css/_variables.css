@@ -20,7 +20,11 @@
   --color-darker-focus: #553822;
   --color-dark: #8b4513;
   --color-light: #eeeeee;
-  --font-heading: battlesbridge;
+  --font-heading: battlesbridge, cursive;
   --font-body: thedarkestpearl, sans-serif;
-  --font-homescreen: Roboto;
+  --font-homescreen: Roboto, sans-serif;
+  
+  --font-heading-grid:   'Autour One', cursive;
+  --font-headline-grid: 'Lemon Milk', sans-serif;
+  --font-body-grid:      'PT Sans', sans-serif;
 }

@@ -5,6 +5,13 @@
         :src="this.settingsOpen ? this.settingsBtnSrc : this.settingsIconImage"
         alt="Settings"
         class="settings-icon"
+        v-if="this.$store.state.game.currentGame == 1"
+      />
+      <img
+        :src="this.settingsIconImageGrid"
+        alt="Settings"
+        class="settings-icon"
+        v-if="this.$store.state.game.currentGame == 2"
       />
     </button>
     <ul
@@ -41,6 +48,7 @@
 <script>
 import LanguageChange from "./LanguageChange.vue";
 import SettingsIconImage from "../assets/images/settings-icon.png";
+import SettingsIconImageGrid from "../assets/images/Settings_Icon_Wood.png";
 
 export default {
   name: "Settings",
@@ -51,6 +59,7 @@ export default {
     watersplashSrc: require("../assets/images/watersplash-settings.gif"),
     settingsBtnSrc: require("../assets/images/stone-close.png"),
     settingsIconImage: SettingsIconImage,
+    settingsIconImageGrid: SettingsIconImageGrid,
     settingsOpen: false,
     settingsLoaded: false,
   }),

@@ -1,5 +1,20 @@
 <template>
   <div>
+    <div class="disable-smartphone">
+      <img src="./assets/images/error.gif" alt="" class="error-gif">
+      <p>
+        Hey, das Spiel ist leider noch nicht für Geräte unter Tabletgröße
+        ausgerichtet! :( <br />
+        Aber gute Nachricht... du kannst es aber auf einem größeren Gerät deiner
+        Wahl spielen :)
+      </p>
+      <hr>
+      <p>
+        Hey, the game is currently not responsive for devices smaller than a
+        tablet! :( <br />
+        But good news... you can play it on a bigger device of your choice :)
+      </p>
+    </div>
     <div v-if="this.$store.state.game.currentGame == 0">
       <HomeScreen />
     </div>
@@ -26,7 +41,7 @@
 
         <Input />
       </div>
-      <div class="left" v-if="this.$store.state.game.currentGame == 2" style="background: url('');">
+      <div class="left left-grid" v-if="this.$store.state.game.currentGame == 2">
         <div class="game-logo">
           <h1>Grid Chick</h1>
           <button
@@ -90,51 +105,9 @@ export default {
       currentPosition: { x: 0, y: 0 },
     },
   }),
-  beforeMount() {
-    this.checkCookie();
-  },
   methods: {
     getLevel() {
       return this.$store.state.game.currentLevel;
-    },
-
-    setCookie(
-      cookieName = "isOnLevel",
-      level = this.getLevel(),
-      expireDays = 30
-    ) {
-      let date = new Date();
-      date.setTime(date.getTime() + expireDays * 24 * 60 * 60 * 1000);
-      let expires = date.toUTCString();
-
-      document.cookie = `${cookieName}=${level}; ${expires}; path=/`;
-    },
-
-    getCookie(cookieName = "isOnLevel") {
-      let name = `${cookieName}=`;
-      // Falls Cookie Sonderzeichen wie $ beinhaltet
-      let decodedCookie = decodeURIComponent(document.cookie);
-      let cookieArray = decodedCookie.split(";");
-
-      for (let i = 0; i < cookieArray.length; i++) {
-        let cookie = cookieArray[i];
-        while (cookie.charAt(0) === " ") {
-          cookie = cookie.substring(1);
-        }
-        if (cookie.indexOf(name) === 0) {
-          return cookie.substring(name.length, cookie.length);
-        }
-      }
-      return "";
-    },
-
-    checkCookie() {
-      let level = this.getCookie();
-      if (level !== "") {
-        // this.$store.state.game.levelNr(level);
-      } else {
-        this.setCookie();
-      }
     },
   },
 };
@@ -146,6 +119,41 @@ body {
   font-family: var(--font-body), sans-serif;
   overflow: hidden;
   user-select: none;
+}
+
+.disable-smartphone {
+  background-color: #03071e;
+  z-index: 10000;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6vw;
+  text-align: center;
+  padding: 0 5vw;
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 685px) {
+  .disable-smartphone {
+    display: flex;
+  }
+}
+
+.error-gif {
+  margin-top: -4rem;
+}
+
+.disable-smartphone p {
+  font-size: calc(5px + 2vw);
+}
+
+.disable-smartphone hr {
+  width: 50%;
 }
 
 #app {
@@ -162,7 +170,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 50% 25%;
-  grid-template-rows: 20% 7% 27% 40%;
+  grid-template-rows: 20% 7% 29% 40%;
   grid-template-areas:
     "Logo Logo"
     "Levelauswahl Settings"
@@ -174,6 +182,11 @@ body {
   background: url(./assets/images/wood.jpg) no-repeat;
   background-size: cover;
   border-right: 5px solid var(--color-darker);
+}
+
+.left-grid {
+  background: url(./assets/images/holztextur.png) no-repeat;
+  background-size: cover;
 }
 
 .game-logo {

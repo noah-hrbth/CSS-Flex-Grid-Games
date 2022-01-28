@@ -3,8 +3,10 @@
     <p
       class="editor-text"
       v-html="
-        this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel)
-          .preTxt
+        this.$store.getters.getLevelById(
+          this.$store.state.game.currentGame,
+          this.$store.state.game.currentLevel
+        ).preTxt
       "
     ></p>
     <textarea
@@ -50,13 +52,12 @@ export default {
 
     go_to_next_level() {
       this.$store.state.editor.editorInput = "";
-      
+
       if (this.is_last_level() === false) {
         this.$store.state.game.currentLevel += 1;
       }
     },
 
-    
     isCollision(div1, div2) {
       let x1 = div1.getBoundingClientRect().left;
       let y1 = div1.getBoundingClientRect().top;
@@ -154,7 +155,19 @@ export default {
   filter: drop-shadow(2px 4px 8px black);
   position: absolute;
   left: 30vw;
-  top: 35vw;
+  top: 37rem;
+}
+
+@media screen and (max-width: 1020px) {
+  .continue-btn {
+    left: 35vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .continue-btn {
+    left: 43vw;
+  }
 }
 
 .continue-btn:active {
@@ -163,6 +176,6 @@ export default {
 }
 
 .continue-icon {
-  max-height: 4rem;
+  max-height: 4.5vw;
 }
 </style>

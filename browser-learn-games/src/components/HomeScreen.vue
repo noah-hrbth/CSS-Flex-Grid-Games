@@ -33,15 +33,15 @@
       ></p>
     </div>
     <div class="preview-grid preview">
-      <h1 class="gametitle">Grid Chick</h1>
+      <h1 class="gametitle gametitle-grid">Grid Chick</h1>
       <img
         src="../assets/images/game-preview-flex.gif"
         alt=""
         class="game-preview-gif"
         v-on:click="goToGrid"
       />
-       <p
-        class="game-description"
+      <p
+        class="game-description game-description-grid"
         v-html="
           this.$store.state.languageData[this.$store.state.settings.language]
             .descriptionGrid
@@ -194,6 +194,10 @@ export default {
   width: 35vw;
 }
 
+.gametitle-grid {
+  font-family: var(--font-heading-grid) !important;
+}
+
 .preview-grid:hover {
   filter: grayscale(0);
 }
@@ -219,6 +223,10 @@ export default {
 
 .game-description {
   width: 35vw;
+}
+
+.game-description-grid {
+  font-family: var(--font-body-grid) !important;
 }
 
 .signature {
