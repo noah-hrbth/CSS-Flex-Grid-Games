@@ -13,6 +13,21 @@
   src: url(../fonts/Roboto/Roboto-Bold.ttf);
 }
 
+@font-face {
+  font-family: moon-regular;
+  src: url(../fonts/moon-font/Moon2.0-Regular.otf);
+}
+
+@font-face {
+  font-family: moon-bold;
+  src: url(../fonts/moon-font/Moon2.0-Bold.otf);
+}
+
+@font-face {
+  font-family: autour-one;
+  src: url(../fonts/autour-one/AutourOne-Regular.ttf);
+}
+
 :root {
   --color-grey: #5c5b64;
   --color-lightgrey: #a09faa;
@@ -24,7 +39,7 @@
   --font-body: thedarkestpearl, sans-serif;
   --font-homescreen: Roboto, sans-serif;
   
-  --font-heading-grid:   'Autour One', cursive;
-  --font-headline-grid: 'Lemon Milk', sans-serif;
-  --font-body-grid:      'PT Sans', sans-serif;
+  --font-heading-grid:   'autour-one', cursive;
+  --font-headline-grid: 'moon-bold', sans-serif;
+  --font-body-grid:      'moon-regular', sans-serif;
 }
