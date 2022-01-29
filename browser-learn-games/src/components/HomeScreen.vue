@@ -19,7 +19,7 @@
     <div class="preview-flex preview">
       <h1 class="gametitle">Flex Pirate</h1>
       <img
-        src="../assets/images/game-preview-flex.gif"
+        src="../assets/images/flex_preview.gif"
         alt=""
         class="game-preview-gif"
         v-on:click="goToFlex"
