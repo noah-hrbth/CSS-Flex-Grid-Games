@@ -7,7 +7,7 @@
         "Bringe den Piraten zu seiner Kiste, indem du die justify-content-Eigenschaft verwendest, welche die Elemente horizontal ausrichtet und die folgende Werte akzeptiert:</br></br>- flex-start: Elemente an der linken Seite des Containers ausrichten.</br>- flex-end: Elemente an der rechten Seite des Containers ausrichten. </br>- center: Elemente an der Mitte des Containers ausrichten. </br>- sapce-between: Elemente mit gleichem Innenabstand. </br>- space-around: Elemente mit gleichem Außenabstand ausrichten. </br></br>Mit <strong>justify-content: flex-start;</strong> bewegst du den Piraten beispielweise nach links.",
         "Guide the pirate to the chest by using the justify-content property, which aligns items horizontally and accepts the following values: </br></br>- flex-start: Items align to the left side oft the container. </br>- flex-end: Items align to the right side oft the container. </br>- center: Items align at the center oft the container. </br>- sapce-between: Items display with equal spacing between them. </br>- space-around: Items dispaly with equal spacing around them. </br></br>For example, justify-content: flex-end; will move the pirate tot he right"
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 1,
       "solution": "align-items: flex-start; justify-content: flex-end;"
     },
@@ -18,7 +18,7 @@
         "Schaffst du es den Piraten in die Mitte zu bringen, indem du justify-content nutzt ? ", 
         "Can you bring the pirante in the middle with the use of justify-content ?"
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 1,
       "solution": "justify-content: center; align-items: flex-start;"
     },
@@ -29,7 +29,7 @@
         "Benutzt noch einmal justify-content, um die Piraten zu ihren Kisten zu führen.",
         "Use justify-content again to help the pirates get to thein chests."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 2,
       "solution": "justify-content: center; align-items:flex-start;"
     },
@@ -40,7 +40,7 @@
         "Jetzt hilfst du drei Piraten, ihre jeweiligen Kisten zu finden. Jeder Pirat soll zu der Kister in seiner Farbe und das mit justify-content. Achtung: Dieses Mal haben die Kisten einen Außenabstand",
         "Now you help all three pirates find their chests just by using justify-content. At the end every pirate should be on the chest with his colour."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "justify-content: space-around; align-items:flex-start;"
     },
@@ -51,7 +51,7 @@
         "Inzwischen sind die Kisten ganz außen am Rand. Benutze justify-content. Sie haben nun einen gleichmäßigen Innenabstand. ",
         "Now the space between the chests has increased. Use justify-content."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "justify-content: space-between; align-items:flex-start;"
     },
@@ -62,7 +62,7 @@
         "Verwende nun align-items, damit die Piraten die tief im Sand versteckten Kisten erreichen können. Diese CSS-Eigenschafft richtet Elemente vertikal aus und akzeptiert folgende Werte: </br></br> - flex-start: Elemente oben am Container ausrichten. </br>- flex-end: Elemente unten am Container ausrichten. </br>- center: Elemente mittig im Container ausrichten. </br> - baseline: Elemente an der Grundlinie des Containers ausrichten.</br>- stretch: Elemente strecken, um den Container zu füllen.",
         "Now use align-items to help the pirates get tot he bottom oft he dessert. This CSS property aligns items vertically and accepts the following values: </br></br> - flex-start: Elemente oben am Container ausrichten. </br>- flex-end: Elemente unten am Container ausrichten.</br>- center: Elemente mittig im Container ausrichten. </br>- baseline: Elemente an der Grundlinie des Containers ausrichten. </br>- stretch: Elemente strecken, um den Container zu füllen. "
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 1,
       "solution": "align-items:flex-end; justify-content: flex-start;"
     },
@@ -72,7 +72,7 @@
       "levelTxt": [
         "Zwei Truhen sind links in der Mitte. Nutze align-items um sie zu erreichen.", 
         "Two chests are in the middle of the left side. Youse align-items to reach them."],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 2,
       "solution": "align-items: center;justify-content: flex-start"
     },
@@ -83,7 +83,7 @@
         "Bringe den Piraten in die Mitte des Sandes mit justify-content und align items.",
         "Lead the pirate to the center of the sand using a combination of justify-content and align items."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 1,
       "solution": "justify-content: center; align-items:center;"
     },
@@ -94,7 +94,7 @@
         "Hilf den Piraten indem du justify-content und align items benutzt.",
         "Help the piraten with the use of justify-content and align items."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 2,
       "solution": "justify-content: flex-end; align-items:center;"
     },
@@ -105,7 +105,7 @@
         "Die Kisten sind schon wieder weit unten versteckt. Dieses Mal kannst du justify-content und align items kombinieren.",
         "The chest are deep hidden in the sand. This time use justify-content and align items to help the pirates."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "align-items: flex-end; justify-content: space-around;"
     },
@@ -116,7 +116,7 @@
         "Die Piraten müssen mit Hilfe von flex-direction in die Rheinfolge der Kisten gebracht werden. Diese CSS-Eigenschaft legt die Ausrichtung in einem Container fest und akzeptiert folgende Werte</br></br>- row: Elemente in Textrichtung ausrichten. </br>- row-reverse: Elemente entgegen Textrichtung ausrichten. </br>- column: Elemente von oben nach unten ausrichten. </br>- column-reverse: Elemente von unten nach oben ausrichten.",
         "The pirates need to be in the same order as the chests. To achieve that you can use flex-direction which defines the direction items are placed in the container, and accepts the following values: </br></br>- row: Items are placed the same as the text direction. </br>- row-reverse: Items are placed opposite to the text direction. </br>- column: Items are placed top to bottom. </br>- column-reverse: Items are placed bottom to top."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "flex-direction: row-reverse; align-items:flex-start; justify-content:flex-start;"
     },
@@ -127,7 +127,7 @@
         "Hilf den Piraten die Kisten zu finden, indem du flex-direction benutzt.",
         "Help the pirates to find their chests using flex-direction."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "flex-direction: column; align-items:flex-start; justify-content:flex-start;"
     },
@@ -138,7 +138,7 @@
         "Ordne die Piraten in der Richtige Rheinfolge auf den Kisten. Dazu benötigst du flex-direction, als auch justify-content. Hinweis: Wenn du eine umgekehrte Ausrichtung verwendest, sind Start und Ende auch umgekehrt.",
         "Lead the to their chests. It will take both flex-direction and justify-content to get them there."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "flex-direction: row-reverse;justify-content: flex-end; align-items: flex-start;"
     },
@@ -149,7 +149,7 @@
         "Hilf den Piraten mit flex-direction und justify-content, ihre Kisten zu finden.",
         "Help the pirates find their chest using flex-direction and justify-content."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "flex-direction: column;justify-content: flex-end; align-items: flex-start;"
     },
@@ -160,7 +160,7 @@
         "Benutzt flex-direction und justify-content, damit die Piraten die Kisten erreichen.",
         "Use flex-direction and justify-content to guide the pirates to their chests."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br> }",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <",
       "playerAmount": 3,
       "solution": "flex-direction: column-reverse; justify-content: space-between; align-items: flex-start;"
     },
@@ -171,7 +171,7 @@
         "Kombiniere jetzt flex-direction, justify-content und align-items.",
         "Help the pirates find thier chests using flex-direction, justify-content and align-items."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "flex-direction: row-reverse; justify-content: center; align-items: flex-end;"
     },
@@ -182,7 +182,7 @@
         "Die Truhen haben Abstand und ihre Reihenfolge geändert. Schaffst du auch dies zu bewälltigen ?",
          "The chests have changed their order and space. Can you still solve that ?"
         ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "flex-direction:column-reverse; justify-content: space-between; align-items: flex-end;"
     },
@@ -192,7 +192,7 @@
       "levelTxt": [
         "Kombiniere ein letztes mal alle gelernten eigenschafften, um die Piraten zu ihren Kisten zu bringen.", 
         "For the last time combine what you learned and bring the pirates to thei chests."],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <br>}",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
       "playerAmount": 3,
       "solution": "align-items: center; justify-content:flex-end; flex-direction:row-reverse;"
     }

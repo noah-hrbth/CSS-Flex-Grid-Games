@@ -1,31 +1,37 @@
 @font-face {
   font-family: battlesbridge;
   src: url(../fonts/battlesbridge-font/BattlesbridgeDemo-AL126.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: thedarkestpearl;
   src: url(../fonts/thedarkestpearl-font/Thedarkestpearl-9Ym8Z.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Roboto;
   src: url(../fonts/Roboto/Roboto-Bold.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: moon-regular;
   src: url(../fonts/moon-font/Moon2.0-Regular.otf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: moon-bold;
   src: url(../fonts/moon-font/Moon2.0-Bold.otf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: autour-one;
   src: url(../fonts/autour-one/AutourOne-Regular.ttf);
+  font-display: swap;
 }
 
 :root {

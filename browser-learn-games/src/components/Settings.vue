@@ -23,14 +23,14 @@
       "
       :style="this.settingsLoaded ? '' : 'animation: none'"
     >
-      <li class="settings-option language-change">
+      <li class="settings-option language-change" :class="this.$store.state.game.currentGame == 2 ? 'settings-item-grid' : ''">
         <span>{{
           this.$store.state.languageData[this.$store.state.settings.language]
             .languageChange
         }}</span>
         <LanguageChange />
       </li>
-      <li class="settings-option hint-change">
+      <li class="settings-option hint-change" :class="this.$store.state.game.currentGame == 2 ? 'settings-item-grid' : ''">
         <span>{{
           this.$store.state.languageData[this.$store.state.settings.language]
             .hints
@@ -41,7 +41,12 @@
         </label>
       </li>
     </ul>
-    <img src="" alt="" class="watersplash-image-settings" />
+    <img
+      src=""
+      alt=""
+      class="watersplash-image-settings"
+      :style="this.$store.state.game.currentGame == 2 ? 'display: none' : ''"
+    />
   </div>
 </template>
 
@@ -92,7 +97,7 @@ export default {
         );
         setTimeout(() => {
           watersplashImageSettings.src = this.watersplashSrc;
-        }, 1850);
+        }, 1800);
       }
     });
   },
@@ -144,6 +149,10 @@ export default {
 .settings-option {
   display: flex;
   gap: 1rem;
+}
+
+.settings-item-grid {
+  font-family: var(--font-body-grid);
 }
 
 .settings-option span:not(.slider) {
@@ -214,7 +223,7 @@ input:checked + .slider:before {
 .watersplash-image-settings {
   position: absolute;
   width: 20rem;
-  top: 44rem;
+  top: 38rem;
   left: 30vw;
   pointer-events: none;
 }

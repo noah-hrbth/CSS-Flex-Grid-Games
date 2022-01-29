@@ -43,14 +43,19 @@
           :key="level.levelNr"
           v-on:click="goToLevel(2, level.levelNr - 1)"
           onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
-          class="level-nr"
+          class="level-nr level-nr-grid"
           :title="level.levelTitle"
         >
           <span>{{ level.levelNr }}</span>
         </div>
       </div>
     </div>
-    <img src="" alt="" class="watersplash-image-level-select" />
+    <img
+      src=""
+      alt=""
+      class="watersplash-image-level-select"
+      :style="this.$store.state.game.currentGame == 2 ? 'display: none' : ''"
+    />
   </div>
 </template>
 
@@ -102,7 +107,7 @@ export default {
         );
         setTimeout(() => {
           watersplashImageLevelSelect.src = this.watersplashLevelSelectSrc;
-        }, 1850);
+        }, 1800);
       }
     });
   },
@@ -169,11 +174,21 @@ export default {
   line-height: 1.8rem;
 }
 
+.level-nr-grid {
+  font-family: var(--font-body-grid);
+}
+
 .watersplash-image-level-select {
   position: absolute;
   width: 30rem;
   top: 75%;
   right: 80vw;
   pointer-events: none;
+}
+
+@media screen and (max-width: 1070px) {
+  .watersplash-image-level-select {
+    right: 70vw;
+  }
 }
 </style>

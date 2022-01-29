@@ -52,6 +52,7 @@ export default {
 
     go_to_next_level() {
       this.$store.state.editor.editorInput = "";
+      document.querySelector(".continue-btn").style.display = "none";
 
       if (this.is_last_level() === false) {
         this.$store.state.game.currentLevel += 1;
@@ -129,11 +130,11 @@ export default {
 }
 
 .editor-text-grid {
- font-size: calc(11.5px + 0.4vw);
+  font-size: calc(11.5px + 0.4vw);
 }
 
 .editor-eingabe {
-  margin: 1% 0 1% 4.2%;
+  margin: 1% 0 1% 1.1rem;
   resize: none;
   font-size: calc(16px + 0.2vw);
   font-weight: bold;
@@ -141,12 +142,18 @@ export default {
   outline: 0;
   border-radius: 5px;
   background-color: var(--color-darker);
-  width: 20vw;
+  width: 22rem;
   min-width: 250px;
   min-height: 60%;
   color: var(--color-light);
   padding: 0.2rem;
   font-family: sans-serif;
+}
+
+@media screen and (max-width: 1100px) {
+  .editor-eingabe {
+    width: 15rem;
+  }
 }
 
 .editor-eingabe:focus {
@@ -157,20 +164,15 @@ export default {
   cursor: pointer;
   border-radius: 100%;
   filter: drop-shadow(2px 4px 8px black);
-  position: absolute;
-  left: 30vw;
-  top: 37rem;
+  width: 10%;
+  position: relative;
+  bottom: 3vw;
+  left: 25rem;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1100px) {
   .continue-btn {
-    left: 35vw;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .continue-btn {
-    left: 43vw;
+    left: 18rem;
   }
 }
 
@@ -180,6 +182,6 @@ export default {
 }
 
 .continue-icon {
-  max-height: 4.5vw;
+  max-height: 4vw;
 }
 </style>

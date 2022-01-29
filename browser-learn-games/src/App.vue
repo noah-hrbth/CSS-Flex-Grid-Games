@@ -1,14 +1,15 @@
 <template>
   <div>
+    <PageLoader />
     <div class="disable-smartphone">
-      <img src="./assets/images/error.gif" alt="" class="error-gif">
+      <img src="./assets/images/error.gif" alt="" class="error-gif" />
       <p>
         Hey, das Spiel ist leider noch nicht für Geräte unter Tabletgröße
         ausgerichtet! :( <br />
         Aber gute Nachricht... du kannst es aber auf einem größeren Gerät deiner
         Wahl spielen :)
       </p>
-      <hr>
+      <hr />
       <p>
         Hey, the game is currently not responsive for devices smaller than a
         tablet! :( <br />
@@ -29,7 +30,11 @@
               this.$store.state.game.currentLevel = 0;
             "
           >
-            <a class="back-to-home-link">{{ this.$store.state.languageData[this.$store.state.settings.language].backToHome }}</a>
+            <a class="back-to-home-link">{{
+              this.$store.state.languageData[
+                this.$store.state.settings.language
+              ].backToHome
+            }}</a>
           </button>
         </div>
 
@@ -41,9 +46,12 @@
 
         <Input />
       </div>
-      <div class="left left-grid" v-if="this.$store.state.game.currentGame == 2">
+      <div
+        class="left left-grid"
+        v-if="this.$store.state.game.currentGame == 2"
+      >
         <div class="game-logo">
-          <h1>Grid Chick</h1>
+          <h1 class="grid-heading">Grid Chick</h1>
           <button
             class="back-to-home"
             @click="
@@ -51,7 +59,11 @@
               this.$store.state.game.currentLevel = 0;
             "
           >
-            <a class="back-to-home-link">{{ this.$store.state.languageData[this.$store.state.settings.language].backToHome }}</a>
+            <a class="back-to-home-link">{{
+              this.$store.state.languageData[
+                this.$store.state.settings.language
+              ].backToHome
+            }}</a>
           </button>
         </div>
 
@@ -86,6 +98,7 @@ import LevelSelect from "./components/LevelSelect.vue";
 import Settings from "./components/Settings.vue";
 import Task from "./components/Task.vue";
 import Input from "./components/Input.vue";
+import PageLoader from "./components/PageLoader.vue";
 
 export default {
   name: "App",
@@ -97,6 +110,7 @@ export default {
     Settings,
     Task,
     Input,
+    PageLoader,
   },
   data: () => ({
     currentGame: 0,
@@ -192,6 +206,11 @@ body {
 .game-logo {
   grid-area: Logo;
   font-family: var(--font-heading);
+}
+
+.grid-heading {
+  font-family: var(--font-heading-grid);
+  font-size: calc(35px + 1vw);
 }
 
 .back-to-home {

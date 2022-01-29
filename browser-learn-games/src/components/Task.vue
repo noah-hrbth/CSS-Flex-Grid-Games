@@ -1,16 +1,28 @@
 <template>
   <div class="aufgaben">
-    <h2 class="aufgaben-titel">
+    <h2
+      class="aufgaben-titel"
+      :class="
+        this.$store.state.game.currentGame == 2 ? 'aufgaben-titel-grid' : ''
+      "
+    >
       {{
-        this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel)
-          .levelTitle
+        this.$store.getters.getLevelById(
+          this.$store.state.game.currentGame,
+          this.$store.state.game.currentLevel
+        ).levelTitle
       }}
     </h2>
     <p
       class="aufgaben-text"
+      :class="
+        this.$store.state.game.currentGame == 2 ? 'aufgaben-text-grid' : ''
+      "
       v-html="
-        this.$store.getters.getLevelById(this.$store.state.game.currentGame, this.$store.state.game.currentLevel)
-          .levelTxt[this.$store.state.settings.language]
+        this.$store.getters.getLevelById(
+          this.$store.state.game.currentGame,
+          this.$store.state.game.currentLevel
+        ).levelTxt[this.$store.state.settings.language]
       "
     ></p>
   </div>
@@ -35,4 +47,11 @@ export default {
   overflow-y: scroll;
 }
 
+.aufgaben-text-grid {
+  font-family: var(--font-body-grid);
+}
+
+.aufgaben-titel-grid {
+  font-family: var(--font-headline-grid);
+}
 </style>

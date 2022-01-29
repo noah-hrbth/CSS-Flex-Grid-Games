@@ -196,6 +196,14 @@ export default {
 
 .gametitle-grid {
   font-family: var(--font-heading-grid) !important;
+  font-size: calc(35px + 1vw);
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .gametitle-grid {
+    margin-top: 1.25rem;
+  }
 }
 
 .preview-grid:hover {
@@ -223,6 +231,7 @@ export default {
 
 .game-description {
   width: 35vw;
+  font-size: calc(12px + 0.5vw);
 }
 
 .game-description-grid {
