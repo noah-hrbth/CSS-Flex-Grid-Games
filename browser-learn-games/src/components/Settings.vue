@@ -223,7 +223,7 @@ input:checked + .slider:before {
 .watersplash-image-settings {
   position: absolute;
   width: 20rem;
-  top: 38rem;
+  top: 83vh;
   left: 30vw;
   pointer-events: none;
 }
