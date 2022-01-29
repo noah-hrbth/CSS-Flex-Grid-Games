@@ -8,6 +8,21 @@
   src: url(/assets/fonts/thedarkestpearl-font/Thedarkestpearl-9Ym8Z.ttf);
 }
 
+@font-face {
+  font-family: moon-regular;
+  src: url(/assets/fonts/moon-font/Moon2.0-Regular.otf)
+}
+
+@font-face {
+  font-family: moon-bold;
+  src: url(/assets/fonts/moon-font/Moon2.0-Bold.otf)
+}
+
+@font-face {
+  font-family: autourone;
+  src: url(/assets/fonts/moon-font/AutourOne-Regular.ttf)
+}
+
 :root {
   --color-grey:   #323232;
   --color-darker: #3B2718;
@@ -15,6 +30,6 @@
   --color-medium: #954c2f;
   --color-light:  #eeeeee;
   --font-heading:   'Autour One', cursive;
-  --font-headline: 'Lemon Milk', sans-serif;
-  --font-body:      'PT Sans', sans-serif;
+  --font-headline: 'moon-bold', sans-serif;
+  --font-body:      'moon-regular', sans-serif;
 }
