@@ -116,7 +116,7 @@ export default {
 .editor {
   grid-area: Editor;
   margin-bottom: 10rem;
-  width: 30rem;
+  width: 45vw;
   display: flex;
   flex-direction: column;
   z-index: 2;

@@ -33,7 +33,9 @@
           this.getLevelById(this.$store.state.game.currentLevel).targetPos
         "
       >
-        <img class="image target-treasure" :src="nestImage" alt="Ziel" />
+        <div class="image-wrapper">
+          <img class="image target-treasure" :src="nestImage" alt="Ziel" />
+        </div>
       </div>
       <div
         class="target-container"
@@ -45,7 +47,9 @@
             : 'display:none;'
         "
       >
-        <img class="image target-treasure" :src="nestBlueImage" alt="Ziel" />
+        <div class="image-wrapper">
+          <img class="image target-treasure" :src="nestBlueImage" alt="Ziel" />
+        </div>
       </div>
       <div
         class="target-container"
@@ -57,7 +61,9 @@
             : 'display:none;'
         "
       >
-        <img class="image target-treasure" :src="nestGreenImage" alt="Ziel" />
+        <div class="image-wrapper">
+          <img class="image target-treasure" :src="nestGreenImage" alt="Ziel" />
+        </div>
       </div>
       <div
         class="target-container"
@@ -69,7 +75,9 @@
             : 'display:none;'
         "
       >
-        <img class="image target-treasure" :src="nestPinkImage" alt="Ziel" />
+        <div class="image-wrapper">
+          <img class="image target-treasure" :src="nestPinkImage" alt="Ziel" />
+        </div>
       </div>
     </div>
     <div
@@ -265,8 +273,7 @@ export default {
 
 .player-container {
   margin: 0.7vw 2vw 0 2vw;
-  height: 7vw;
-  width: 7vw;
+  width: 6vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,15 +285,18 @@ export default {
 }
 
 .target-container {
-  margin: 4vw 2vw 0 2vw;
   height: 10vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 50;
 }
 
 .target-treasure {
   max-width: 10vw;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
 }
 </style>
