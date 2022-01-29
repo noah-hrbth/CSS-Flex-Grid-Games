@@ -264,7 +264,7 @@ export default {
 }
 
 .player-container {
-  margin: 2rem 0 0 2rem;
+  margin: 1vw 2vw 0 2vw;
   height: 7rem;
   width: 7rem;
   display: flex;
@@ -274,12 +274,13 @@ export default {
 }
 
 .player-pirate {
-  max-width: 10rem;
+  max-width: 10vw;
 }
 
 .target-container {
-  height: 10rem;
-  width: 10rem;
+  margin: 4vw 2vw 0 2vw;
+  height: 10vw;
+  width: 10vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,6 +288,6 @@ export default {
 }
 
 .target-treasure {
-  max-width: 10rem;
+  max-width: 10vw;
 }
 </style>
