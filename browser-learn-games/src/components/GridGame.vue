@@ -264,9 +264,9 @@ export default {
 }
 
 .player-container {
-  margin: 1vw 2vw 0 2vw;
-  height: 7rem;
-  width: 7rem;
+  margin: 0.7vw 2vw 0 2vw;
+  height: 7vw;
+  width: 7vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,7 +280,6 @@ export default {
 .target-container {
   margin: 4vw 2vw 0 2vw;
   height: 10vw;
-  width: 10vw;
   display: flex;
   align-items: center;
   justify-content: center;
