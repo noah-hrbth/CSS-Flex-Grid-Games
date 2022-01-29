@@ -1,6 +1,7 @@
 <template>
   <div class="editor">
     <p
+      :class="this.$store.state.game.currentGame == 2 ? 'editor-text-grid' : ''"
       class="editor-text"
       v-html="
         this.$store.getters.getLevelById(
@@ -125,6 +126,10 @@ export default {
   font-size: calc(16px + 0.2vw);
   font-weight: bold;
   font-family: sans-serif;
+}
+
+.editor-text-grid {
+ font-size: calc(11.5px + 0.4vw);
 }
 
 .editor-eingabe {
