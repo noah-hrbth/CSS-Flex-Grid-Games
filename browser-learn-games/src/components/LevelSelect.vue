@@ -32,6 +32,7 @@
           v-on:click="goToLevel(1, level.levelNr - 1)"
           class="level-nr"
           onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
+          :title="level.levelTitle"
         >
           <span>{{ level.levelNr }}</span>
         </div>
@@ -43,6 +44,7 @@
           v-on:click="goToLevel(2, level.levelNr - 1)"
           onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(item => item.style.display = 'none')"
           class="level-nr"
+          :title="level.levelTitle"
         >
           <span>{{ level.levelNr }}</span>
         </div>

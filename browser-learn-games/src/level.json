@@ -2,7 +2,7 @@
   "flex": [
     {
       "levelNr": 1,
-      "levelTitle": "justify-content",
+      "levelTitle": "justify-content-1",
       "levelTxt": [
         "Bringe den Piraten zu seiner Kiste, indem du die justify-content-Eigenschaft verwendest, welche die Elemente horizontal ausrichtet und die folgende Werte akzeptiert:</br></br>- flex-start: Elemente an der linken Seite des Containers ausrichten.</br>- flex-end: Elemente an der rechten Seite des Containers ausrichten. </br>- center: Elemente an der Mitte des Containers ausrichten. </br>- sapce-between: Elemente mit gleichem Innenabstand. </br>- space-around: Elemente mit gleichem Außenabstand ausrichten. </br></br>Mit <strong>justify-content: flex-start;</strong> bewegst du den Piraten beispielweise nach links.",
         "Guide the pirate to the chest by using the justify-content property, which aligns items horizontally and accepts the following values: </br></br>- flex-start: Items align to the left side oft the container. </br>- flex-end: Items align to the right side oft the container. </br>- center: Items align at the center oft the container. </br>- sapce-between: Items display with equal spacing between them. </br>- space-around: Items dispaly with equal spacing around them. </br></br>For example, justify-content: flex-end; will move the pirate tot he right"

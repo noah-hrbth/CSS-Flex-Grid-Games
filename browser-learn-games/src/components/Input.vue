@@ -8,6 +8,7 @@
           this.$store.state.game.currentLevel
         ).preTxt
       "
+      :class="this.$store.state.game.currentGame == 2 ? 'editor-text-grid' : ''"
     ></p>
     <textarea
       class="editor-eingabe"
