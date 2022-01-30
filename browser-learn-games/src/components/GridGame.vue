@@ -34,49 +34,7 @@
         "
       >
         <div class="image-wrapper">
-          <img class="image target-treasure" :src="nestImage" alt="Ziel" />
-        </div>
-      </div>
-      <div
-        class="target-container"
-        id="target-container-2"
-        :style="
-          this.getLevelById(this.$store.state.game.currentLevel).targetAmount >
-          1
-            ? 'this.getLevelById(this.$store.state.game.currentLevel).targetPos'
-            : 'display:none;'
-        "
-      >
-        <div class="image-wrapper">
-          <img class="image target-treasure" :src="nestBlueImage" alt="Ziel" />
-        </div>
-      </div>
-      <div
-        class="target-container"
-        id="target-container-3"
-        :style="
-          this.getLevelById(this.$store.state.game.currentLevel).targetAmount >
-          2
-            ? 'this.getLevelById(this.$store.state.game.currentLevel).targetPos'
-            : 'display:none;'
-        "
-      >
-        <div class="image-wrapper">
-          <img class="image target-treasure" :src="nestGreenImage" alt="Ziel" />
-        </div>
-      </div>
-      <div
-        class="target-container"
-        id="target-container-4"
-        :style="
-          this.getLevelById(this.$store.state.game.currentLevel).targetAmount >
-          3
-            ? 'this.getLevelById(this.$store.state.game.currentLevel).targetPos'
-            : 'display:none;'
-        "
-      >
-        <div class="image-wrapper">
-          <img class="image target-treasure" :src="nestPinkImage" alt="Ziel" />
+          <div class="image target-treasure"></div>
         </div>
       </div>
     </div>
@@ -98,55 +56,13 @@
       >
         <img :src="playerImage" alt="" />
       </div>
-      <div
-        class="player-container"
-        id="player-container-2"
-        :style="
-          this.getLevelById(this.$store.state.game.currentLevel).targetAmount >
-          1
-            ? ''
-            : 'display:none;'
-        "
-      >
-        <img :src="playerBlueImage" alt="" />
-      </div>
-      <div
-        class="player-container"
-        id="player-container-3"
-        :style="
-          this.getLevelById(this.$store.state.game.currentLevel).targetAmount >
-          2
-            ? ''
-            : 'display:none;'
-        "
-      >
-        <img :src="playerGreenImage" alt="" />
-      </div>
-      <div
-        class="player-container"
-        id="player-container-4"
-        :style="
-          this.getLevelById(this.$store.state.game.currentLevel).targetAmount >
-          3
-            ? ''
-            : 'display:none;'
-        "
-      >
-        <img :src="playerPinkImage" alt="" />
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 import PlayerImage from "../assets/images/egg_chick.png";
-import PlayerBlueImage from "../assets/images/egg_chick_blue.png";
-import PlayerGreenImage from "../assets/images/egg_chick_green.png";
-import PlayerPinkImage from "../assets/images/egg_chick_pink.png";
 import NestImage from "../assets/images/nest.png";
-import NestBlueImage from "../assets/images/nest.png";
-import NestGreenImage from "../assets/images/nest.png";
-import NestPinkImage from "../assets/images/nest.png";
 
 export default {
   name: "GridGame",
@@ -159,13 +75,7 @@ export default {
 
   data: () => ({
     playerImage: PlayerImage,
-    playerBlueImage: PlayerBlueImage,
-    playerGreenImage: PlayerGreenImage,
-    playerPinkImage: PlayerPinkImage,
     nestImage: NestImage,
-    nestBlueImage: NestBlueImage,
-    nestGreenImage: NestGreenImage,
-    nestPinkImage: NestPinkImage,
 
     message: "",
   }),
@@ -289,14 +199,27 @@ export default {
   z-index: 50;
 }
 
-.target-treasure {
-  max-width: 10vw;
-}
-
 .image-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 100%;
+  width: 100%;
 }
+
+.target-treasure {
+  max-width: 100%;
+  min-width: 10vw;
+  min-height: 10vh;
+  background-image: url(../assets/images/nest.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+}
+
+.image {
+  width: 100%;
+}
+
+
 </style>
