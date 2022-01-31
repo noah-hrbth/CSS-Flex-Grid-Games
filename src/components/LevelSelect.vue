@@ -176,6 +176,8 @@ export default {
 
 .level-nr-grid {
   font-family: var(--font-body-grid);
+  background-color: #FFBA2E;
+  color: var(--color-darker)
 }
 
 .watersplash-image-level-select {

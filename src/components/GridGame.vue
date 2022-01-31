@@ -176,7 +176,6 @@ export default {
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 50vw;
   height: 100vh;
   top: 0;
