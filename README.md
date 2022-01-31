@@ -1,15 +1,24 @@
-# Browser Learn Games
+# browser-learn-games
 
-## Install
+## Project setup
+```
+npm install
+```
 
-docker build -t browser-games .  
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-docker run -dp 80:3005 browser-games  
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## Project
+### Lints and fixes files
+```
+npm run lint
+```
 
-### Dependencies
-- [Express](http://expressjs.com/)
-
-### Developer Dependencies
-- [Nodemon](https://www.npmjs.com/package/nodemon)  
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

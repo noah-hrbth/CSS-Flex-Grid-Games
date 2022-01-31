@@ -1,18 +1,216 @@
 {
-  "level1":{
-    "levelNr": 1,
-    "levelTitle": "grid-column-start 1",
-    "levelTxt": [
-      "<p>Willkommen bei Grid Chick, wo du CSS Code schreibst, um dem Küken zurück zu seinem Nest zu helfen! Bewege das Küken, indem du die <strong>grid-column-start</strong> Eigenschaft nutzt.</p><p>Zum Beispiel <strong>grid-column-start: 3;</strong> bewegt das Küken auf den Abschnitt auf der dritten vertikalen Rasterlinie.</p>",
-      "<p>Welcome to Grid Chichk, where you write CSS code to help the chick get back to its nest! Move the chick by using the <strong>grid-column-start</strong> property.</p><p>For example, <strong>grid-column-start: 3;</strong> will move the chick to the 3rd vertical grid line, which is another way of saying the 3rd vertical border from the left in the grid.</p>"
-    ],
-    "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
-    "targetAmount": 1,
-    "playerPos": "grid-column-start: 1;",
-    "targetPos": "grid-column-start: 3;"
-  }
-  ,
-  "level2":{
+  "flex": [
+    {
+      "levelNr": 1,
+      "levelTitle": "justify-content-1",
+      "levelTxt": [
+        "Bringe den Piraten zu seiner Kiste, indem du die justify-content-Eigenschaft verwendest, welche die Elemente horizontal ausrichtet und die folgende Werte akzeptiert:</br></br>- flex-start: Elemente an der linken Seite des Containers ausrichten.</br>- flex-end: Elemente an der rechten Seite des Containers ausrichten. </br>- center: Elemente an der Mitte des Containers ausrichten. </br>- sapce-between: Elemente mit gleichem Innenabstand. </br>- space-around: Elemente mit gleichem Außenabstand ausrichten. </br></br>Mit <strong>justify-content: flex-start;</strong> bewegst du den Piraten beispielweise nach links.",
+        "Guide the pirate to the chest by using the justify-content property, which aligns items horizontally and accepts the following values: </br></br>- flex-start: Items align to the left side oft the container. </br>- flex-end: Items align to the right side oft the container. </br>- center: Items align at the center oft the container. </br>- sapce-between: Items display with equal spacing between them. </br>- space-around: Items dispaly with equal spacing around them. </br></br>For example, justify-content: flex-end; will move the pirate tot he right"
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 1,
+      "solution": "align-items: flex-start; justify-content: flex-end;"
+    },
+    {
+      "levelNr": 2,
+      "levelTitle": "justify-content-2",
+      "levelTxt": [
+        "Schaffst du es den Piraten in die Mitte zu bringen, indem du justify-content nutzt ? ", 
+        "Can you bring the pirante in the middle with the use of justify-content ?"
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 1,
+      "solution": "justify-content: center; align-items: flex-start;"
+    },
+    {
+      "levelNr": 3,
+      "levelTitle": "justify-content-3",
+      "levelTxt": [
+        "Benutzt noch einmal justify-content, um die Piraten zu ihren Kisten zu führen.",
+        "Use justify-content again to help the pirates get to thein chests."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 2,
+      "solution": "justify-content: center; align-items:flex-start;"
+    },
+    {
+      "levelNr": 4,
+      "levelTitle": "justify-content-4",
+      "levelTxt": [
+        "Jetzt hilfst du drei Piraten, ihre jeweiligen Kisten zu finden. Jeder Pirat soll zu der Kister in seiner Farbe und das mit justify-content. Achtung: Dieses Mal haben die Kisten einen Außenabstand",
+        "Now you help all three pirates find their chests just by using justify-content. At the end every pirate should be on the chest with his colour."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "justify-content: space-around; align-items:flex-start;"
+    },
+    {
+      "levelNr": 5,
+      "levelTitle": "justify-content-5",
+      "levelTxt": [
+        "Inzwischen sind die Kisten ganz außen am Rand. Benutze justify-content. Sie haben nun einen gleichmäßigen Innenabstand. ",
+        "Now the space between the chests has increased. Use justify-content."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "justify-content: space-between; align-items:flex-start;"
+    },
+    {
+      "levelNr": 6,
+      "levelTitle": "align-items-1",
+      "levelTxt": [
+        "Verwende nun align-items, damit die Piraten die tief im Sand versteckten Kisten erreichen können. Diese CSS-Eigenschafft richtet Elemente vertikal aus und akzeptiert folgende Werte: </br></br> - flex-start: Elemente oben am Container ausrichten. </br>- flex-end: Elemente unten am Container ausrichten. </br>- center: Elemente mittig im Container ausrichten. </br> - baseline: Elemente an der Grundlinie des Containers ausrichten.</br>- stretch: Elemente strecken, um den Container zu füllen.",
+        "Now use align-items to help the pirates get tot he bottom oft he dessert. This CSS property aligns items vertically and accepts the following values: </br></br> - flex-start: Elemente oben am Container ausrichten. </br>- flex-end: Elemente unten am Container ausrichten.</br>- center: Elemente mittig im Container ausrichten. </br>- baseline: Elemente an der Grundlinie des Containers ausrichten. </br>- stretch: Elemente strecken, um den Container zu füllen. "
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 1,
+      "solution": "align-items:flex-end; justify-content: flex-start;"
+    },
+    {
+      "levelNr": 7,
+      "levelTitle": "align-items-2",
+      "levelTxt": [
+        "Zwei Truhen sind links in der Mitte. Nutze align-items um sie zu erreichen.", 
+        "Two chests are in the middle of the left side. Youse align-items to reach them."],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 2,
+      "solution": "align-items: center;justify-content: flex-start"
+    },
+    {
+      "levelNr": 8,
+      "levelTitle": "align-items-3",
+      "levelTxt": [
+        "Bringe den Piraten in die Mitte des Sandes mit justify-content und align items.",
+        "Lead the pirate to the center of the sand using a combination of justify-content and align items."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 1,
+      "solution": "justify-content: center; align-items:center;"
+    },
+    {
+      "levelNr": 9,
+      "levelTitle": "align-items-4",
+      "levelTxt": [
+        "Hilf den Piraten indem du justify-content und align items benutzt.",
+        "Help the piraten with the use of justify-content and align items."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 2,
+      "solution": "justify-content: flex-end; align-items:center;"
+    },
+    {
+      "levelNr": 10,
+      "levelTitle": "align-items-5",
+      "levelTxt": [
+        "Die Kisten sind schon wieder weit unten versteckt. Dieses Mal kannst du justify-content und align items kombinieren.",
+        "The chest are deep hidden in the sand. This time use justify-content and align items to help the pirates."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "align-items: flex-end; justify-content: space-around;"
+    },
+    {
+      "levelNr": 11,
+      "levelTitle": "flex-direction-1",
+      "levelTxt": [
+        "Die Piraten müssen mit Hilfe von flex-direction in die Rheinfolge der Kisten gebracht werden. Diese CSS-Eigenschaft legt die Ausrichtung in einem Container fest und akzeptiert folgende Werte</br></br>- row: Elemente in Textrichtung ausrichten. </br>- row-reverse: Elemente entgegen Textrichtung ausrichten. </br>- column: Elemente von oben nach unten ausrichten. </br>- column-reverse: Elemente von unten nach oben ausrichten.",
+        "The pirates need to be in the same order as the chests. To achieve that you can use flex-direction which defines the direction items are placed in the container, and accepts the following values: </br></br>- row: Items are placed the same as the text direction. </br>- row-reverse: Items are placed opposite to the text direction. </br>- column: Items are placed top to bottom. </br>- column-reverse: Items are placed bottom to top."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "flex-direction: row-reverse; align-items:flex-start; justify-content:flex-start;"
+    },
+    {
+      "levelNr": 12,
+      "levelTitle": "flex-direction-2",
+      "levelTxt": [
+        "Hilf den Piraten die Kisten zu finden, indem du flex-direction benutzt.",
+        "Help the pirates to find their chests using flex-direction."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "flex-direction: column; align-items:flex-start; justify-content:flex-start;"
+    },
+    {
+      "levelNr": 13,
+      "levelTitle": "flex-direction-3",
+      "levelTxt": [
+        "Ordne die Piraten in der Richtige Rheinfolge auf den Kisten. Dazu benötigst du flex-direction, als auch justify-content. Hinweis: Wenn du eine umgekehrte Ausrichtung verwendest, sind Start und Ende auch umgekehrt.",
+        "Lead the to their chests. It will take both flex-direction and justify-content to get them there."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "flex-direction: row-reverse;justify-content: flex-end; align-items: flex-start;"
+    },
+    {
+      "levelNr": 14,
+      "levelTitle": "flex-direction-4",
+      "levelTxt": [
+        "Hilf den Piraten mit flex-direction und justify-content, ihre Kisten zu finden.",
+        "Help the pirates find their chest using flex-direction and justify-content."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "flex-direction: column;justify-content: flex-end; align-items: flex-start;"
+    },
+    {
+      "levelNr": 15,
+      "levelTitle": "flex-direction-5",
+      "levelTxt": [
+        "Benutzt flex-direction und justify-content, damit die Piraten die Kisten erreichen.",
+        "Use flex-direction and justify-content to guide the pirates to their chests."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <",
+      "playerAmount": 3,
+      "solution": "flex-direction: column-reverse; justify-content: space-between; align-items: flex-start;"
+    },
+    {
+      "levelNr": 16,
+      "levelTitle": "flex-direction-6",
+      "levelTxt": [
+        "Kombiniere jetzt flex-direction, justify-content und align-items.",
+        "Help the pirates find thier chests using flex-direction, justify-content and align-items."
+      ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "flex-direction: row-reverse; justify-content: center; align-items: flex-end;"
+    },
+    {
+      "levelNr": 17,
+      "levelTitle": "flex-direction-7" ,
+      "levelTxt": [
+        "Die Truhen haben Abstand und ihre Reihenfolge geändert. Schaffst du auch dies zu bewälltigen ?",
+         "The chests have changed their order and space. Can you still solve that ?"
+        ],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "flex-direction:column-reverse; justify-content: space-between; align-items: flex-end;"
+    },
+    {
+      "levelNr": 18,
+      "levelTitle": "flex-direction-8",
+      "levelTxt": [
+        "Kombiniere ein letztes mal alle gelernten eigenschafften, um die Piraten zu ihren Kisten zu bringen.", 
+        "For the last time combine what you learned and bring the pirates to thei chests."],
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex;",
+      "playerAmount": 3,
+      "solution": "align-items: center; justify-content:flex-end; flex-direction:row-reverse;"
+    }
+  ],
+  "grid": [
+    {
+      "levelNr": 1,
+      "levelTitle": "grid-column-start 1",
+      "levelTxt": [
+        "<p>Bewege das Küken, indem du die <strong>grid-column-start</strong> Eigenschaft nutzt.</p><p>Zum Beispiel <strong>grid-column-start: 3;</strong> bewegt das Küken auf den Abschnitt auf der dritten vertikalen Rasterlinie.</p>",
+        "<p>Move the chick by using the <strong>grid-column-start</strong> property.</p><p>For example, <strong>grid-column-start: 3;</strong> will move the chick to the 3rd vertical grid line, which is another way of saying the 3rd vertical border from the left in the grid.</p>"
+      ],
+      "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
+      "targetAmount": 1,
+      "playerPos": "grid-column-start: 1;",
+      "targetPos": "grid-column-start: 3;"
+    },
+    {
       "levelNr": 2,
       "levelTitle": "grid-column-start 2",
       "levelTxt": [
@@ -24,7 +222,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: 5;"
     },
-    "level3":{
+    {
       "levelNr": 3,
       "levelTitle": "grid-column-end 1",
       "levelTxt": [
@@ -36,7 +234,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: 1; grid-column-end: 4;"
     },
-    "level4":{
+    {
       "levelNr": 4,
       "levelTitle": "grid-column-end 2",
       "levelTxt": [
@@ -48,7 +246,7 @@
       "playerPos": "grid-column-start: 5;",
       "targetPos": "grid-column-start: 5; grid-column-end: 2;"
     },
-    "level5":{
+    {
       "levelNr": 5,
       "levelTitle": "grid-column-end 3",
       "levelTxt": [
@@ -56,11 +254,11 @@
         "<p>If you want to count grid lines from the right instead of the left, you can give <strong>grid-column-start</strong> and <strong>grid-column-end</strong> negative values. For example, you can set it to -1 to specify the first grid line from the right.</p><p>Try setting <strong>grid-column-end</strong> to a negative value.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick { <br> &nbsp; &nbsp; grid-column-start: 1;",
-      "targetAmount": 4 ,
+      "targetAmount": 4,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: 1; grid-column-end: -2;"
     },
-    "level6":{
+    {
       "levelNr": 6,
       "levelTitle": "grid-column-start 3",
       "levelTxt": [
@@ -72,7 +270,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: -3;"
     },
-    "level7":{
+    {
       "levelNr": 7,
       "levelTitle": "grid-column-end 4",
       "levelTxt": [
@@ -84,7 +282,7 @@
       "playerPos": "grid-column-start: 2;",
       "targetPos": "grid-column-start: 2; grid-column-end: span 2;"
     },
-    "level8":{
+    {
       "levelNr": 8,
       "levelTitle": "grid-column-end 5",
       "levelTxt": [
@@ -96,7 +294,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: 1; grid-column-end: span 5;"
     },
-    "level9":{
+    {
       "levelNr": 9,
       "levelTitle": "grid-column-start 4",
       "levelTxt": [
@@ -108,7 +306,7 @@
       "playerPos": "grid-column-end: 6;",
       "targetPos": "grid-column-end: 6; grid-column-start: span 3;"
     },
-    "level10":{
+    {
       "levelNr": 10,
       "levelTitle": "grid-column 1",
       "levelTxt": [
@@ -120,7 +318,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column: 4 / 6;"
     },
-    "level11":{
+    {
       "levelNr": 11,
       "levelTitle": "grid-column 2",
       "levelTxt": [
@@ -132,7 +330,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column: 2 / 5;"
     },
-    "level12":{
+    {
       "levelNr": 12,
       "levelTitle": "grid-row-start 1",
       "levelTxt": [
@@ -144,7 +342,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-row-start: 3;"
     },
-    "level13":{
+    {
       "levelNr": 13,
       "levelTitle": "grid-row-start 2",
       "levelTxt": [
@@ -156,7 +354,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-row: 3 / 6;"
     },
-    "level14":{
+    {
       "levelNr": 14,
       "levelTitle": "grid-column-row 1",
       "levelTxt": [
@@ -168,7 +366,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-area: 5 / 2 / auto / auto;"
     },
-    "level15":{
+    {
       "levelNr": 15,
       "levelTitle": "grid-column-row 2",
       "levelTxt": [
@@ -180,7 +378,7 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-area: 1 / 2 / 6 / 6;"
     },
-    "level16":{
+    {
       "levelNr": 16,
       "levelTitle": "grid-area 1",
       "levelTxt": [
@@ -192,4 +390,5 @@
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-area: 1 / 2 / 4 / 6;"
     }
+  ]
 }
