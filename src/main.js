@@ -38,4 +38,6 @@ const store = createStore({
   },
 });
 
+// yo
+
 createApp(App).use(store).mount("#app");
