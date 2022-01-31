@@ -211,7 +211,6 @@ export default {
   background-image: url(../assets/images/nest_small.png);
   background-repeat: repeat-x;
   background-size: 10vw;
-  background-position: center;
 }
 
 .player-bird {
@@ -221,7 +220,6 @@ export default {
   background-image: url(../assets/images/egg_chicken_small.png);
   background-repeat: repeat-x;
   background-size: 10vw;
-  background-position: bottom;
 }
 
 .image {
