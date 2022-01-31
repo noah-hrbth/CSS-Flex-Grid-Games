@@ -2,20 +2,20 @@
   <div class="right">
     <div id="board">
       <div id="overlay">
-        <span v-for="n in 25" class="plot" v-bind:key="n"></span>
+        <span v-for="n in 25" class="kasten" v-bind:key="n"></span>
       </div>
-      <div id="plants">
-        <div class="plant carrot" style="grid-column-start: 3">
+      <div id="nester">
+        <div class="nest" style="grid-column-start: 3">
           <div class="bg"></div>
         </div>
       </div>
-      <div id="garden">
-        <div class="treatment carrot">
+      <div id="tree">
+        <div class="küken">
           <div class="bg"></div>
         </div>
       </div>
       <div id="leaves">
-        <span v-for="n in 25" class="plot" v-bind:key="n"></span>
+        <span v-for="n in 25" class="kasten" v-bind:key="n"></span>
       </div>
     </div>
     <div
@@ -107,8 +107,8 @@ export default {
   overflow: hidden;
 }
 
-#garden,
-#plants,
+#tree,
+#nester,
 #leaves,
 #overlay {
   display: grid;
@@ -121,13 +121,13 @@ export default {
   height: 100%;
 }
 
-#overlay .plot {
+#overlay .kasten {
   z-index: 50;
   background: none;
   box-shadow: inset 2px 2px 0 rgb(255 255 255 / 5%), inset -2px -2px 0 #133e14;
 }
 
-.plot {
+.kasten {
   width: 100%;
   height: 100%;
   background-color: #6f532a;
@@ -136,27 +136,27 @@ export default {
   background-size: calc(10vw - 4px);
 }
 
-#plants {
+#nester {
   z-index: 30;
 }
 
-.plant,
-.treatment {
+.nest,
+.küken {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.plant .bg,
-.treatment .bg {
+.nest .bg,
+.küken .bg {
   width: 100%;
   height: 100%;
   background-position: left top;
   background-size: calc(10vw - 4px);
 }
 
-#garden {
+#tree {
   z-index: 20;
 }
 
