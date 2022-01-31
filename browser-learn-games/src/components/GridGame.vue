@@ -54,7 +54,9 @@
           this.$store.state.editor.editorInput,
         ]"
       >
-        <img :src="playerImage" alt="" />
+        <div class="image-wrapper player-bird">
+          <div class="image "></div>
+        </div>
       </div>
     </div>
   </div>
@@ -182,12 +184,8 @@ export default {
 }
 
 .player-container {
-  margin: 0.7vw 2vw 0 2vw;
-  width: 6vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1000;
+  padding-bottom: 2vw;
 }
 
 .player-pirate {
@@ -210,16 +208,23 @@ export default {
 .target-treasure {
   max-width: 100%;
   min-width: 10vw;
-  min-height: 10vh;
+  height: 79px;;
   background-image: url(../assets/images/nest.png);
   background-repeat: repeat-x;
+  background-size: 10vw;
+}
+
+.player-bird {
+  max-width: 100%;
+  min-width: 10vw;
+  min-height: 10vh;
+  background-image: url(../assets/images/egg_chick.png);
+  background-repeat: space;
   background-size: contain;
-  background-position: center;
+  background-position: bottom;
 }
 
 .image {
   width: 100%;
 }
-
-
 </style>
