@@ -2,7 +2,7 @@
   <div class="right">
     <div id="board">
       <div id="overlay">
-        <span v-for="n in 39" class="plot" v-bind:key="n"></span>
+        <span v-for="n in 25" class="plot" v-bind:key="n"></span>
       </div>
       <div id="plants">
         <div class="plant carrot" style="grid-column-start: 3">
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div id="leaves">
-        <span v-for="n in 39" class="plot" v-bind:key="n"></span>
+        <span v-for="n in 25" class="plot" v-bind:key="n"></span>
       </div>
     </div>
     <div
@@ -185,7 +185,6 @@ export default {
 
 .player-container {
   z-index: 1000;
-  padding-bottom: 2vw;
 }
 
 .player-pirate {
@@ -208,19 +207,20 @@ export default {
 .target-treasure {
   max-width: 100%;
   min-width: 10vw;
-  height: 79px;;
-  background-image: url(../assets/images/nest.png);
+  min-height: 100%;
+  background-image: url(../assets/images/nest_small.png);
   background-repeat: repeat-x;
   background-size: 10vw;
+  background-position: center;
 }
 
 .player-bird {
   max-width: 100%;
   min-width: 10vw;
-  min-height: 10vh;
-  background-image: url(../assets/images/egg_chick.png);
-  background-repeat: space;
-  background-size: contain;
+  min-height: 100%;
+  background-image: url(../assets/images/egg_chicken_small.png);
+  background-repeat: repeat-x;
+  background-size: 10vw;
   background-position: bottom;
 }
 
