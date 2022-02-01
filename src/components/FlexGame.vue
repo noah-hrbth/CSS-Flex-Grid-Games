@@ -132,6 +132,7 @@ import WoodImage from "../assets/images/wood.jpg";
 
 export default {
   name: "FlexGame",
+  title: "Flex Pirate",
   components: {},
   props: {
     levelData: {

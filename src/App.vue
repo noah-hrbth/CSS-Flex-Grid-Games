@@ -29,6 +29,7 @@
               this.$store.state.game.currentGame = 0;
               this.$store.state.game.currentLevel = 0;
             "
+            v-on:click="handleIcon"
           >
             <a class="back-to-home-link">{{
               this.$store.state.languageData[
@@ -58,6 +59,7 @@
               this.$store.state.game.currentGame = 0;
               this.$store.state.game.currentLevel = 0;
             "
+            v-on:click="handleIcon"
           >
             <a class="back-to-home-link">{{
               this.$store.state.languageData[
@@ -100,6 +102,9 @@ import Task from "./components/Task.vue";
 import Input from "./components/Input.vue";
 import PageLoader from "./components/PageLoader.vue";
 
+
+import HsdIcon from "./assets/images/favicon_io/favicon_hsd.png";
+
 export default {
   name: "App",
   components: {
@@ -118,11 +123,18 @@ export default {
       levelNr: 0,
       currentPosition: { x: 0, y: 0 },
     },
+    hsdIcon: HsdIcon,
   }),
   methods: {
     getLevel() {
       return this.$store.state.game.currentLevel;
     },
+    handleIcon() {
+      let favicon = document.getElementById("favicon");
+      favicon.href = this.hsdIcon;
+      let title = document.getElementById("title");
+      title.innerText = "Browser Learn Games";
+    }
   },
 };
 </script>
