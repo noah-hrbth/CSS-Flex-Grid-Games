@@ -89,14 +89,6 @@ export default {
     editorInput: async function () {
       this.$store.state.editor.editorInput = this.editorInput;
 
-      console.log("yo")
-
-      let amount = this.$store.getters.getPlayerAmount(this.$store.state.game.currentGame, this.$store.state.game.currentLevel)
-
-      console.log("currentGame " + this.$store.state.game.currentGame)
-      console.log("currentLevel " + this.$store.state.game.currentLevel)
-      console.log("playerAmount " + amount)
-
       for (
         let i = 0;
         i <
