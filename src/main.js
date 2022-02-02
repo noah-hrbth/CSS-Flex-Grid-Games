@@ -35,6 +35,16 @@ const store = createStore({
         return state.levelData.grid[levelId];
       }
     },
+    getPlayerAmount: (state) => (gameId, levelId) => {
+      state.currentGame = gameId;
+      state.currentLevel = levelId;
+
+      if(gameId == 1){
+        return state.levelData.flex[levelId].playerAmount;
+      } else if(gameId == 2){
+        return state.levelData.grid[levelId].targetAmount;
+      }
+    }
   },
 });
 

@@ -230,7 +230,7 @@
         "<p>When <strong>grid-column-start</strong> is used alone, the grid item by default will span exactly one column. However, you can extend the item across multiple columns by adding the <strong>grid-column-end</strong> property.</p><p>Use <strong>grid-column-end</strong> to help all the chicks!</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick { <br> &nbsp; &nbsp; grid-column-start: 1;",
-      "targetAmount": 3,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: 1; grid-column-end: 4;"
     },
@@ -242,7 +242,7 @@
         "<p>When pairing <strong>grid-column-start</strong> and <strong>grid-column-end</strong>, you might assume that the end value has to be greater than the start value. But this turns out not the case!</p><p>Try setting <strong>grid-column-end</strong> to a value less than 5 to get the chicks to their nests.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick { <br> &nbsp; &nbsp; grid-column-start: 5;",
-      "targetAmount": 3,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 5;",
       "targetPos": "grid-column-start: 5; grid-column-end: 2;"
     },
@@ -254,7 +254,7 @@
         "<p>If you want to count grid lines from the right instead of the left, you can give <strong>grid-column-start</strong> and <strong>grid-column-end</strong> negative values. For example, you can set it to -1 to specify the first grid line from the right.</p><p>Try setting <strong>grid-column-end</strong> to a negative value.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick { <br> &nbsp; &nbsp; grid-column-start: 1;",
-      "targetAmount": 4,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: 1; grid-column-end: -2;"
     },
@@ -278,7 +278,7 @@
         "<p>Instead of defining a grid item based on the start and end positions of the grid lines, you can define it based on your desired column width using the <strong>span</strong> keyword. Keep in mind that <strong>span</strong> only works with positive values.</p><p>For example, help the chick with the rule <strong>grid-column-end: span 2;</strong>.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick { <br> &nbsp; &nbsp; grid-column-start: 2;",
-      "targetAmount": 2,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 2;",
       "targetPos": "grid-column-start: 2; grid-column-end: span 2;"
     },
@@ -290,7 +290,7 @@
         "<p>Try using <strong>grid-column-end</strong> with the <strong>span</strong> keyword again to help the chicks.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {<br>&nbsp;&nbsp;grid-column-start: 1;",
-      "targetAmount": 5,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column-start: 1; grid-column-end: span 5;"
     },
@@ -302,7 +302,7 @@
         "<p>You can also use the <strong>span</strong> keyword with <strong>grid-column-start</strong> to set your item's width relative to the end position.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chicken {",
-      "targetAmount": 3,
+      "targetAmount": 1,
       "playerPos": "grid-column-end: 6;",
       "targetPos": "grid-column-end: 6; grid-column-start: span 3;"
     },
@@ -314,7 +314,7 @@
         "<p>Typing both <strong>grid-column-start</strong> and <strong>grid-column-end</strong> every time can get tiring. Fortunately, <strong>grid-column</strong> is a shorthand property that can accept both values at once, separated by a slash.</p><p>For example, <strong>grid-column: 2 / 4;</strong> will set the grid item to start on the 2nd vertical grid line and end on the 4th grid line.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
-      "targetAmount": 2,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column: 4 / 6;"
     },
@@ -326,7 +326,7 @@
         "<p>Try using <strong>grid-column</strong> to give each nest an inhabitant. The <strong>span</strong> keyword also works with this shorthand property so give it a try!</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
-      "targetAmount": 3,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-column: 2 / 5;"
     },
@@ -350,7 +350,7 @@
         "<p>Now give the shorthand property <strong>grid-row</strong> a try.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
-      "targetAmount": 3,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-row: 3 / 6;"
     },
@@ -374,7 +374,7 @@
         "<p>You can also use <strong>grid-column</strong> and <strong>grid-row</strong> together to span larger areas within the grid. Give it a try!</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
-      "targetAmount": 20,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-area: 1 / 2 / 6 / 6;"
     },
@@ -386,7 +386,7 @@
         "<p>If typing out both <strong>grid-column</strong> and <strong>grid-row</strong> is too much for you, there's yet another shorthand for that. <strong>grid-area</strong> accepts four values separated by slashes: <strong>grid-row-start</strong>, <strong>grid-column-start</strong>, <strong>grid-row-end</strong>, followed by <strong>grid-column-end</strong>.</p><p>One example of this would be <strong>grid-area: 1 / 1 / 3 / 6;</strong>.</p>"
       ],
       "preTxt": "#tree { <br> &nbsp; &nbsp; display: grid; <br> &nbsp; &nbsp; grid-template-columns: 20% 20% 20% 20% 20%; <br> &nbsp; &nbsp; grid-template-rows: 20% 20% 20% 20% 20%; <br> } <br> <br> #chick {",
-      "targetAmount": 12,
+      "targetAmount": 1,
       "playerPos": "grid-column-start: 1;",
       "targetPos": "grid-area: 1 / 2 / 4 / 6;"
     }
