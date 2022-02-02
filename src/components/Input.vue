@@ -60,6 +60,24 @@ export default {
       // TODO: Add case for the last level
     },
 
+    isCollisionGrid(div1, div2) {
+      let x1 = div1.getBoundingClientRect().left;
+      let w1 = div1.offsetWidth;
+      let r1 = x1 + w1;
+      let x2 = div2.getBoundingClientRect().left;
+      let w2 = div2.offsetWidth;
+      let r2 = x2 + w2;
+
+      if(x1 == x2 && r1 == r2){
+        this.$store.state.game.colliding = true;
+        document.querySelector(".continue-btn").style.display = "block";
+        return true;
+      }
+      this.$store.state.game.colliding = false;
+      document.querySelector(".continue-btn").style.display = "none";
+      return false;
+    },
+
     isCollision(div1, div2) {
       let x1 = div1.getBoundingClientRect().left;
       let y1 = div1.getBoundingClientRect().top;
@@ -107,7 +125,11 @@ export default {
 
         await this.$nextTick();
 
-        this.isCollision(p, t);
+        if(this.$store.state.game.currentGame == 1){
+          this.isCollision(p, t);
+        } else {
+          this.isCollisionGrid(p, t);
+        }
       }
     },
   },
