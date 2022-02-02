@@ -35,7 +35,7 @@
     <div class="preview-grid preview">
       <h1 class="gametitle gametitle-grid">Grid Chick</h1>
       <img
-        src="../assets/images/game-preview-flex.gif"
+        src="../assets/images/grid_preview.gif"
         alt=""
         class="game-preview-gif"
         v-on:click="goToGrid"
@@ -49,7 +49,7 @@
       ></p>
     </div>
     <p class="signature">
-      Made with &#10084;&#65039; by Browser-Learn-Games Team
+      Made with &#10084;&#65039; by Browser Learn Games Team
     </p>
   </div>
 </template>
@@ -57,18 +57,27 @@
 <script>
 import LanguageChange from "./LanguageChange.vue";
 
+import FlexIcon from "../assets/images/favicon_io/favicon-32x32.png";
+import GridIcon from "../assets/images/favicon_io/favicon_grid.png";
+
 export default {
   name: "HomeScreen",
   components: {
     LanguageChange,
   },
   props: {},
+  data: () => ({
+    flexIcon: FlexIcon,
+    gridIcon: GridIcon,
+  }),
   methods: {
     goToFlex() {
       this.$store.state.game.currentGame = 1;
+      this.handleIcon();
     },
     goToGrid() {
       this.$store.state.game.currentGame = 2;
+      this.handleIcon();
     },
     changeLanguage() {
       const languageChange = document.querySelector(
@@ -80,6 +89,18 @@ export default {
         this.$store.state.settings.language = 1;
       }
     },
+    handleIcon() {
+      let favicon = document.getElementById("favicon");
+      let title = document.getElementById("title");
+      if (this.$store.state.game.currentGame === 1) {
+        favicon.href = this.flexIcon;
+        title.innerText = "Flex Pirate";
+      }
+      if (this.$store.state.game.currentGame === 2) {
+        favicon.href = this.gridIcon;
+        title.innerText = "Grid Chick";
+      }
+    }
   },
 };
 </script>
