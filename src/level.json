@@ -160,7 +160,7 @@
         "Benutzt flex-direction und justify-content, damit die Piraten die Kisten erreichen.",
         "Use flex-direction and justify-content to guide the pirates to their chests."
       ],
-      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; <",
+      "preTxt": "<br> <br> <br> #sand {<br> &nbsp; &nbsp; display: flex; ",
       "playerAmount": 3,
       "solution": "flex-direction: column-reverse; justify-content: space-between; align-items: flex-start;"
     },

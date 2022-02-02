@@ -57,6 +57,7 @@ export default {
       if (this.is_last_level() === false) {
         this.$store.state.game.currentLevel += 1;
       }
+      // TODO: Add case for the last level
     },
 
     isCollision(div1, div2) {
