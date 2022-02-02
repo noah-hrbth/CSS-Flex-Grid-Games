@@ -44,10 +44,7 @@ export default {
   }),
   methods: {
     is_last_level() {
-      if (this.$store.state.game.currentLevel + 1 == null) {
-        return true;
-      }
-      return false;
+      return this.$store.state.game.currentLevel  === 17;
     },
 
     go_to_next_level() {
@@ -56,8 +53,12 @@ export default {
 
       if (this.is_last_level() === false) {
         this.$store.state.game.currentLevel += 1;
+      } else {
+        alert(
+            "Das war leider schon das letzte Level :( aber in Zukunft werden mehr Level dazukommen!\nUnfortunately this was the last Level :( but more level are coming soon!"
+        );
+        this.$store.state.game.currentLevel = 0;
       }
-      // TODO: Add case for the last level
     },
 
     isCollisionGrid(div1, div2) {
@@ -73,9 +74,11 @@ export default {
       if(x1 == x2 && r1 == r2 && y1 == y2){
         this.$store.state.game.colliding = true;
         document.querySelector(".continue-btn").style.display = "block";
+        console.log(1);
         return true;
       }
       this.$store.state.game.colliding = false;
+      console.log(2);
       document.querySelector(".continue-btn").style.display = "none";
       return false;
     },
@@ -97,12 +100,10 @@ export default {
       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
         this.$store.state.game.colliding = false;
         document.querySelector(".continue-btn").style.display = "none";
-        console.log(false);
         return false;
       }
       this.$store.state.game.colliding = true;
       document.querySelector(".continue-btn").style.display = "block";
-      console.log(true);
       return true;
     },
   },
