@@ -62,13 +62,15 @@ export default {
 
     isCollisionGrid(div1, div2) {
       let x1 = div1.getBoundingClientRect().left;
+      let y1 = div1.getBoundingClientRect().top;
       let w1 = div1.offsetWidth;
       let r1 = x1 + w1;
       let x2 = div2.getBoundingClientRect().left;
+      let y2 = div2.getBoundingClientRect().top;
       let w2 = div2.offsetWidth;
       let r2 = x2 + w2;
 
-      if(x1 == x2 && r1 == r2){
+      if(x1 == x2 && r1 == r2 && y1 == y2){
         this.$store.state.game.colliding = true;
         document.querySelector(".continue-btn").style.display = "block";
         return true;
