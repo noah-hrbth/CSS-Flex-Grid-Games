@@ -23,13 +23,17 @@
     <p class="editor-text">}</p>
     <button
       class="continue-btn"
-      @click="go_to_next_level()"
+      @click="this.$store.state.game.currentGame == 1 ? go_to_next_level() : go_to_next_level_grid()"
       style="display: none"
       onclick="document.querySelector('.editor-eingabe').value = ''; document.querySelectorAll('.coin-gif').forEach(coin => coin.style.display = 'none')"
     >
       <img
         class="continue-icon"
-        :src="this.$store.state.game.currentGame === 1 ? this.flexArrow : this.gridArrow"
+        :src="
+          this.$store.state.game.currentGame === 1
+            ? this.flexArrow
+            : this.gridArrow
+        "
         alt=""
       />
     </button>
@@ -37,8 +41,8 @@
 </template>
 
 <script>
-import FlexArrow from '../assets/images/continue-btn.png';
-import GridArrow from '../assets/images/btn_next.png';
+import FlexArrow from "../assets/images/continue-btn.png";
+import GridArrow from "../assets/images/btn_next.png";
 
 export default {
   name: "Input",
@@ -48,19 +52,38 @@ export default {
     gridArrow: GridArrow,
   }),
   methods: {
-    is_last_level() {
-      return this.$store.state.game.currentLevel.next == null;
+
+    // TODO: simplify that
+    is_last_level_flex() {
+      return this.$store.state.game.currentLevel == 17;
+    },
+
+    is_last_level_grid() {
+      return this.$store.state.game.currentLevel == 15;
     },
 
     go_to_next_level() {
       this.$store.state.editor.editorInput = "";
       document.querySelector(".continue-btn").style.display = "none";
 
-      if (this.is_last_level() === false) {
+      if (!this.is_last_level_flex()) {
         this.$store.state.game.currentLevel += 1;
       } else {
         alert(
-            "Das war leider schon das letzte Level :( aber in Zukunft werden mehr Level dazukommen!\nUnfortunately this was the last Level :( but more level are coming soon!"
+          "Das war leider schon das letzte Level :( aber in Zukunft werden mehr Level dazukommen!\nUnfortunately this was the last Level :( but more level are coming soon!"
+        );
+        this.$store.state.game.currentLevel = 0;
+      }
+    },
+    go_to_next_level_grid() {
+      this.$store.state.editor.editorInput = "";
+      document.querySelector(".continue-btn").style.display = "none";
+
+      if (!this.is_last_level_grid()) {
+        this.$store.state.game.currentLevel += 1;
+      } else {
+        alert(
+          "Das war leider schon das letzte Level :( aber in Zukunft werden mehr Level dazukommen!\nUnfortunately this was the last Level :( but more level are coming soon!"
         );
         this.$store.state.game.currentLevel = 0;
       }
@@ -76,7 +99,7 @@ export default {
       let w2 = div2.offsetWidth;
       let r2 = x2 + w2;
 
-      if(x1 == x2 && r1 == r2 && y1 == y2){
+      if (x1 == x2 && r1 == r2 && y1 == y2) {
         this.$store.state.game.colliding = true;
         document.querySelector(".continue-btn").style.display = "block";
         console.log(1);
@@ -133,7 +156,7 @@ export default {
 
         await this.$nextTick();
 
-        if(this.$store.state.game.currentGame == 1){
+        if (this.$store.state.game.currentGame == 1) {
           this.isCollision(p, t);
         } else {
           this.isCollisionGrid(p, t);

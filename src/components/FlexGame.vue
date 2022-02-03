@@ -1,3 +1,4 @@
+// FIXME: coin.gif plays when collision in grid game
 <template>
   <div class="right">
     <div class="inner-right-target" :style="this.getLevelById(this.$store.state.game.currentLevel).solution">
