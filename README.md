@@ -1,4 +1,7 @@
 # Browser Learn Games
+
+## Der Code der Games ist im VueCLI Branch oder unter der öffentlichen IP http://129.159.255.16/ erreichbar!
+
 ## Konzept
 In dem Projekt geht es um die Erstellung von 2 Browser-Lerngames zum Thema CSS Flexbox und CSS Grid.
 Ziel ist es mithilfe von HTML/CSS/JavaScript, 2 seperate Browsergames zu erstellen, welche von Studenten aus dem ersten Semester genutzt werden können.
