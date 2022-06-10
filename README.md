@@ -19,41 +19,6 @@ So vertieft man Schritt für Schritt CSS Flexbox bzw. CSS Grid.
 
 Die gesamte Organisation findet hier auf GitLab, über Issues usw., statt.
 
+## Erste Konzeptidee
 ![Unsere Skizze](https://cdn.discordapp.com/attachments/898937507406839869/903664783226716200/unknown.png)
 
-## Zeitstrahl für Milestones
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/910247728641105930/Milestones.png">
-
-## Sequenzdiagramm Input zu Output
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/914157736034451506/Sequenzdiagramm_Input_to_Output.png">
-
-## Kontextabgrenzung
-
-Die Browser Learn Games sind 2 interaktive Lernspiele, in welchen HSD Studenten ihre CSS Kenntnisse vertiefen und teilweise neue Anweisungen lernen können. Die Spiele laufen beide über die HSD Server und sind über das Web (per Link auf HSD Website) erreichbar. Das Spiel so wie die Server werden von einem Administrator gewartet.
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/929418638618939402/Verfeinerungsebene0.png">
-
-## Whitebox-/Bausteinsicht  
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/929418639252267048/Verfeinerungsebene.png"> 
-
-## Verfeinerungsebene 2
-### UI  
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/929418638837051442/Verfeinerungsebene1.png">
-
-### Leveldata
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/929418639029960784/Verfeinerungsebene2.png">
-
-## UML Verteilungsdiagramm
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/929425027428909077/UML_Verteilungsdiagramm.png">
-
-
-## Vue Lifecycle Diagram 
-
-<img src="https://cdn.discordapp.com/attachments/898937507406839869/929425681014751292/lifecycle.png">
-Quelle: <a href="https://vuejs.org/v2/guide/instance.html">Offiziele Vue Documentation</a>
