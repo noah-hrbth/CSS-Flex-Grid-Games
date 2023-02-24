@@ -16,9 +16,3 @@ In beiden Games muss man mithilfe von Flexbox/Grid-Anweisungen die gestellten Au
 Beispielsweise, die farbigen Frösche auf die dazu gehörigen farbigen Seerosen bringen.
 Hat man dies erreicht kommt man ins nächste Level.
 So vertieft man Schritt für Schritt CSS Flexbox bzw. CSS Grid.
-
-Die gesamte Organisation findet hier auf GitLab, über Issues usw., statt.
-
-## Erste Konzeptidee
-![Unsere Skizze](https://cdn.discordapp.com/attachments/898937507406839869/903664783226716200/unknown.png)
-
